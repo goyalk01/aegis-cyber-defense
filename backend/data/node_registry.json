@@ -1,0 +1,82 @@
+[
+  {
+    "node_id": "NODE-001",
+    "node_name": "Alpha Server",
+    "ip_address": "10.0.1.10",
+    "hardware_id_b64": "TUFMV0FSRV9QQVlMT0FEX3Yy",
+    "region": "US-EAST",
+    "registered_at": "2024-01-15T08:00:00Z"
+  },
+  {
+    "node_id": "NODE-002",
+    "node_name": "Beta Gateway",
+    "ip_address": "10.0.1.11",
+    "hardware_id_b64": "Tk9ERTAwMl9IV19JRA==",
+    "region": "EU-WEST",
+    "registered_at": "2024-01-16T09:30:00Z"
+  },
+  {
+    "node_id": "NODE-003",
+    "node_name": "Gamma Load Balancer",
+    "ip_address": "10.0.1.12",
+    "hardware_id_b64": "R0FNTUFfTEJfSFdfMDAz",
+    "region": "AP-SOUTH",
+    "registered_at": "2024-01-17T11:00:00Z"
+  },
+  {
+    "node_id": "NODE-004",
+    "node_name": "Delta Edge Router",
+    "ip_address": "10.0.1.13",
+    "hardware_id_b64": "REVMVEFFRGRFX0VER0VfUk9VVEVS",
+    "region": "US-WEST",
+    "registered_at": "2024-01-18T07:45:00Z"
+  },
+  {
+    "node_id": "NODE-005",
+    "node_name": "Epsilon Firewall",
+    "ip_address": "10.0.1.14",
+    "hardware_id_b64": "RVhQTE9JVF9JTkpFQ1RfU0hFTEw=",
+    "region": "EU-NORTH",
+    "registered_at": "2024-01-19T13:15:00Z"
+  },
+  {
+    "node_id": "NODE-006",
+    "node_name": "Zeta DNS Server",
+    "ip_address": "10.0.1.15",
+    "hardware_id_b64": "WkVUQV9ETlNfSFdfMDA2",
+    "region": "US-EAST",
+    "registered_at": "2024-01-20T10:00:00Z"
+  },
+  {
+    "node_id": "NODE-007",
+    "node_name": "Eta Cache Node",
+    "ip_address": "10.0.1.16",
+    "hardware_id_b64": "TUFMV0FSRV9DTUQ=",
+    "region": "AP-EAST",
+    "registered_at": "2024-01-21T08:30:00Z"
+  },
+  {
+    "node_id": "NODE-008",
+    "node_name": "Theta Auth Service",
+    "ip_address": "10.0.1.17",
+    "hardware_id_b64": "VEVFVEFBVVRIX0hXXzAwOA==",
+    "region": "EU-WEST",
+    "registered_at": "2024-01-22T14:00:00Z"
+  },
+  {
+    "node_id": "NODE-009",
+    "node_name": "Iota Monitoring Agent",
+    "ip_address": "10.0.1.18",
+    "hardware_id_b64": "SU9UQV9NT05fSFdfMDA5",
+    "region": "US-EAST",
+    "registered_at": "2024-01-23T09:00:00Z"
+  },
+  {
+    "node_id": "NODE-010",
+    "node_name": "Kappa Backup Node",
+    "ip_address": "10.0.1.19",
+    "hardware_id_b64": "S0FQUEFCQUNLVVBIQVNIX0hXXzAxMA==",
+    "region": "AP-SOUTH",
+    "registered_at": "2024-01-24T11:30:00Z"
+  }
+]

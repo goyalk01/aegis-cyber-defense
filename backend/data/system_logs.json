@@ -1,0 +1,132 @@
+[
+  {
+    "log_id": "LOG-1001",
+    "node_id": "NODE-001",
+    "schema_version": 1,
+    "status": "Operational",
+    "http_code": 500,
+    "latency": 4200,
+    "hardware_id_b64": "TUFMV0FSRV9QQVlMT0FEX3Yy",
+    "timestamp": "2024-03-01T12:05:00Z"
+  },
+  {
+    "log_id": "LOG-1002",
+    "node_id": "NODE-002",
+    "schema_version": 2,
+    "node_status": "Operational",
+    "response_code": 200,
+    "response_ms": 1800,
+    "hardware_id_b64": "Tk9ERTAwMl9IV19JRA==",
+    "timestamp": "2024-03-01T12:06:00Z"
+  },
+  {
+    "log_id": "LOG-1003",
+    "node_id": "NODE-003",
+    "schema_version": 3,
+    "operational_status": "Degraded",
+    "status_code": 503,
+    "latency_ms": 350,
+    "hardware_id_b64": "R0FNTUFfTEJfSFdfMDAz",
+    "timestamp": "2024-03-01T12:07:00Z"
+  },
+  {
+    "log_id": "LOG-1004",
+    "node_id": "NODE-004",
+    "schema_version": 2,
+    "node_status": "Operational",
+    "response_code": 200,
+    "response_ms": 320,
+    "hardware_id_b64": "REVMVEFFRGRFX0VER0VfUk9VVEVS",
+    "timestamp": "2024-03-01T12:08:00Z"
+  },
+  {
+    "log_id": "LOG-1005",
+    "node_id": "NODE-005",
+    "schema_version": 1,
+    "status": "Operational",
+    "http_code": 403,
+    "latency": 980,
+    "hardware_id_b64": "RVhQTE9JVF9JTkpFQ1RfU0hFTEw=",
+    "timestamp": "2024-03-01T12:09:00Z"
+  },
+  {
+    "log_id": "LOG-1006",
+    "node_id": "NODE-006",
+    "schema_version": 3,
+    "operational_status": "Operational",
+    "status_code": 200,
+    "latency_ms": 3500,
+    "hardware_id_b64": "WkVUQV9ETlNfSFdfMDA2",
+    "timestamp": "2024-03-01T12:10:00Z"
+  },
+  {
+    "log_id": "LOG-1007",
+    "node_id": "NODE-007",
+    "schema_version": 2,
+    "node_status": "Operational",
+    "response_code": 502,
+    "response_ms": 2700,
+    "hardware_id_b64": "TUFMV0FSRV9DTUQ=",
+    "timestamp": "2024-03-01T12:11:00Z"
+  },
+  {
+    "log_id": "LOG-1008",
+    "node_id": "NODE-008",
+    "schema_version": 3,
+    "operational_status": "Operational",
+    "status_code": 200,
+    "latency_ms": 410,
+    "hardware_id_b64": "VEVFVEFBVVRIX0hXXzAwOA==",
+    "timestamp": "2024-03-01T12:12:00Z"
+  },
+  {
+    "log_id": "LOG-1009",
+    "node_id": "NODE-009",
+    "schema_version": 99,
+    "unknown_field": "Operational",
+    "http_code": 200,
+    "latency": 500,
+    "hardware_id_b64": "SU9UQV9NT05fSFdfMDA5",
+    "timestamp": "2024-03-01T12:13:00Z"
+  },
+  {
+    "log_id": "LOG-1010",
+    "node_id": "NODE-010",
+    "schema_version": 1,
+    "status": "Operational",
+    "http_code": 200,
+    "latency": 290,
+    "hardware_id_b64": "!!!INVALID_BASE64###",
+    "timestamp": "2024-03-01T12:14:00Z"
+  },
+  {
+    "log_id": "LOG-1011",
+    "node_id": "NODE-999",
+    "schema_version": 2,
+    "node_status": "Operational",
+    "response_code": 200,
+    "response_ms": 450,
+    "hardware_id_b64": "Tk9ERTk5OV9IV19JRA==",
+    "timestamp": "2024-03-01T12:15:00Z"
+  },
+  {
+    "log_id": "LOG-1012",
+    "node_id": "NODE-001",
+    "schema_version": 1,
+    "status": "Maintenance",
+    "http_code": null,
+    "latency": null,
+    "hardware_id_b64": null,
+    "timestamp": "2024-03-01T12:16:00Z"
+  },
+  {
+    "log_id": "LOG-1013",
+    "node_id": "NODE-002",
+    "schema_version": 3,
+    "operational_status": "Operational",
+    "status_code": 200,
+    "latency_ms": 1600,
+    "hardware_id_b64": "Tk9ERTAwMl9IV19JRA==",
+    "timestamp": "2024-03-01T12:17:00Z"
+  }
+]
