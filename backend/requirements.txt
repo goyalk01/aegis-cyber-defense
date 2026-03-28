@@ -1,0 +1,5 @@
+# AEGIS Backend Dependencies
+# Install: pip install -r requirements.txt
+
+fastapi>=0.100.0
+uvicorn[standard]>=0.23.0

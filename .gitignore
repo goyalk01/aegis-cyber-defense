@@ -115,3 +115,10 @@ next-env.d.ts
 # backend/data/normalized_logs.json
 # backend/data/alerts.json
 # backend/data/metrics.json
+
+backend/data/alerts.json
+backend/data/metrics.json
+backend/data/normalized_logs.json
+backend/__pycache__/
+backend/venv/
+.next/
