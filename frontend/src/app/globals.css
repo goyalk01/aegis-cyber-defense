@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #0f172a;
+    --card: #ffffff;
+    --card-foreground: #0f172a;
+    --border: #e2e8f0;
+    --primary: #6366f1;
+    --primary-foreground: #ffffff;
+    --muted: #f1f5f9;
+    --muted-foreground: #64748b;
+    --accent: #f1f5f9;
+    --accent-foreground: #0f172a;
+    --destructive: #ef4444;
+    --warning: #f97316;
+    --success: #22c55e;
+  }
+
+  .dark {
+    --background: #0f1419;
+    --foreground: #e7e9ea;
+    --card: #16202a;
+    --card-foreground: #e7e9ea;
+    --border: #2f3943;
+    --primary: #6366f1;
+    --primary-foreground: #ffffff;
+    --muted: #1d2935;
+    --muted-foreground: #8b98a5;
+    --accent: #1d2935;
+    --accent-foreground: #e7e9ea;
+    --destructive: #ef4444;
+    --warning: #f97316;
+    --success: #22c55e;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--muted);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--muted-foreground);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--foreground);
+}
