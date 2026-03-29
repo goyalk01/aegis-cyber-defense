@@ -28,7 +28,7 @@
 
 Most detection systems rely on opaque machine learning models. AEGIS takes a fundamentally different approach: **every alert is explainable, every rule is auditable, and every classification is reproducible**. If the same log enters the pipeline twice, it will always produce the same alert with the same severity score.
 
-### Why It Matters--
+### Why It Matters
 
 Modern infrastructure generates telemetry across dozens of schema versions, regions, and node types. AEGIS solves three critical problems:
 
