@@ -1,82 +1,5002 @@
 [
   {
-    "node_id": "NODE-001",
-    "node_name": "Alpha Server",
-    "ip_address": "10.0.1.10",
-    "hardware_id_b64": "TUFMV0FSRV9QQVlMT0FEX3Yy",
+    "node_id": "NODE-000",
+    "node_name": "Aegis Node 000",
+    "ip_address": "10.42.0.0",
+    "hardware_id_b64": "U04tOTI4MA==",
     "region": "US-EAST",
-    "registered_at": "2024-01-15T08:00:00Z"
+    "registered_at": "2026-03-01T00:00:00Z",
+    "is_infected": false,
+    "user_agent": "0 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-001",
+    "node_name": "Aegis Node 001",
+    "ip_address": "10.42.0.1",
+    "hardware_id_b64": "U04tNjEyNA==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T00:01:00Z",
+    "is_infected": false,
+    "user_agent": "1 AEGIS-Node/2.0 (Linux)"
   },
   {
     "node_id": "NODE-002",
-    "node_name": "Beta Gateway",
-    "ip_address": "10.0.1.11",
-    "hardware_id_b64": "Tk9ERTAwMl9IV19JRA==",
+    "node_name": "Aegis Node 002",
+    "ip_address": "10.42.0.2",
+    "hardware_id_b64": "U04tMTAwOQ==",
     "region": "EU-WEST",
-    "registered_at": "2024-01-16T09:30:00Z"
+    "registered_at": "2026-03-01T00:02:00Z",
+    "is_infected": false,
+    "user_agent": "2 AEGIS-Node/2.0 (Linux)"
   },
   {
     "node_id": "NODE-003",
-    "node_name": "Gamma Load Balancer",
-    "ip_address": "10.0.1.12",
-    "hardware_id_b64": "R0FNTUFfTEJfSFdfMDAz",
-    "region": "AP-SOUTH",
-    "registered_at": "2024-01-17T11:00:00Z"
+    "node_name": "Aegis Node 003",
+    "ip_address": "10.42.0.3",
+    "hardware_id_b64": "U04tMzM5MQ==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T00:03:00Z",
+    "is_infected": false,
+    "user_agent": "3 AEGIS-Node/2.0 (Linux)"
   },
   {
     "node_id": "NODE-004",
-    "node_name": "Delta Edge Router",
-    "ip_address": "10.0.1.13",
-    "hardware_id_b64": "REVMVEFFRGRFX0VER0VfUk9VVEVS",
-    "region": "US-WEST",
-    "registered_at": "2024-01-18T07:45:00Z"
+    "node_name": "Aegis Node 004",
+    "ip_address": "10.42.0.4",
+    "hardware_id_b64": "U04tOTkyMQ==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T00:04:00Z",
+    "is_infected": false,
+    "user_agent": "4 AEGIS-Node/2.0 (Linux)"
   },
   {
     "node_id": "NODE-005",
-    "node_name": "Epsilon Firewall",
-    "ip_address": "10.0.1.14",
-    "hardware_id_b64": "RVhQTE9JVF9JTkpFQ1RfU0hFTEw=",
-    "region": "EU-NORTH",
-    "registered_at": "2024-01-19T13:15:00Z"
+    "node_name": "Aegis Node 005",
+    "ip_address": "10.42.0.5",
+    "hardware_id_b64": "U04tNTg4Nw==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T00:05:00Z",
+    "is_infected": false,
+    "user_agent": "5 AEGIS-Node/2.0 (Linux)"
   },
   {
     "node_id": "NODE-006",
-    "node_name": "Zeta DNS Server",
-    "ip_address": "10.0.1.15",
-    "hardware_id_b64": "WkVUQV9ETlNfSFdfMDA2",
+    "node_name": "Aegis Node 006",
+    "ip_address": "10.42.0.6",
+    "hardware_id_b64": "U04tNTI5Nw==",
     "region": "US-EAST",
-    "registered_at": "2024-01-20T10:00:00Z"
+    "registered_at": "2026-03-01T00:06:00Z",
+    "is_infected": false,
+    "user_agent": "6 AEGIS-Node/2.0 (Linux)"
   },
   {
     "node_id": "NODE-007",
-    "node_name": "Eta Cache Node",
-    "ip_address": "10.0.1.16",
-    "hardware_id_b64": "TUFMV0FSRV9DTUQ=",
-    "region": "AP-EAST",
-    "registered_at": "2024-01-21T08:30:00Z"
+    "node_name": "Aegis Node 007",
+    "ip_address": "10.42.0.7",
+    "hardware_id_b64": "U04tMzA0Ng==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T00:07:00Z",
+    "is_infected": false,
+    "user_agent": "7 AEGIS-Node/2.0 (Linux)"
   },
   {
     "node_id": "NODE-008",
-    "node_name": "Theta Auth Service",
-    "ip_address": "10.0.1.17",
-    "hardware_id_b64": "VEVFVEFBVVRIX0hXXzAwOA==",
+    "node_name": "Aegis Node 008",
+    "ip_address": "10.42.0.8",
+    "hardware_id_b64": "U04tNTEwMg==",
     "region": "EU-WEST",
-    "registered_at": "2024-01-22T14:00:00Z"
+    "registered_at": "2026-03-01T00:08:00Z",
+    "is_infected": false,
+    "user_agent": "8 AEGIS-Node/2.0 (Linux)"
   },
   {
     "node_id": "NODE-009",
-    "node_name": "Iota Monitoring Agent",
-    "ip_address": "10.0.1.18",
-    "hardware_id_b64": "SU9UQV9NT05fSFdfMDA5",
-    "region": "US-EAST",
-    "registered_at": "2024-01-23T09:00:00Z"
+    "node_name": "Aegis Node 009",
+    "ip_address": "10.42.0.9",
+    "hardware_id_b64": "U04tMzM2MQ==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T00:09:00Z",
+    "is_infected": false,
+    "user_agent": "9 AEGIS-Node/2.0 (Linux)"
   },
   {
     "node_id": "NODE-010",
-    "node_name": "Kappa Backup Node",
-    "ip_address": "10.0.1.19",
-    "hardware_id_b64": "S0FQUEFCQUNLVVBIQVNIX0hXXzAxMA==",
+    "node_name": "Aegis Node 010",
+    "ip_address": "10.42.0.10",
+    "hardware_id_b64": "U04tNzkxOA==",
     "region": "AP-SOUTH",
-    "registered_at": "2024-01-24T11:30:00Z"
+    "registered_at": "2026-03-01T00:10:00Z",
+    "is_infected": false,
+    "user_agent": "10 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-011",
+    "node_name": "Aegis Node 011",
+    "ip_address": "10.42.0.11",
+    "hardware_id_b64": "U04tODM1NQ==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T00:11:00Z",
+    "is_infected": false,
+    "user_agent": "11 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-012",
+    "node_name": "Aegis Node 012",
+    "ip_address": "10.42.0.12",
+    "hardware_id_b64": "U04tMTE2Mg==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T00:12:00Z",
+    "is_infected": true,
+    "user_agent": "12 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-013",
+    "node_name": "Aegis Node 013",
+    "ip_address": "10.42.0.13",
+    "hardware_id_b64": "U04tOTY2Mw==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T00:13:00Z",
+    "is_infected": true,
+    "user_agent": "13 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-014",
+    "node_name": "Aegis Node 014",
+    "ip_address": "10.42.0.14",
+    "hardware_id_b64": "U04tNDE3OA==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T00:14:00Z",
+    "is_infected": false,
+    "user_agent": "14 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-015",
+    "node_name": "Aegis Node 015",
+    "ip_address": "10.42.0.15",
+    "hardware_id_b64": "U04tNzgyNA==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T00:15:00Z",
+    "is_infected": false,
+    "user_agent": "15 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-016",
+    "node_name": "Aegis Node 016",
+    "ip_address": "10.42.0.16",
+    "hardware_id_b64": "U04tNTExNg==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T00:16:00Z",
+    "is_infected": false,
+    "user_agent": "16 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-017",
+    "node_name": "Aegis Node 017",
+    "ip_address": "10.42.0.17",
+    "hardware_id_b64": "U04tMjA3Nw==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T00:17:00Z",
+    "is_infected": false,
+    "user_agent": "17 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-018",
+    "node_name": "Aegis Node 018",
+    "ip_address": "10.42.0.18",
+    "hardware_id_b64": "U04tNDY5NQ==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T00:18:00Z",
+    "is_infected": false,
+    "user_agent": "18 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-019",
+    "node_name": "Aegis Node 019",
+    "ip_address": "10.42.0.19",
+    "hardware_id_b64": "U04tNzY0Nw==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T00:19:00Z",
+    "is_infected": false,
+    "user_agent": "19 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-020",
+    "node_name": "Aegis Node 020",
+    "ip_address": "10.42.0.20",
+    "hardware_id_b64": "U04tMTc3Mw==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T00:20:00Z",
+    "is_infected": false,
+    "user_agent": "20 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-021",
+    "node_name": "Aegis Node 021",
+    "ip_address": "10.42.0.21",
+    "hardware_id_b64": "U04tMzAyOQ==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T00:21:00Z",
+    "is_infected": false,
+    "user_agent": "21 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-022",
+    "node_name": "Aegis Node 022",
+    "ip_address": "10.42.0.22",
+    "hardware_id_b64": "U04tNzE3Mw==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T00:22:00Z",
+    "is_infected": false,
+    "user_agent": "22 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-023",
+    "node_name": "Aegis Node 023",
+    "ip_address": "10.42.0.23",
+    "hardware_id_b64": "U04tMjcyNQ==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T00:23:00Z",
+    "is_infected": false,
+    "user_agent": "23 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-024",
+    "node_name": "Aegis Node 024",
+    "ip_address": "10.42.0.24",
+    "hardware_id_b64": "U04tMzkwOA==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T00:24:00Z",
+    "is_infected": false,
+    "user_agent": "24 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-025",
+    "node_name": "Aegis Node 025",
+    "ip_address": "10.42.0.25",
+    "hardware_id_b64": "U04tODc1NQ==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T00:25:00Z",
+    "is_infected": true,
+    "user_agent": "25 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-026",
+    "node_name": "Aegis Node 026",
+    "ip_address": "10.42.0.26",
+    "hardware_id_b64": "U04tMzgwOA==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T00:26:00Z",
+    "is_infected": false,
+    "user_agent": "26 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-027",
+    "node_name": "Aegis Node 027",
+    "ip_address": "10.42.0.27",
+    "hardware_id_b64": "U04tNTg4OA==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T00:27:00Z",
+    "is_infected": false,
+    "user_agent": "27 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-028",
+    "node_name": "Aegis Node 028",
+    "ip_address": "10.42.0.28",
+    "hardware_id_b64": "U04tNDA1MQ==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T00:28:00Z",
+    "is_infected": false,
+    "user_agent": "28 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-029",
+    "node_name": "Aegis Node 029",
+    "ip_address": "10.42.0.29",
+    "hardware_id_b64": "U04tMjQzMA==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T00:29:00Z",
+    "is_infected": false,
+    "user_agent": "29 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-030",
+    "node_name": "Aegis Node 030",
+    "ip_address": "10.42.0.30",
+    "hardware_id_b64": "U04tNDk1NQ==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T00:30:00Z",
+    "is_infected": false,
+    "user_agent": "30 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-031",
+    "node_name": "Aegis Node 031",
+    "ip_address": "10.42.0.31",
+    "hardware_id_b64": "U04tNjM3Mw==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T00:31:00Z",
+    "is_infected": false,
+    "user_agent": "31 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-032",
+    "node_name": "Aegis Node 032",
+    "ip_address": "10.42.0.32",
+    "hardware_id_b64": "U04tNjQ5Ng==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T00:32:00Z",
+    "is_infected": false,
+    "user_agent": "32 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-033",
+    "node_name": "Aegis Node 033",
+    "ip_address": "10.42.0.33",
+    "hardware_id_b64": "U04tMjk1Mw==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T00:33:00Z",
+    "is_infected": false,
+    "user_agent": "33 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-034",
+    "node_name": "Aegis Node 034",
+    "ip_address": "10.42.0.34",
+    "hardware_id_b64": "U04tMzE4Nw==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T00:34:00Z",
+    "is_infected": false,
+    "user_agent": "34 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-035",
+    "node_name": "Aegis Node 035",
+    "ip_address": "10.42.0.35",
+    "hardware_id_b64": "U04tMzYwOA==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T00:35:00Z",
+    "is_infected": false,
+    "user_agent": "35 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-036",
+    "node_name": "Aegis Node 036",
+    "ip_address": "10.42.0.36",
+    "hardware_id_b64": "U04tNTM0OA==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T00:36:00Z",
+    "is_infected": false,
+    "user_agent": "36 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-037",
+    "node_name": "Aegis Node 037",
+    "ip_address": "10.42.0.37",
+    "hardware_id_b64": "U04tMTk1Ng==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T00:37:00Z",
+    "is_infected": false,
+    "user_agent": "37 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-038",
+    "node_name": "Aegis Node 038",
+    "ip_address": "10.42.0.38",
+    "hardware_id_b64": "U04tMjE5MA==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T00:38:00Z",
+    "is_infected": false,
+    "user_agent": "38 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-039",
+    "node_name": "Aegis Node 039",
+    "ip_address": "10.42.0.39",
+    "hardware_id_b64": "U04tODM4Nw==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T00:39:00Z",
+    "is_infected": false,
+    "user_agent": "39 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-040",
+    "node_name": "Aegis Node 040",
+    "ip_address": "10.42.0.40",
+    "hardware_id_b64": "U04tNjY1Mw==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T00:40:00Z",
+    "is_infected": false,
+    "user_agent": "40 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-041",
+    "node_name": "Aegis Node 041",
+    "ip_address": "10.42.0.41",
+    "hardware_id_b64": "U04tMTY4Mg==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T00:41:00Z",
+    "is_infected": true,
+    "user_agent": "41 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-042",
+    "node_name": "Aegis Node 042",
+    "ip_address": "10.42.0.42",
+    "hardware_id_b64": "U04tNTUxNg==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T00:42:00Z",
+    "is_infected": false,
+    "user_agent": "42 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-043",
+    "node_name": "Aegis Node 043",
+    "ip_address": "10.42.0.43",
+    "hardware_id_b64": "U04tNjc3Mg==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T00:43:00Z",
+    "is_infected": false,
+    "user_agent": "43 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-044",
+    "node_name": "Aegis Node 044",
+    "ip_address": "10.42.0.44",
+    "hardware_id_b64": "U04tNTkzMQ==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T00:44:00Z",
+    "is_infected": false,
+    "user_agent": "44 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-045",
+    "node_name": "Aegis Node 045",
+    "ip_address": "10.42.0.45",
+    "hardware_id_b64": "U04tMjAzNw==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T00:45:00Z",
+    "is_infected": false,
+    "user_agent": "45 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-046",
+    "node_name": "Aegis Node 046",
+    "ip_address": "10.42.0.46",
+    "hardware_id_b64": "U04tMTY5OQ==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T00:46:00Z",
+    "is_infected": false,
+    "user_agent": "46 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-047",
+    "node_name": "Aegis Node 047",
+    "ip_address": "10.42.0.47",
+    "hardware_id_b64": "U04tNDA2NA==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T00:47:00Z",
+    "is_infected": true,
+    "user_agent": "47 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-048",
+    "node_name": "Aegis Node 048",
+    "ip_address": "10.42.0.48",
+    "hardware_id_b64": "U04tNzc1Mw==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T00:48:00Z",
+    "is_infected": true,
+    "user_agent": "48 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-049",
+    "node_name": "Aegis Node 049",
+    "ip_address": "10.42.0.49",
+    "hardware_id_b64": "U04tMzM3Nw==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T00:49:00Z",
+    "is_infected": false,
+    "user_agent": "49 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-050",
+    "node_name": "Aegis Node 050",
+    "ip_address": "10.42.0.50",
+    "hardware_id_b64": "U04tNzg3Nw==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T00:50:00Z",
+    "is_infected": true,
+    "user_agent": "50 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-051",
+    "node_name": "Aegis Node 051",
+    "ip_address": "10.42.0.51",
+    "hardware_id_b64": "U04tMzg0Mg==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T00:51:00Z",
+    "is_infected": false,
+    "user_agent": "51 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-052",
+    "node_name": "Aegis Node 052",
+    "ip_address": "10.42.0.52",
+    "hardware_id_b64": "U04tMzg0Nw==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T00:52:00Z",
+    "is_infected": false,
+    "user_agent": "52 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-053",
+    "node_name": "Aegis Node 053",
+    "ip_address": "10.42.0.53",
+    "hardware_id_b64": "U04tMzgwMg==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T00:53:00Z",
+    "is_infected": true,
+    "user_agent": "53 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-054",
+    "node_name": "Aegis Node 054",
+    "ip_address": "10.42.0.54",
+    "hardware_id_b64": "U04tMjI1NA==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T00:54:00Z",
+    "is_infected": false,
+    "user_agent": "54 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-055",
+    "node_name": "Aegis Node 055",
+    "ip_address": "10.42.0.55",
+    "hardware_id_b64": "U04tNzQyOQ==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T00:55:00Z",
+    "is_infected": false,
+    "user_agent": "55 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-056",
+    "node_name": "Aegis Node 056",
+    "ip_address": "10.42.0.56",
+    "hardware_id_b64": "U04tNjIzNg==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T00:56:00Z",
+    "is_infected": false,
+    "user_agent": "56 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-057",
+    "node_name": "Aegis Node 057",
+    "ip_address": "10.42.0.57",
+    "hardware_id_b64": "U04tMTgxOA==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T00:57:00Z",
+    "is_infected": false,
+    "user_agent": "57 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-058",
+    "node_name": "Aegis Node 058",
+    "ip_address": "10.42.0.58",
+    "hardware_id_b64": "U04tNjQ5Nw==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T00:58:00Z",
+    "is_infected": false,
+    "user_agent": "58 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-059",
+    "node_name": "Aegis Node 059",
+    "ip_address": "10.42.0.59",
+    "hardware_id_b64": "U04tNTk2Ng==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T00:59:00Z",
+    "is_infected": false,
+    "user_agent": "59 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-060",
+    "node_name": "Aegis Node 060",
+    "ip_address": "10.42.0.60",
+    "hardware_id_b64": "U04tMTkxNw==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T01:00:00Z",
+    "is_infected": false,
+    "user_agent": "60 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-061",
+    "node_name": "Aegis Node 061",
+    "ip_address": "10.42.0.61",
+    "hardware_id_b64": "U04tMTQ0MQ==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T01:01:00Z",
+    "is_infected": false,
+    "user_agent": "61 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-062",
+    "node_name": "Aegis Node 062",
+    "ip_address": "10.42.0.62",
+    "hardware_id_b64": "U04tMzA2MA==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T01:02:00Z",
+    "is_infected": false,
+    "user_agent": "62 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-063",
+    "node_name": "Aegis Node 063",
+    "ip_address": "10.42.0.63",
+    "hardware_id_b64": "U04tMTM3Ng==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T01:03:00Z",
+    "is_infected": true,
+    "user_agent": "63 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-064",
+    "node_name": "Aegis Node 064",
+    "ip_address": "10.42.0.64",
+    "hardware_id_b64": "U04tMjcxNw==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T01:04:00Z",
+    "is_infected": false,
+    "user_agent": "64 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-065",
+    "node_name": "Aegis Node 065",
+    "ip_address": "10.42.0.65",
+    "hardware_id_b64": "U04tMjI4MA==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T01:05:00Z",
+    "is_infected": false,
+    "user_agent": "65 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-066",
+    "node_name": "Aegis Node 066",
+    "ip_address": "10.42.0.66",
+    "hardware_id_b64": "U04tMjI3MQ==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T01:06:00Z",
+    "is_infected": true,
+    "user_agent": "66 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-067",
+    "node_name": "Aegis Node 067",
+    "ip_address": "10.42.0.67",
+    "hardware_id_b64": "U04tMzE0Mg==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T01:07:00Z",
+    "is_infected": false,
+    "user_agent": "67 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-068",
+    "node_name": "Aegis Node 068",
+    "ip_address": "10.42.0.68",
+    "hardware_id_b64": "U04tNDI1Ng==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T01:08:00Z",
+    "is_infected": false,
+    "user_agent": "68 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-069",
+    "node_name": "Aegis Node 069",
+    "ip_address": "10.42.0.69",
+    "hardware_id_b64": "U04tNzA1Nw==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T01:09:00Z",
+    "is_infected": false,
+    "user_agent": "69 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-070",
+    "node_name": "Aegis Node 070",
+    "ip_address": "10.42.0.70",
+    "hardware_id_b64": "U04tNjU5OA==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T01:10:00Z",
+    "is_infected": false,
+    "user_agent": "70 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-071",
+    "node_name": "Aegis Node 071",
+    "ip_address": "10.42.0.71",
+    "hardware_id_b64": "U04tMjQ1NA==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T01:11:00Z",
+    "is_infected": false,
+    "user_agent": "71 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-072",
+    "node_name": "Aegis Node 072",
+    "ip_address": "10.42.0.72",
+    "hardware_id_b64": "U04tMTkwMg==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T01:12:00Z",
+    "is_infected": false,
+    "user_agent": "72 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-073",
+    "node_name": "Aegis Node 073",
+    "ip_address": "10.42.0.73",
+    "hardware_id_b64": "U04tMjgzMA==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T01:13:00Z",
+    "is_infected": false,
+    "user_agent": "73 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-074",
+    "node_name": "Aegis Node 074",
+    "ip_address": "10.42.0.74",
+    "hardware_id_b64": "U04tODE0Nw==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T01:14:00Z",
+    "is_infected": false,
+    "user_agent": "74 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-075",
+    "node_name": "Aegis Node 075",
+    "ip_address": "10.42.0.75",
+    "hardware_id_b64": "U04tMTkzMQ==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T01:15:00Z",
+    "is_infected": false,
+    "user_agent": "75 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-076",
+    "node_name": "Aegis Node 076",
+    "ip_address": "10.42.0.76",
+    "hardware_id_b64": "U04tNzI0OQ==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T01:16:00Z",
+    "is_infected": false,
+    "user_agent": "76 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-077",
+    "node_name": "Aegis Node 077",
+    "ip_address": "10.42.0.77",
+    "hardware_id_b64": "U04tNTc5Mw==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T01:17:00Z",
+    "is_infected": false,
+    "user_agent": "77 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-078",
+    "node_name": "Aegis Node 078",
+    "ip_address": "10.42.0.78",
+    "hardware_id_b64": "U04tNjAzOQ==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T01:18:00Z",
+    "is_infected": false,
+    "user_agent": "78 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-079",
+    "node_name": "Aegis Node 079",
+    "ip_address": "10.42.0.79",
+    "hardware_id_b64": "U04tMTY3MQ==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T01:19:00Z",
+    "is_infected": false,
+    "user_agent": "79 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-080",
+    "node_name": "Aegis Node 080",
+    "ip_address": "10.42.0.80",
+    "hardware_id_b64": "U04tMzQ5NA==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T01:20:00Z",
+    "is_infected": true,
+    "user_agent": "80 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-081",
+    "node_name": "Aegis Node 081",
+    "ip_address": "10.42.0.81",
+    "hardware_id_b64": "U04tNDM5NQ==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T01:21:00Z",
+    "is_infected": true,
+    "user_agent": "81 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-082",
+    "node_name": "Aegis Node 082",
+    "ip_address": "10.42.0.82",
+    "hardware_id_b64": "U04tODkzMA==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T01:22:00Z",
+    "is_infected": false,
+    "user_agent": "82 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-083",
+    "node_name": "Aegis Node 083",
+    "ip_address": "10.42.0.83",
+    "hardware_id_b64": "U04tOTc1Ng==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T01:23:00Z",
+    "is_infected": false,
+    "user_agent": "83 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-084",
+    "node_name": "Aegis Node 084",
+    "ip_address": "10.42.0.84",
+    "hardware_id_b64": "U04tNTg0Mg==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T01:24:00Z",
+    "is_infected": false,
+    "user_agent": "84 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-085",
+    "node_name": "Aegis Node 085",
+    "ip_address": "10.42.0.85",
+    "hardware_id_b64": "U04tNjQ2NA==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T01:25:00Z",
+    "is_infected": false,
+    "user_agent": "85 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-086",
+    "node_name": "Aegis Node 086",
+    "ip_address": "10.42.0.86",
+    "hardware_id_b64": "U04tNTMxOQ==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T01:26:00Z",
+    "is_infected": true,
+    "user_agent": "86 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-087",
+    "node_name": "Aegis Node 087",
+    "ip_address": "10.42.0.87",
+    "hardware_id_b64": "U04tNDEzMg==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T01:27:00Z",
+    "is_infected": false,
+    "user_agent": "87 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-088",
+    "node_name": "Aegis Node 088",
+    "ip_address": "10.42.0.88",
+    "hardware_id_b64": "U04tODYzNw==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T01:28:00Z",
+    "is_infected": false,
+    "user_agent": "88 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-089",
+    "node_name": "Aegis Node 089",
+    "ip_address": "10.42.0.89",
+    "hardware_id_b64": "U04tMTMyNw==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T01:29:00Z",
+    "is_infected": false,
+    "user_agent": "89 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-090",
+    "node_name": "Aegis Node 090",
+    "ip_address": "10.42.0.90",
+    "hardware_id_b64": "U04tMTk0Mg==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T01:30:00Z",
+    "is_infected": false,
+    "user_agent": "90 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-091",
+    "node_name": "Aegis Node 091",
+    "ip_address": "10.42.0.91",
+    "hardware_id_b64": "U04tNzgzNg==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T01:31:00Z",
+    "is_infected": false,
+    "user_agent": "91 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-092",
+    "node_name": "Aegis Node 092",
+    "ip_address": "10.42.0.92",
+    "hardware_id_b64": "U04tNzQzOQ==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T01:32:00Z",
+    "is_infected": false,
+    "user_agent": "92 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-093",
+    "node_name": "Aegis Node 093",
+    "ip_address": "10.42.0.93",
+    "hardware_id_b64": "U04tNjY0Mw==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T01:33:00Z",
+    "is_infected": false,
+    "user_agent": "93 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-094",
+    "node_name": "Aegis Node 094",
+    "ip_address": "10.42.0.94",
+    "hardware_id_b64": "U04tOTQyNg==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T01:34:00Z",
+    "is_infected": false,
+    "user_agent": "94 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-095",
+    "node_name": "Aegis Node 095",
+    "ip_address": "10.42.0.95",
+    "hardware_id_b64": "U04tNDIyOQ==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T01:35:00Z",
+    "is_infected": false,
+    "user_agent": "95 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-096",
+    "node_name": "Aegis Node 096",
+    "ip_address": "10.42.0.96",
+    "hardware_id_b64": "U04tNTU0Mw==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T01:36:00Z",
+    "is_infected": false,
+    "user_agent": "96 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-097",
+    "node_name": "Aegis Node 097",
+    "ip_address": "10.42.0.97",
+    "hardware_id_b64": "U04tODk2MA==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T01:37:00Z",
+    "is_infected": false,
+    "user_agent": "97 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-098",
+    "node_name": "Aegis Node 098",
+    "ip_address": "10.42.0.98",
+    "hardware_id_b64": "U04tNTk3Ng==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T01:38:00Z",
+    "is_infected": false,
+    "user_agent": "98 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-099",
+    "node_name": "Aegis Node 099",
+    "ip_address": "10.42.0.99",
+    "hardware_id_b64": "U04tNDA5MQ==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T01:39:00Z",
+    "is_infected": false,
+    "user_agent": "99 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-100",
+    "node_name": "Aegis Node 100",
+    "ip_address": "10.42.0.100",
+    "hardware_id_b64": "U04tNDU1Ng==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T01:40:00Z",
+    "is_infected": false,
+    "user_agent": "100 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-101",
+    "node_name": "Aegis Node 101",
+    "ip_address": "10.42.0.101",
+    "hardware_id_b64": "U04tMTI5Nw==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T01:41:00Z",
+    "is_infected": false,
+    "user_agent": "101 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-102",
+    "node_name": "Aegis Node 102",
+    "ip_address": "10.42.0.102",
+    "hardware_id_b64": "U04tNjg1MA==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T01:42:00Z",
+    "is_infected": false,
+    "user_agent": "102 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-103",
+    "node_name": "Aegis Node 103",
+    "ip_address": "10.42.0.103",
+    "hardware_id_b64": "U04tODA3Nw==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T01:43:00Z",
+    "is_infected": false,
+    "user_agent": "103 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-104",
+    "node_name": "Aegis Node 104",
+    "ip_address": "10.42.0.104",
+    "hardware_id_b64": "U04tNjI3Mg==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T01:44:00Z",
+    "is_infected": false,
+    "user_agent": "104 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-105",
+    "node_name": "Aegis Node 105",
+    "ip_address": "10.42.0.105",
+    "hardware_id_b64": "U04tNDMyNg==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T01:45:00Z",
+    "is_infected": false,
+    "user_agent": "105 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-106",
+    "node_name": "Aegis Node 106",
+    "ip_address": "10.42.0.106",
+    "hardware_id_b64": "U04tNTEyMA==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T01:46:00Z",
+    "is_infected": true,
+    "user_agent": "106 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-107",
+    "node_name": "Aegis Node 107",
+    "ip_address": "10.42.0.107",
+    "hardware_id_b64": "U04tNDE0NQ==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T01:47:00Z",
+    "is_infected": true,
+    "user_agent": "107 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-108",
+    "node_name": "Aegis Node 108",
+    "ip_address": "10.42.0.108",
+    "hardware_id_b64": "U04tODczMQ==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T01:48:00Z",
+    "is_infected": false,
+    "user_agent": "108 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-109",
+    "node_name": "Aegis Node 109",
+    "ip_address": "10.42.0.109",
+    "hardware_id_b64": "U04tMzY1Mw==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T01:49:00Z",
+    "is_infected": false,
+    "user_agent": "109 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-110",
+    "node_name": "Aegis Node 110",
+    "ip_address": "10.42.0.110",
+    "hardware_id_b64": "U04tNzM1Nw==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T01:50:00Z",
+    "is_infected": false,
+    "user_agent": "110 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-111",
+    "node_name": "Aegis Node 111",
+    "ip_address": "10.42.0.111",
+    "hardware_id_b64": "U04tOTE5OA==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T01:51:00Z",
+    "is_infected": false,
+    "user_agent": "111 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-112",
+    "node_name": "Aegis Node 112",
+    "ip_address": "10.42.0.112",
+    "hardware_id_b64": "U04tNjkwOQ==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T01:52:00Z",
+    "is_infected": false,
+    "user_agent": "112 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-113",
+    "node_name": "Aegis Node 113",
+    "ip_address": "10.42.0.113",
+    "hardware_id_b64": "U04tNDcxNg==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T01:53:00Z",
+    "is_infected": false,
+    "user_agent": "113 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-114",
+    "node_name": "Aegis Node 114",
+    "ip_address": "10.42.0.114",
+    "hardware_id_b64": "U04tMjQ4NQ==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T01:54:00Z",
+    "is_infected": true,
+    "user_agent": "114 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-115",
+    "node_name": "Aegis Node 115",
+    "ip_address": "10.42.0.115",
+    "hardware_id_b64": "U04tNTIxNQ==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T01:55:00Z",
+    "is_infected": true,
+    "user_agent": "115 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-116",
+    "node_name": "Aegis Node 116",
+    "ip_address": "10.42.0.116",
+    "hardware_id_b64": "U04tNDEwNA==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T01:56:00Z",
+    "is_infected": false,
+    "user_agent": "116 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-117",
+    "node_name": "Aegis Node 117",
+    "ip_address": "10.42.0.117",
+    "hardware_id_b64": "U04tMTYwMA==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T01:57:00Z",
+    "is_infected": false,
+    "user_agent": "117 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-118",
+    "node_name": "Aegis Node 118",
+    "ip_address": "10.42.0.118",
+    "hardware_id_b64": "U04tNTM4NA==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T01:58:00Z",
+    "is_infected": false,
+    "user_agent": "118 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-119",
+    "node_name": "Aegis Node 119",
+    "ip_address": "10.42.0.119",
+    "hardware_id_b64": "U04tODU5NQ==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T01:59:00Z",
+    "is_infected": false,
+    "user_agent": "119 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-120",
+    "node_name": "Aegis Node 120",
+    "ip_address": "10.42.0.120",
+    "hardware_id_b64": "U04tMjkxMw==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T02:00:00Z",
+    "is_infected": false,
+    "user_agent": "120 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-121",
+    "node_name": "Aegis Node 121",
+    "ip_address": "10.42.0.121",
+    "hardware_id_b64": "U04tNDc4MA==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T02:01:00Z",
+    "is_infected": false,
+    "user_agent": "121 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-122",
+    "node_name": "Aegis Node 122",
+    "ip_address": "10.42.0.122",
+    "hardware_id_b64": "U04tNDc5MQ==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T02:02:00Z",
+    "is_infected": true,
+    "user_agent": "122 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-123",
+    "node_name": "Aegis Node 123",
+    "ip_address": "10.42.0.123",
+    "hardware_id_b64": "U04tNDU5OQ==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T02:03:00Z",
+    "is_infected": false,
+    "user_agent": "123 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-124",
+    "node_name": "Aegis Node 124",
+    "ip_address": "10.42.0.124",
+    "hardware_id_b64": "U04tNzg2Ng==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T02:04:00Z",
+    "is_infected": false,
+    "user_agent": "124 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-125",
+    "node_name": "Aegis Node 125",
+    "ip_address": "10.42.0.125",
+    "hardware_id_b64": "U04tMjQ1MA==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T02:05:00Z",
+    "is_infected": true,
+    "user_agent": "125 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-126",
+    "node_name": "Aegis Node 126",
+    "ip_address": "10.42.0.126",
+    "hardware_id_b64": "U04tMjg3Mg==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T02:06:00Z",
+    "is_infected": false,
+    "user_agent": "126 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-127",
+    "node_name": "Aegis Node 127",
+    "ip_address": "10.42.0.127",
+    "hardware_id_b64": "U04tNTcxMA==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T02:07:00Z",
+    "is_infected": true,
+    "user_agent": "127 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-128",
+    "node_name": "Aegis Node 128",
+    "ip_address": "10.42.0.128",
+    "hardware_id_b64": "U04tNjQ3Mw==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T02:08:00Z",
+    "is_infected": false,
+    "user_agent": "128 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-129",
+    "node_name": "Aegis Node 129",
+    "ip_address": "10.42.0.129",
+    "hardware_id_b64": "U04tNDIzOA==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T02:09:00Z",
+    "is_infected": false,
+    "user_agent": "129 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-130",
+    "node_name": "Aegis Node 130",
+    "ip_address": "10.42.0.130",
+    "hardware_id_b64": "U04tNzgxNg==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T02:10:00Z",
+    "is_infected": false,
+    "user_agent": "130 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-131",
+    "node_name": "Aegis Node 131",
+    "ip_address": "10.42.0.131",
+    "hardware_id_b64": "U04tODI5NA==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T02:11:00Z",
+    "is_infected": false,
+    "user_agent": "131 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-132",
+    "node_name": "Aegis Node 132",
+    "ip_address": "10.42.0.132",
+    "hardware_id_b64": "U04tOTc1MA==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T02:12:00Z",
+    "is_infected": false,
+    "user_agent": "132 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-133",
+    "node_name": "Aegis Node 133",
+    "ip_address": "10.42.0.133",
+    "hardware_id_b64": "U04tMzE5Nw==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T02:13:00Z",
+    "is_infected": false,
+    "user_agent": "133 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-134",
+    "node_name": "Aegis Node 134",
+    "ip_address": "10.42.0.134",
+    "hardware_id_b64": "U04tNDkxNg==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T02:14:00Z",
+    "is_infected": false,
+    "user_agent": "134 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-135",
+    "node_name": "Aegis Node 135",
+    "ip_address": "10.42.0.135",
+    "hardware_id_b64": "U04tNjA5NA==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T02:15:00Z",
+    "is_infected": false,
+    "user_agent": "135 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-136",
+    "node_name": "Aegis Node 136",
+    "ip_address": "10.42.0.136",
+    "hardware_id_b64": "U04tNTI1MQ==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T02:16:00Z",
+    "is_infected": false,
+    "user_agent": "136 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-137",
+    "node_name": "Aegis Node 137",
+    "ip_address": "10.42.0.137",
+    "hardware_id_b64": "U04tMzQ5Mw==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T02:17:00Z",
+    "is_infected": false,
+    "user_agent": "137 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-138",
+    "node_name": "Aegis Node 138",
+    "ip_address": "10.42.0.138",
+    "hardware_id_b64": "U04tMjY5MA==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T02:18:00Z",
+    "is_infected": false,
+    "user_agent": "138 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-139",
+    "node_name": "Aegis Node 139",
+    "ip_address": "10.42.0.139",
+    "hardware_id_b64": "U04tMzg1OQ==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T02:19:00Z",
+    "is_infected": false,
+    "user_agent": "139 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-140",
+    "node_name": "Aegis Node 140",
+    "ip_address": "10.42.0.140",
+    "hardware_id_b64": "U04tOTg5NA==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T02:20:00Z",
+    "is_infected": false,
+    "user_agent": "140 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-141",
+    "node_name": "Aegis Node 141",
+    "ip_address": "10.42.0.141",
+    "hardware_id_b64": "U04tODk2MQ==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T02:21:00Z",
+    "is_infected": false,
+    "user_agent": "141 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-142",
+    "node_name": "Aegis Node 142",
+    "ip_address": "10.42.0.142",
+    "hardware_id_b64": "U04tOTc0Mg==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T02:22:00Z",
+    "is_infected": false,
+    "user_agent": "142 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-143",
+    "node_name": "Aegis Node 143",
+    "ip_address": "10.42.0.143",
+    "hardware_id_b64": "U04tOTQzMg==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T02:23:00Z",
+    "is_infected": false,
+    "user_agent": "143 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-144",
+    "node_name": "Aegis Node 144",
+    "ip_address": "10.42.0.144",
+    "hardware_id_b64": "U04tNzQ4Mg==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T02:24:00Z",
+    "is_infected": false,
+    "user_agent": "144 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-145",
+    "node_name": "Aegis Node 145",
+    "ip_address": "10.42.0.145",
+    "hardware_id_b64": "U04tODI1MA==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T02:25:00Z",
+    "is_infected": false,
+    "user_agent": "145 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-146",
+    "node_name": "Aegis Node 146",
+    "ip_address": "10.42.0.146",
+    "hardware_id_b64": "U04tNzkyNA==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T02:26:00Z",
+    "is_infected": false,
+    "user_agent": "146 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-147",
+    "node_name": "Aegis Node 147",
+    "ip_address": "10.42.0.147",
+    "hardware_id_b64": "U04tNzQ2Nw==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T02:27:00Z",
+    "is_infected": false,
+    "user_agent": "147 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-148",
+    "node_name": "Aegis Node 148",
+    "ip_address": "10.42.0.148",
+    "hardware_id_b64": "U04tNzcyMg==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T02:28:00Z",
+    "is_infected": false,
+    "user_agent": "148 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-149",
+    "node_name": "Aegis Node 149",
+    "ip_address": "10.42.0.149",
+    "hardware_id_b64": "U04tMTM0MQ==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T02:29:00Z",
+    "is_infected": false,
+    "user_agent": "149 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-150",
+    "node_name": "Aegis Node 150",
+    "ip_address": "10.42.0.150",
+    "hardware_id_b64": "U04tNDAwNg==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T02:30:00Z",
+    "is_infected": false,
+    "user_agent": "150 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-151",
+    "node_name": "Aegis Node 151",
+    "ip_address": "10.42.0.151",
+    "hardware_id_b64": "U04tNTM1Ng==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T02:31:00Z",
+    "is_infected": true,
+    "user_agent": "151 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-152",
+    "node_name": "Aegis Node 152",
+    "ip_address": "10.42.0.152",
+    "hardware_id_b64": "U04tMjMzMA==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T02:32:00Z",
+    "is_infected": false,
+    "user_agent": "152 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-153",
+    "node_name": "Aegis Node 153",
+    "ip_address": "10.42.0.153",
+    "hardware_id_b64": "U04tNjM5MQ==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T02:33:00Z",
+    "is_infected": false,
+    "user_agent": "153 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-154",
+    "node_name": "Aegis Node 154",
+    "ip_address": "10.42.0.154",
+    "hardware_id_b64": "U04tMjUxMg==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T02:34:00Z",
+    "is_infected": true,
+    "user_agent": "154 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-155",
+    "node_name": "Aegis Node 155",
+    "ip_address": "10.42.0.155",
+    "hardware_id_b64": "U04tNzcxMQ==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T02:35:00Z",
+    "is_infected": false,
+    "user_agent": "155 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-156",
+    "node_name": "Aegis Node 156",
+    "ip_address": "10.42.0.156",
+    "hardware_id_b64": "U04tNDQ3Nw==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T02:36:00Z",
+    "is_infected": false,
+    "user_agent": "156 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-157",
+    "node_name": "Aegis Node 157",
+    "ip_address": "10.42.0.157",
+    "hardware_id_b64": "U04tNTkwNw==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T02:37:00Z",
+    "is_infected": false,
+    "user_agent": "157 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-158",
+    "node_name": "Aegis Node 158",
+    "ip_address": "10.42.0.158",
+    "hardware_id_b64": "U04tNjIwOA==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T02:38:00Z",
+    "is_infected": false,
+    "user_agent": "158 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-159",
+    "node_name": "Aegis Node 159",
+    "ip_address": "10.42.0.159",
+    "hardware_id_b64": "U04tNjA0Mg==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T02:39:00Z",
+    "is_infected": true,
+    "user_agent": "159 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-160",
+    "node_name": "Aegis Node 160",
+    "ip_address": "10.42.0.160",
+    "hardware_id_b64": "U04tODI5Ng==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T02:40:00Z",
+    "is_infected": false,
+    "user_agent": "160 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-161",
+    "node_name": "Aegis Node 161",
+    "ip_address": "10.42.0.161",
+    "hardware_id_b64": "U04tMjU3OQ==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T02:41:00Z",
+    "is_infected": false,
+    "user_agent": "161 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-162",
+    "node_name": "Aegis Node 162",
+    "ip_address": "10.42.0.162",
+    "hardware_id_b64": "U04tMTI0OQ==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T02:42:00Z",
+    "is_infected": false,
+    "user_agent": "162 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-163",
+    "node_name": "Aegis Node 163",
+    "ip_address": "10.42.0.163",
+    "hardware_id_b64": "U04tODAwNw==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T02:43:00Z",
+    "is_infected": true,
+    "user_agent": "163 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-164",
+    "node_name": "Aegis Node 164",
+    "ip_address": "10.42.0.164",
+    "hardware_id_b64": "U04tNDg5Ng==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T02:44:00Z",
+    "is_infected": false,
+    "user_agent": "164 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-165",
+    "node_name": "Aegis Node 165",
+    "ip_address": "10.42.0.165",
+    "hardware_id_b64": "U04tMjYyNA==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T02:45:00Z",
+    "is_infected": false,
+    "user_agent": "165 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-166",
+    "node_name": "Aegis Node 166",
+    "ip_address": "10.42.0.166",
+    "hardware_id_b64": "U04tMTU3Nw==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T02:46:00Z",
+    "is_infected": false,
+    "user_agent": "166 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-167",
+    "node_name": "Aegis Node 167",
+    "ip_address": "10.42.0.167",
+    "hardware_id_b64": "U04tNzYyOQ==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T02:47:00Z",
+    "is_infected": true,
+    "user_agent": "167 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-168",
+    "node_name": "Aegis Node 168",
+    "ip_address": "10.42.0.168",
+    "hardware_id_b64": "U04tNDc0OA==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T02:48:00Z",
+    "is_infected": false,
+    "user_agent": "168 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-169",
+    "node_name": "Aegis Node 169",
+    "ip_address": "10.42.0.169",
+    "hardware_id_b64": "U04tNjMwNw==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T02:49:00Z",
+    "is_infected": false,
+    "user_agent": "169 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-170",
+    "node_name": "Aegis Node 170",
+    "ip_address": "10.42.0.170",
+    "hardware_id_b64": "U04tNjM1Ng==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T02:50:00Z",
+    "is_infected": false,
+    "user_agent": "170 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-171",
+    "node_name": "Aegis Node 171",
+    "ip_address": "10.42.0.171",
+    "hardware_id_b64": "U04tNTI5Mg==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T02:51:00Z",
+    "is_infected": false,
+    "user_agent": "171 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-172",
+    "node_name": "Aegis Node 172",
+    "ip_address": "10.42.0.172",
+    "hardware_id_b64": "U04tNjMzMQ==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T02:52:00Z",
+    "is_infected": false,
+    "user_agent": "172 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-173",
+    "node_name": "Aegis Node 173",
+    "ip_address": "10.42.0.173",
+    "hardware_id_b64": "U04tNTAzMg==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T02:53:00Z",
+    "is_infected": false,
+    "user_agent": "173 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-174",
+    "node_name": "Aegis Node 174",
+    "ip_address": "10.42.0.174",
+    "hardware_id_b64": "U04tNzQ5Nw==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T02:54:00Z",
+    "is_infected": true,
+    "user_agent": "174 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-175",
+    "node_name": "Aegis Node 175",
+    "ip_address": "10.42.0.175",
+    "hardware_id_b64": "U04tMjQ4Mw==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T02:55:00Z",
+    "is_infected": false,
+    "user_agent": "175 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-176",
+    "node_name": "Aegis Node 176",
+    "ip_address": "10.42.0.176",
+    "hardware_id_b64": "U04tMjc4NA==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T02:56:00Z",
+    "is_infected": true,
+    "user_agent": "176 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-177",
+    "node_name": "Aegis Node 177",
+    "ip_address": "10.42.0.177",
+    "hardware_id_b64": "U04tNjEwNA==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T02:57:00Z",
+    "is_infected": false,
+    "user_agent": "177 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-178",
+    "node_name": "Aegis Node 178",
+    "ip_address": "10.42.0.178",
+    "hardware_id_b64": "U04tNTQ5Nw==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T02:58:00Z",
+    "is_infected": false,
+    "user_agent": "178 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-179",
+    "node_name": "Aegis Node 179",
+    "ip_address": "10.42.0.179",
+    "hardware_id_b64": "U04tMzc2NQ==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T02:59:00Z",
+    "is_infected": false,
+    "user_agent": "179 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-180",
+    "node_name": "Aegis Node 180",
+    "ip_address": "10.42.0.180",
+    "hardware_id_b64": "U04tNDAyNw==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T03:00:00Z",
+    "is_infected": true,
+    "user_agent": "180 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-181",
+    "node_name": "Aegis Node 181",
+    "ip_address": "10.42.0.181",
+    "hardware_id_b64": "U04tODcyMQ==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T03:01:00Z",
+    "is_infected": false,
+    "user_agent": "181 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-182",
+    "node_name": "Aegis Node 182",
+    "ip_address": "10.42.0.182",
+    "hardware_id_b64": "U04tNjMwOA==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T03:02:00Z",
+    "is_infected": true,
+    "user_agent": "182 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-183",
+    "node_name": "Aegis Node 183",
+    "ip_address": "10.42.0.183",
+    "hardware_id_b64": "U04tNjQ0NQ==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T03:03:00Z",
+    "is_infected": false,
+    "user_agent": "183 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-184",
+    "node_name": "Aegis Node 184",
+    "ip_address": "10.42.0.184",
+    "hardware_id_b64": "U04tMjk0Mw==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T03:04:00Z",
+    "is_infected": false,
+    "user_agent": "184 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-185",
+    "node_name": "Aegis Node 185",
+    "ip_address": "10.42.0.185",
+    "hardware_id_b64": "U04tMTA0Ng==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T03:05:00Z",
+    "is_infected": false,
+    "user_agent": "185 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-186",
+    "node_name": "Aegis Node 186",
+    "ip_address": "10.42.0.186",
+    "hardware_id_b64": "U04tOTkyNg==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T03:06:00Z",
+    "is_infected": false,
+    "user_agent": "186 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-187",
+    "node_name": "Aegis Node 187",
+    "ip_address": "10.42.0.187",
+    "hardware_id_b64": "U04tMjUyOA==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T03:07:00Z",
+    "is_infected": false,
+    "user_agent": "187 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-188",
+    "node_name": "Aegis Node 188",
+    "ip_address": "10.42.0.188",
+    "hardware_id_b64": "U04tOTIwMw==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T03:08:00Z",
+    "is_infected": true,
+    "user_agent": "188 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-189",
+    "node_name": "Aegis Node 189",
+    "ip_address": "10.42.0.189",
+    "hardware_id_b64": "U04tODE5Nw==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T03:09:00Z",
+    "is_infected": false,
+    "user_agent": "189 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-190",
+    "node_name": "Aegis Node 190",
+    "ip_address": "10.42.0.190",
+    "hardware_id_b64": "U04tMTAxMg==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T03:10:00Z",
+    "is_infected": false,
+    "user_agent": "190 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-191",
+    "node_name": "Aegis Node 191",
+    "ip_address": "10.42.0.191",
+    "hardware_id_b64": "U04tNzU3MA==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T03:11:00Z",
+    "is_infected": false,
+    "user_agent": "191 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-192",
+    "node_name": "Aegis Node 192",
+    "ip_address": "10.42.0.192",
+    "hardware_id_b64": "U04tNTYzNA==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T03:12:00Z",
+    "is_infected": false,
+    "user_agent": "192 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-193",
+    "node_name": "Aegis Node 193",
+    "ip_address": "10.42.0.193",
+    "hardware_id_b64": "U04tODkyMQ==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T03:13:00Z",
+    "is_infected": true,
+    "user_agent": "193 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-194",
+    "node_name": "Aegis Node 194",
+    "ip_address": "10.42.0.194",
+    "hardware_id_b64": "U04tOTE2OQ==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T03:14:00Z",
+    "is_infected": false,
+    "user_agent": "194 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-195",
+    "node_name": "Aegis Node 195",
+    "ip_address": "10.42.0.195",
+    "hardware_id_b64": "U04tNTI5MA==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T03:15:00Z",
+    "is_infected": true,
+    "user_agent": "195 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-196",
+    "node_name": "Aegis Node 196",
+    "ip_address": "10.42.0.196",
+    "hardware_id_b64": "U04tODAwNQ==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T03:16:00Z",
+    "is_infected": true,
+    "user_agent": "196 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-197",
+    "node_name": "Aegis Node 197",
+    "ip_address": "10.42.0.197",
+    "hardware_id_b64": "U04tMTMxNg==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T03:17:00Z",
+    "is_infected": false,
+    "user_agent": "197 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-198",
+    "node_name": "Aegis Node 198",
+    "ip_address": "10.42.0.198",
+    "hardware_id_b64": "U04tNDcyNg==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T03:18:00Z",
+    "is_infected": false,
+    "user_agent": "198 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-199",
+    "node_name": "Aegis Node 199",
+    "ip_address": "10.42.0.199",
+    "hardware_id_b64": "U04tNjkwMw==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T03:19:00Z",
+    "is_infected": false,
+    "user_agent": "199 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-200",
+    "node_name": "Aegis Node 200",
+    "ip_address": "10.42.0.200",
+    "hardware_id_b64": "U04tNzU0Mw==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T03:20:00Z",
+    "is_infected": false,
+    "user_agent": "200 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-201",
+    "node_name": "Aegis Node 201",
+    "ip_address": "10.42.0.201",
+    "hardware_id_b64": "U04tNzIzNQ==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T03:21:00Z",
+    "is_infected": true,
+    "user_agent": "201 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-202",
+    "node_name": "Aegis Node 202",
+    "ip_address": "10.42.0.202",
+    "hardware_id_b64": "U04tMjAzMg==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T03:22:00Z",
+    "is_infected": false,
+    "user_agent": "202 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-203",
+    "node_name": "Aegis Node 203",
+    "ip_address": "10.42.0.203",
+    "hardware_id_b64": "U04tMTAzMA==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T03:23:00Z",
+    "is_infected": false,
+    "user_agent": "203 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-204",
+    "node_name": "Aegis Node 204",
+    "ip_address": "10.42.0.204",
+    "hardware_id_b64": "U04tMTQ5OA==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T03:24:00Z",
+    "is_infected": false,
+    "user_agent": "204 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-205",
+    "node_name": "Aegis Node 205",
+    "ip_address": "10.42.0.205",
+    "hardware_id_b64": "U04tNjkxMA==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T03:25:00Z",
+    "is_infected": false,
+    "user_agent": "205 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-206",
+    "node_name": "Aegis Node 206",
+    "ip_address": "10.42.0.206",
+    "hardware_id_b64": "U04tNTc2OQ==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T03:26:00Z",
+    "is_infected": false,
+    "user_agent": "206 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-207",
+    "node_name": "Aegis Node 207",
+    "ip_address": "10.42.0.207",
+    "hardware_id_b64": "U04tNDkwOA==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T03:27:00Z",
+    "is_infected": false,
+    "user_agent": "207 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-208",
+    "node_name": "Aegis Node 208",
+    "ip_address": "10.42.0.208",
+    "hardware_id_b64": "U04tODExMw==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T03:28:00Z",
+    "is_infected": false,
+    "user_agent": "208 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-209",
+    "node_name": "Aegis Node 209",
+    "ip_address": "10.42.0.209",
+    "hardware_id_b64": "U04tNzgxNg==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T03:29:00Z",
+    "is_infected": false,
+    "user_agent": "209 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-210",
+    "node_name": "Aegis Node 210",
+    "ip_address": "10.42.0.210",
+    "hardware_id_b64": "U04tNjQxOA==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T03:30:00Z",
+    "is_infected": false,
+    "user_agent": "210 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-211",
+    "node_name": "Aegis Node 211",
+    "ip_address": "10.42.0.211",
+    "hardware_id_b64": "U04tNDI2OQ==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T03:31:00Z",
+    "is_infected": false,
+    "user_agent": "211 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-212",
+    "node_name": "Aegis Node 212",
+    "ip_address": "10.42.0.212",
+    "hardware_id_b64": "U04tMTM1Mw==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T03:32:00Z",
+    "is_infected": false,
+    "user_agent": "212 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-213",
+    "node_name": "Aegis Node 213",
+    "ip_address": "10.42.0.213",
+    "hardware_id_b64": "U04tMTA0OQ==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T03:33:00Z",
+    "is_infected": false,
+    "user_agent": "213 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-214",
+    "node_name": "Aegis Node 214",
+    "ip_address": "10.42.0.214",
+    "hardware_id_b64": "U04tMzI5Mg==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T03:34:00Z",
+    "is_infected": false,
+    "user_agent": "214 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-215",
+    "node_name": "Aegis Node 215",
+    "ip_address": "10.42.0.215",
+    "hardware_id_b64": "U04tMzY5Mw==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T03:35:00Z",
+    "is_infected": false,
+    "user_agent": "215 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-216",
+    "node_name": "Aegis Node 216",
+    "ip_address": "10.42.0.216",
+    "hardware_id_b64": "U04tNDYxNw==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T03:36:00Z",
+    "is_infected": false,
+    "user_agent": "216 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-217",
+    "node_name": "Aegis Node 217",
+    "ip_address": "10.42.0.217",
+    "hardware_id_b64": "U04tMTAwOA==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T03:37:00Z",
+    "is_infected": false,
+    "user_agent": "217 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-218",
+    "node_name": "Aegis Node 218",
+    "ip_address": "10.42.0.218",
+    "hardware_id_b64": "U04tNzc5Mg==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T03:38:00Z",
+    "is_infected": false,
+    "user_agent": "218 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-219",
+    "node_name": "Aegis Node 219",
+    "ip_address": "10.42.0.219",
+    "hardware_id_b64": "U04tMTI3Ng==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T03:39:00Z",
+    "is_infected": false,
+    "user_agent": "219 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-220",
+    "node_name": "Aegis Node 220",
+    "ip_address": "10.42.0.220",
+    "hardware_id_b64": "U04tNjkzOA==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T03:40:00Z",
+    "is_infected": false,
+    "user_agent": "220 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-221",
+    "node_name": "Aegis Node 221",
+    "ip_address": "10.42.0.221",
+    "hardware_id_b64": "U04tNTM5MQ==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T03:41:00Z",
+    "is_infected": false,
+    "user_agent": "221 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-222",
+    "node_name": "Aegis Node 222",
+    "ip_address": "10.42.0.222",
+    "hardware_id_b64": "U04tOTA4MA==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T03:42:00Z",
+    "is_infected": false,
+    "user_agent": "222 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-223",
+    "node_name": "Aegis Node 223",
+    "ip_address": "10.42.0.223",
+    "hardware_id_b64": "U04tOTU0MA==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T03:43:00Z",
+    "is_infected": false,
+    "user_agent": "223 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-224",
+    "node_name": "Aegis Node 224",
+    "ip_address": "10.42.0.224",
+    "hardware_id_b64": "U04tMjg1Nw==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T03:44:00Z",
+    "is_infected": false,
+    "user_agent": "224 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-225",
+    "node_name": "Aegis Node 225",
+    "ip_address": "10.42.0.225",
+    "hardware_id_b64": "U04tMTY5NQ==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T03:45:00Z",
+    "is_infected": true,
+    "user_agent": "225 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-226",
+    "node_name": "Aegis Node 226",
+    "ip_address": "10.42.0.226",
+    "hardware_id_b64": "U04tMjc4MQ==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T03:46:00Z",
+    "is_infected": false,
+    "user_agent": "226 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-227",
+    "node_name": "Aegis Node 227",
+    "ip_address": "10.42.0.227",
+    "hardware_id_b64": "U04tNjQ3NQ==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T03:47:00Z",
+    "is_infected": false,
+    "user_agent": "227 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-228",
+    "node_name": "Aegis Node 228",
+    "ip_address": "10.42.0.228",
+    "hardware_id_b64": "U04tMTkzMQ==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T03:48:00Z",
+    "is_infected": false,
+    "user_agent": "228 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-229",
+    "node_name": "Aegis Node 229",
+    "ip_address": "10.42.0.229",
+    "hardware_id_b64": "U04tMTI1Mw==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T03:49:00Z",
+    "is_infected": true,
+    "user_agent": "229 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-230",
+    "node_name": "Aegis Node 230",
+    "ip_address": "10.42.0.230",
+    "hardware_id_b64": "U04tNjIyNw==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T03:50:00Z",
+    "is_infected": false,
+    "user_agent": "230 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-231",
+    "node_name": "Aegis Node 231",
+    "ip_address": "10.42.0.231",
+    "hardware_id_b64": "U04tNTk3MQ==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T03:51:00Z",
+    "is_infected": false,
+    "user_agent": "231 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-232",
+    "node_name": "Aegis Node 232",
+    "ip_address": "10.42.0.232",
+    "hardware_id_b64": "U04tMzcyMQ==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T03:52:00Z",
+    "is_infected": false,
+    "user_agent": "232 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-233",
+    "node_name": "Aegis Node 233",
+    "ip_address": "10.42.0.233",
+    "hardware_id_b64": "U04tMzg2NA==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T03:53:00Z",
+    "is_infected": false,
+    "user_agent": "233 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-234",
+    "node_name": "Aegis Node 234",
+    "ip_address": "10.42.0.234",
+    "hardware_id_b64": "U04tNzMyNA==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T03:54:00Z",
+    "is_infected": false,
+    "user_agent": "234 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-235",
+    "node_name": "Aegis Node 235",
+    "ip_address": "10.42.0.235",
+    "hardware_id_b64": "U04tODg0MA==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T03:55:00Z",
+    "is_infected": false,
+    "user_agent": "235 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-236",
+    "node_name": "Aegis Node 236",
+    "ip_address": "10.42.0.236",
+    "hardware_id_b64": "U04tMTI2OA==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T03:56:00Z",
+    "is_infected": true,
+    "user_agent": "236 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-237",
+    "node_name": "Aegis Node 237",
+    "ip_address": "10.42.0.237",
+    "hardware_id_b64": "U04tNzI3OQ==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T03:57:00Z",
+    "is_infected": false,
+    "user_agent": "237 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-238",
+    "node_name": "Aegis Node 238",
+    "ip_address": "10.42.0.238",
+    "hardware_id_b64": "U04tNDY2MQ==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T03:58:00Z",
+    "is_infected": true,
+    "user_agent": "238 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-239",
+    "node_name": "Aegis Node 239",
+    "ip_address": "10.42.0.239",
+    "hardware_id_b64": "U04tOTM4Ng==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T03:59:00Z",
+    "is_infected": false,
+    "user_agent": "239 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-240",
+    "node_name": "Aegis Node 240",
+    "ip_address": "10.42.0.240",
+    "hardware_id_b64": "U04tNTUwOA==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T04:00:00Z",
+    "is_infected": false,
+    "user_agent": "240 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-241",
+    "node_name": "Aegis Node 241",
+    "ip_address": "10.42.0.241",
+    "hardware_id_b64": "U04tMTEwMw==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T04:01:00Z",
+    "is_infected": false,
+    "user_agent": "241 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-242",
+    "node_name": "Aegis Node 242",
+    "ip_address": "10.42.0.242",
+    "hardware_id_b64": "U04tNzA4Nw==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T04:02:00Z",
+    "is_infected": false,
+    "user_agent": "242 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-243",
+    "node_name": "Aegis Node 243",
+    "ip_address": "10.42.0.243",
+    "hardware_id_b64": "U04tMTMzNw==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T04:03:00Z",
+    "is_infected": false,
+    "user_agent": "243 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-244",
+    "node_name": "Aegis Node 244",
+    "ip_address": "10.42.0.244",
+    "hardware_id_b64": "U04tOTA0Mw==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T04:04:00Z",
+    "is_infected": false,
+    "user_agent": "244 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-245",
+    "node_name": "Aegis Node 245",
+    "ip_address": "10.42.0.245",
+    "hardware_id_b64": "U04tMjY0OQ==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T04:05:00Z",
+    "is_infected": false,
+    "user_agent": "245 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-246",
+    "node_name": "Aegis Node 246",
+    "ip_address": "10.42.0.246",
+    "hardware_id_b64": "U04tMzc5OQ==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T04:06:00Z",
+    "is_infected": true,
+    "user_agent": "246 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-247",
+    "node_name": "Aegis Node 247",
+    "ip_address": "10.42.0.247",
+    "hardware_id_b64": "U04tNjQwMA==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T04:07:00Z",
+    "is_infected": false,
+    "user_agent": "247 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-248",
+    "node_name": "Aegis Node 248",
+    "ip_address": "10.42.0.248",
+    "hardware_id_b64": "U04tODk2MA==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T04:08:00Z",
+    "is_infected": false,
+    "user_agent": "248 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-249",
+    "node_name": "Aegis Node 249",
+    "ip_address": "10.42.0.249",
+    "hardware_id_b64": "U04tNjg2Ng==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T04:09:00Z",
+    "is_infected": false,
+    "user_agent": "249 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-250",
+    "node_name": "Aegis Node 250",
+    "ip_address": "10.42.0.250",
+    "hardware_id_b64": "U04tMjU5Ng==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T04:10:00Z",
+    "is_infected": false,
+    "user_agent": "250 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-251",
+    "node_name": "Aegis Node 251",
+    "ip_address": "10.42.0.251",
+    "hardware_id_b64": "U04tMzE2NQ==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T04:11:00Z",
+    "is_infected": false,
+    "user_agent": "251 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-252",
+    "node_name": "Aegis Node 252",
+    "ip_address": "10.42.0.252",
+    "hardware_id_b64": "U04tNjk4Mg==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T04:12:00Z",
+    "is_infected": false,
+    "user_agent": "252 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-253",
+    "node_name": "Aegis Node 253",
+    "ip_address": "10.42.0.253",
+    "hardware_id_b64": "U04tOTMwMw==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T04:13:00Z",
+    "is_infected": false,
+    "user_agent": "253 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-254",
+    "node_name": "Aegis Node 254",
+    "ip_address": "10.42.0.254",
+    "hardware_id_b64": "U04tMjY0Mg==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T04:14:00Z",
+    "is_infected": false,
+    "user_agent": "254 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-255",
+    "node_name": "Aegis Node 255",
+    "ip_address": "10.42.0.255",
+    "hardware_id_b64": "U04tNjM1NA==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T04:15:00Z",
+    "is_infected": false,
+    "user_agent": "255 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-256",
+    "node_name": "Aegis Node 256",
+    "ip_address": "10.42.1.0",
+    "hardware_id_b64": "U04tOTc1MQ==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T04:16:00Z",
+    "is_infected": false,
+    "user_agent": "256 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-257",
+    "node_name": "Aegis Node 257",
+    "ip_address": "10.42.1.1",
+    "hardware_id_b64": "U04tMTE5Mg==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T04:17:00Z",
+    "is_infected": false,
+    "user_agent": "257 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-258",
+    "node_name": "Aegis Node 258",
+    "ip_address": "10.42.1.2",
+    "hardware_id_b64": "U04tMjEwNg==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T04:18:00Z",
+    "is_infected": false,
+    "user_agent": "258 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-259",
+    "node_name": "Aegis Node 259",
+    "ip_address": "10.42.1.3",
+    "hardware_id_b64": "U04tNjA0Mw==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T04:19:00Z",
+    "is_infected": false,
+    "user_agent": "259 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-260",
+    "node_name": "Aegis Node 260",
+    "ip_address": "10.42.1.4",
+    "hardware_id_b64": "U04tNjE0OQ==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T04:20:00Z",
+    "is_infected": false,
+    "user_agent": "260 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-261",
+    "node_name": "Aegis Node 261",
+    "ip_address": "10.42.1.5",
+    "hardware_id_b64": "U04tOTA3NA==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T04:21:00Z",
+    "is_infected": false,
+    "user_agent": "261 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-262",
+    "node_name": "Aegis Node 262",
+    "ip_address": "10.42.1.6",
+    "hardware_id_b64": "U04tMTkxMg==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T04:22:00Z",
+    "is_infected": false,
+    "user_agent": "262 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-263",
+    "node_name": "Aegis Node 263",
+    "ip_address": "10.42.1.7",
+    "hardware_id_b64": "U04tNzIwNg==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T04:23:00Z",
+    "is_infected": true,
+    "user_agent": "263 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-264",
+    "node_name": "Aegis Node 264",
+    "ip_address": "10.42.1.8",
+    "hardware_id_b64": "U04tMjIxMQ==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T04:24:00Z",
+    "is_infected": false,
+    "user_agent": "264 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-265",
+    "node_name": "Aegis Node 265",
+    "ip_address": "10.42.1.9",
+    "hardware_id_b64": "U04tMjA2OA==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T04:25:00Z",
+    "is_infected": false,
+    "user_agent": "265 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-266",
+    "node_name": "Aegis Node 266",
+    "ip_address": "10.42.1.10",
+    "hardware_id_b64": "U04tMzc2NA==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T04:26:00Z",
+    "is_infected": false,
+    "user_agent": "266 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-267",
+    "node_name": "Aegis Node 267",
+    "ip_address": "10.42.1.11",
+    "hardware_id_b64": "U04tNTM1Mg==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T04:27:00Z",
+    "is_infected": false,
+    "user_agent": "267 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-268",
+    "node_name": "Aegis Node 268",
+    "ip_address": "10.42.1.12",
+    "hardware_id_b64": "U04tNjI3MQ==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T04:28:00Z",
+    "is_infected": false,
+    "user_agent": "268 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-269",
+    "node_name": "Aegis Node 269",
+    "ip_address": "10.42.1.13",
+    "hardware_id_b64": "U04tOTU0OA==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T04:29:00Z",
+    "is_infected": false,
+    "user_agent": "269 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-270",
+    "node_name": "Aegis Node 270",
+    "ip_address": "10.42.1.14",
+    "hardware_id_b64": "U04tOTkxMg==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T04:30:00Z",
+    "is_infected": false,
+    "user_agent": "270 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-271",
+    "node_name": "Aegis Node 271",
+    "ip_address": "10.42.1.15",
+    "hardware_id_b64": "U04tOTAyOA==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T04:31:00Z",
+    "is_infected": false,
+    "user_agent": "271 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-272",
+    "node_name": "Aegis Node 272",
+    "ip_address": "10.42.1.16",
+    "hardware_id_b64": "U04tMzYwMA==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T04:32:00Z",
+    "is_infected": false,
+    "user_agent": "272 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-273",
+    "node_name": "Aegis Node 273",
+    "ip_address": "10.42.1.17",
+    "hardware_id_b64": "U04tNDUxNQ==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T04:33:00Z",
+    "is_infected": false,
+    "user_agent": "273 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-274",
+    "node_name": "Aegis Node 274",
+    "ip_address": "10.42.1.18",
+    "hardware_id_b64": "U04tNDg0NA==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T04:34:00Z",
+    "is_infected": true,
+    "user_agent": "274 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-275",
+    "node_name": "Aegis Node 275",
+    "ip_address": "10.42.1.19",
+    "hardware_id_b64": "U04tMjA2OQ==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T04:35:00Z",
+    "is_infected": false,
+    "user_agent": "275 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-276",
+    "node_name": "Aegis Node 276",
+    "ip_address": "10.42.1.20",
+    "hardware_id_b64": "U04tNjI4MQ==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T04:36:00Z",
+    "is_infected": false,
+    "user_agent": "276 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-277",
+    "node_name": "Aegis Node 277",
+    "ip_address": "10.42.1.21",
+    "hardware_id_b64": "U04tNDgyNQ==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T04:37:00Z",
+    "is_infected": false,
+    "user_agent": "277 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-278",
+    "node_name": "Aegis Node 278",
+    "ip_address": "10.42.1.22",
+    "hardware_id_b64": "U04tMjMzNQ==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T04:38:00Z",
+    "is_infected": false,
+    "user_agent": "278 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-279",
+    "node_name": "Aegis Node 279",
+    "ip_address": "10.42.1.23",
+    "hardware_id_b64": "U04tNjk3Mw==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T04:39:00Z",
+    "is_infected": false,
+    "user_agent": "279 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-280",
+    "node_name": "Aegis Node 280",
+    "ip_address": "10.42.1.24",
+    "hardware_id_b64": "U04tNTM3Ng==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T04:40:00Z",
+    "is_infected": false,
+    "user_agent": "280 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-281",
+    "node_name": "Aegis Node 281",
+    "ip_address": "10.42.1.25",
+    "hardware_id_b64": "U04tNDg1Ng==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T04:41:00Z",
+    "is_infected": false,
+    "user_agent": "281 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-282",
+    "node_name": "Aegis Node 282",
+    "ip_address": "10.42.1.26",
+    "hardware_id_b64": "U04tNzUxNw==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T04:42:00Z",
+    "is_infected": false,
+    "user_agent": "282 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-283",
+    "node_name": "Aegis Node 283",
+    "ip_address": "10.42.1.27",
+    "hardware_id_b64": "U04tMTc5MQ==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T04:43:00Z",
+    "is_infected": false,
+    "user_agent": "283 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-284",
+    "node_name": "Aegis Node 284",
+    "ip_address": "10.42.1.28",
+    "hardware_id_b64": "U04tMzA5Mw==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T04:44:00Z",
+    "is_infected": false,
+    "user_agent": "284 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-285",
+    "node_name": "Aegis Node 285",
+    "ip_address": "10.42.1.29",
+    "hardware_id_b64": "U04tNDc3OQ==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T04:45:00Z",
+    "is_infected": false,
+    "user_agent": "285 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-286",
+    "node_name": "Aegis Node 286",
+    "ip_address": "10.42.1.30",
+    "hardware_id_b64": "U04tODY3NQ==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T04:46:00Z",
+    "is_infected": false,
+    "user_agent": "286 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-287",
+    "node_name": "Aegis Node 287",
+    "ip_address": "10.42.1.31",
+    "hardware_id_b64": "U04tNjMwMA==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T04:47:00Z",
+    "is_infected": false,
+    "user_agent": "287 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-288",
+    "node_name": "Aegis Node 288",
+    "ip_address": "10.42.1.32",
+    "hardware_id_b64": "U04tODQxMQ==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T04:48:00Z",
+    "is_infected": true,
+    "user_agent": "288 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-289",
+    "node_name": "Aegis Node 289",
+    "ip_address": "10.42.1.33",
+    "hardware_id_b64": "U04tNTMwMg==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T04:49:00Z",
+    "is_infected": false,
+    "user_agent": "289 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-290",
+    "node_name": "Aegis Node 290",
+    "ip_address": "10.42.1.34",
+    "hardware_id_b64": "U04tNzQ1NQ==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T04:50:00Z",
+    "is_infected": false,
+    "user_agent": "290 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-291",
+    "node_name": "Aegis Node 291",
+    "ip_address": "10.42.1.35",
+    "hardware_id_b64": "U04tNDY3OQ==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T04:51:00Z",
+    "is_infected": false,
+    "user_agent": "291 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-292",
+    "node_name": "Aegis Node 292",
+    "ip_address": "10.42.1.36",
+    "hardware_id_b64": "U04tNzgwOA==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T04:52:00Z",
+    "is_infected": false,
+    "user_agent": "292 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-293",
+    "node_name": "Aegis Node 293",
+    "ip_address": "10.42.1.37",
+    "hardware_id_b64": "U04tODY5Nw==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T04:53:00Z",
+    "is_infected": false,
+    "user_agent": "293 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-294",
+    "node_name": "Aegis Node 294",
+    "ip_address": "10.42.1.38",
+    "hardware_id_b64": "U04tMzY1NQ==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T04:54:00Z",
+    "is_infected": false,
+    "user_agent": "294 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-295",
+    "node_name": "Aegis Node 295",
+    "ip_address": "10.42.1.39",
+    "hardware_id_b64": "U04tMjgxOA==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T04:55:00Z",
+    "is_infected": false,
+    "user_agent": "295 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-296",
+    "node_name": "Aegis Node 296",
+    "ip_address": "10.42.1.40",
+    "hardware_id_b64": "U04tNjc5Mg==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T04:56:00Z",
+    "is_infected": true,
+    "user_agent": "296 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-297",
+    "node_name": "Aegis Node 297",
+    "ip_address": "10.42.1.41",
+    "hardware_id_b64": "U04tNjEyNg==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T04:57:00Z",
+    "is_infected": false,
+    "user_agent": "297 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-298",
+    "node_name": "Aegis Node 298",
+    "ip_address": "10.42.1.42",
+    "hardware_id_b64": "U04tNjA1OA==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T04:58:00Z",
+    "is_infected": false,
+    "user_agent": "298 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-299",
+    "node_name": "Aegis Node 299",
+    "ip_address": "10.42.1.43",
+    "hardware_id_b64": "U04tNjI4NA==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T04:59:00Z",
+    "is_infected": false,
+    "user_agent": "299 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-300",
+    "node_name": "Aegis Node 300",
+    "ip_address": "10.42.1.44",
+    "hardware_id_b64": "U04tODUyMw==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T05:00:00Z",
+    "is_infected": false,
+    "user_agent": "300 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-301",
+    "node_name": "Aegis Node 301",
+    "ip_address": "10.42.1.45",
+    "hardware_id_b64": "U04tNTA1MQ==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T05:01:00Z",
+    "is_infected": false,
+    "user_agent": "301 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-302",
+    "node_name": "Aegis Node 302",
+    "ip_address": "10.42.1.46",
+    "hardware_id_b64": "U04tNjMxMA==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T05:02:00Z",
+    "is_infected": false,
+    "user_agent": "302 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-303",
+    "node_name": "Aegis Node 303",
+    "ip_address": "10.42.1.47",
+    "hardware_id_b64": "U04tNjUxMg==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T05:03:00Z",
+    "is_infected": false,
+    "user_agent": "303 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-304",
+    "node_name": "Aegis Node 304",
+    "ip_address": "10.42.1.48",
+    "hardware_id_b64": "U04tOTkzNQ==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T05:04:00Z",
+    "is_infected": false,
+    "user_agent": "304 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-305",
+    "node_name": "Aegis Node 305",
+    "ip_address": "10.42.1.49",
+    "hardware_id_b64": "U04tMTM1Nw==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T05:05:00Z",
+    "is_infected": false,
+    "user_agent": "305 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-306",
+    "node_name": "Aegis Node 306",
+    "ip_address": "10.42.1.50",
+    "hardware_id_b64": "U04tNTQyNQ==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T05:06:00Z",
+    "is_infected": false,
+    "user_agent": "306 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-307",
+    "node_name": "Aegis Node 307",
+    "ip_address": "10.42.1.51",
+    "hardware_id_b64": "U04tODA3MQ==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T05:07:00Z",
+    "is_infected": false,
+    "user_agent": "307 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-308",
+    "node_name": "Aegis Node 308",
+    "ip_address": "10.42.1.52",
+    "hardware_id_b64": "U04tODc2Nw==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T05:08:00Z",
+    "is_infected": false,
+    "user_agent": "308 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-309",
+    "node_name": "Aegis Node 309",
+    "ip_address": "10.42.1.53",
+    "hardware_id_b64": "U04tMjA3OA==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T05:09:00Z",
+    "is_infected": false,
+    "user_agent": "309 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-310",
+    "node_name": "Aegis Node 310",
+    "ip_address": "10.42.1.54",
+    "hardware_id_b64": "U04tODg1OQ==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T05:10:00Z",
+    "is_infected": false,
+    "user_agent": "310 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-311",
+    "node_name": "Aegis Node 311",
+    "ip_address": "10.42.1.55",
+    "hardware_id_b64": "U04tMTk2OA==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T05:11:00Z",
+    "is_infected": false,
+    "user_agent": "311 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-312",
+    "node_name": "Aegis Node 312",
+    "ip_address": "10.42.1.56",
+    "hardware_id_b64": "U04tMTkzMA==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T05:12:00Z",
+    "is_infected": false,
+    "user_agent": "312 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-313",
+    "node_name": "Aegis Node 313",
+    "ip_address": "10.42.1.57",
+    "hardware_id_b64": "U04tMjM2Ng==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T05:13:00Z",
+    "is_infected": false,
+    "user_agent": "313 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-314",
+    "node_name": "Aegis Node 314",
+    "ip_address": "10.42.1.58",
+    "hardware_id_b64": "U04tNDczNA==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T05:14:00Z",
+    "is_infected": false,
+    "user_agent": "314 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-315",
+    "node_name": "Aegis Node 315",
+    "ip_address": "10.42.1.59",
+    "hardware_id_b64": "U04tNzQxMQ==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T05:15:00Z",
+    "is_infected": false,
+    "user_agent": "315 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-316",
+    "node_name": "Aegis Node 316",
+    "ip_address": "10.42.1.60",
+    "hardware_id_b64": "U04tMjI5OQ==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T05:16:00Z",
+    "is_infected": false,
+    "user_agent": "316 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-317",
+    "node_name": "Aegis Node 317",
+    "ip_address": "10.42.1.61",
+    "hardware_id_b64": "U04tMTUyOA==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T05:17:00Z",
+    "is_infected": false,
+    "user_agent": "317 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-318",
+    "node_name": "Aegis Node 318",
+    "ip_address": "10.42.1.62",
+    "hardware_id_b64": "U04tNjI4Ng==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T05:18:00Z",
+    "is_infected": false,
+    "user_agent": "318 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-319",
+    "node_name": "Aegis Node 319",
+    "ip_address": "10.42.1.63",
+    "hardware_id_b64": "U04tODY0OA==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T05:19:00Z",
+    "is_infected": false,
+    "user_agent": "319 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-320",
+    "node_name": "Aegis Node 320",
+    "ip_address": "10.42.1.64",
+    "hardware_id_b64": "U04tNzMxNA==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T05:20:00Z",
+    "is_infected": false,
+    "user_agent": "320 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-321",
+    "node_name": "Aegis Node 321",
+    "ip_address": "10.42.1.65",
+    "hardware_id_b64": "U04tOTE2Ng==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T05:21:00Z",
+    "is_infected": false,
+    "user_agent": "321 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-322",
+    "node_name": "Aegis Node 322",
+    "ip_address": "10.42.1.66",
+    "hardware_id_b64": "U04tNzM1Mw==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T05:22:00Z",
+    "is_infected": false,
+    "user_agent": "322 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-323",
+    "node_name": "Aegis Node 323",
+    "ip_address": "10.42.1.67",
+    "hardware_id_b64": "U04tNDUxOQ==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T05:23:00Z",
+    "is_infected": false,
+    "user_agent": "323 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-324",
+    "node_name": "Aegis Node 324",
+    "ip_address": "10.42.1.68",
+    "hardware_id_b64": "U04tNjE0MA==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T05:24:00Z",
+    "is_infected": false,
+    "user_agent": "324 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-325",
+    "node_name": "Aegis Node 325",
+    "ip_address": "10.42.1.69",
+    "hardware_id_b64": "U04tNDE0Ng==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T05:25:00Z",
+    "is_infected": false,
+    "user_agent": "325 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-326",
+    "node_name": "Aegis Node 326",
+    "ip_address": "10.42.1.70",
+    "hardware_id_b64": "U04tNjM2MA==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T05:26:00Z",
+    "is_infected": false,
+    "user_agent": "326 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-327",
+    "node_name": "Aegis Node 327",
+    "ip_address": "10.42.1.71",
+    "hardware_id_b64": "U04tODYyOQ==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T05:27:00Z",
+    "is_infected": false,
+    "user_agent": "327 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-328",
+    "node_name": "Aegis Node 328",
+    "ip_address": "10.42.1.72",
+    "hardware_id_b64": "U04tNzU2NQ==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T05:28:00Z",
+    "is_infected": true,
+    "user_agent": "328 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-329",
+    "node_name": "Aegis Node 329",
+    "ip_address": "10.42.1.73",
+    "hardware_id_b64": "U04tNTY2OA==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T05:29:00Z",
+    "is_infected": false,
+    "user_agent": "329 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-330",
+    "node_name": "Aegis Node 330",
+    "ip_address": "10.42.1.74",
+    "hardware_id_b64": "U04tOTMzOQ==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T05:30:00Z",
+    "is_infected": false,
+    "user_agent": "330 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-331",
+    "node_name": "Aegis Node 331",
+    "ip_address": "10.42.1.75",
+    "hardware_id_b64": "U04tNzUzNA==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T05:31:00Z",
+    "is_infected": false,
+    "user_agent": "331 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-332",
+    "node_name": "Aegis Node 332",
+    "ip_address": "10.42.1.76",
+    "hardware_id_b64": "U04tMTExMQ==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T05:32:00Z",
+    "is_infected": false,
+    "user_agent": "332 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-333",
+    "node_name": "Aegis Node 333",
+    "ip_address": "10.42.1.77",
+    "hardware_id_b64": "U04tMjMxOA==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T05:33:00Z",
+    "is_infected": false,
+    "user_agent": "333 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-334",
+    "node_name": "Aegis Node 334",
+    "ip_address": "10.42.1.78",
+    "hardware_id_b64": "U04tODM5OQ==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T05:34:00Z",
+    "is_infected": false,
+    "user_agent": "334 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-335",
+    "node_name": "Aegis Node 335",
+    "ip_address": "10.42.1.79",
+    "hardware_id_b64": "U04tMjY4OQ==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T05:35:00Z",
+    "is_infected": false,
+    "user_agent": "335 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-336",
+    "node_name": "Aegis Node 336",
+    "ip_address": "10.42.1.80",
+    "hardware_id_b64": "U04tNDE0OQ==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T05:36:00Z",
+    "is_infected": false,
+    "user_agent": "336 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-337",
+    "node_name": "Aegis Node 337",
+    "ip_address": "10.42.1.81",
+    "hardware_id_b64": "U04tNjUzNw==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T05:37:00Z",
+    "is_infected": false,
+    "user_agent": "337 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-338",
+    "node_name": "Aegis Node 338",
+    "ip_address": "10.42.1.82",
+    "hardware_id_b64": "U04tNjY2Nw==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T05:38:00Z",
+    "is_infected": true,
+    "user_agent": "338 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-339",
+    "node_name": "Aegis Node 339",
+    "ip_address": "10.42.1.83",
+    "hardware_id_b64": "U04tMTgxOA==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T05:39:00Z",
+    "is_infected": false,
+    "user_agent": "339 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-340",
+    "node_name": "Aegis Node 340",
+    "ip_address": "10.42.1.84",
+    "hardware_id_b64": "U04tMTg5OQ==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T05:40:00Z",
+    "is_infected": false,
+    "user_agent": "340 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-341",
+    "node_name": "Aegis Node 341",
+    "ip_address": "10.42.1.85",
+    "hardware_id_b64": "U04tNzI5MQ==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T05:41:00Z",
+    "is_infected": false,
+    "user_agent": "341 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-342",
+    "node_name": "Aegis Node 342",
+    "ip_address": "10.42.1.86",
+    "hardware_id_b64": "U04tMjcxOA==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T05:42:00Z",
+    "is_infected": false,
+    "user_agent": "342 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-343",
+    "node_name": "Aegis Node 343",
+    "ip_address": "10.42.1.87",
+    "hardware_id_b64": "U04tMjAwOA==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T05:43:00Z",
+    "is_infected": false,
+    "user_agent": "343 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-344",
+    "node_name": "Aegis Node 344",
+    "ip_address": "10.42.1.88",
+    "hardware_id_b64": "U04tNzgwMw==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T05:44:00Z",
+    "is_infected": false,
+    "user_agent": "344 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-345",
+    "node_name": "Aegis Node 345",
+    "ip_address": "10.42.1.89",
+    "hardware_id_b64": "U04tMTUzMQ==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T05:45:00Z",
+    "is_infected": false,
+    "user_agent": "345 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-346",
+    "node_name": "Aegis Node 346",
+    "ip_address": "10.42.1.90",
+    "hardware_id_b64": "U04tOTkwNA==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T05:46:00Z",
+    "is_infected": false,
+    "user_agent": "346 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-347",
+    "node_name": "Aegis Node 347",
+    "ip_address": "10.42.1.91",
+    "hardware_id_b64": "U04tMzE5Mg==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T05:47:00Z",
+    "is_infected": false,
+    "user_agent": "347 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-348",
+    "node_name": "Aegis Node 348",
+    "ip_address": "10.42.1.92",
+    "hardware_id_b64": "U04tMzM1OQ==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T05:48:00Z",
+    "is_infected": false,
+    "user_agent": "348 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-349",
+    "node_name": "Aegis Node 349",
+    "ip_address": "10.42.1.93",
+    "hardware_id_b64": "U04tMjQ4Ng==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T05:49:00Z",
+    "is_infected": false,
+    "user_agent": "349 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-350",
+    "node_name": "Aegis Node 350",
+    "ip_address": "10.42.1.94",
+    "hardware_id_b64": "U04tMzcwMw==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T05:50:00Z",
+    "is_infected": false,
+    "user_agent": "350 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-351",
+    "node_name": "Aegis Node 351",
+    "ip_address": "10.42.1.95",
+    "hardware_id_b64": "U04tMTI0NA==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T05:51:00Z",
+    "is_infected": false,
+    "user_agent": "351 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-352",
+    "node_name": "Aegis Node 352",
+    "ip_address": "10.42.1.96",
+    "hardware_id_b64": "U04tNDM0MA==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T05:52:00Z",
+    "is_infected": false,
+    "user_agent": "352 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-353",
+    "node_name": "Aegis Node 353",
+    "ip_address": "10.42.1.97",
+    "hardware_id_b64": "U04tODk3Mw==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T05:53:00Z",
+    "is_infected": true,
+    "user_agent": "353 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-354",
+    "node_name": "Aegis Node 354",
+    "ip_address": "10.42.1.98",
+    "hardware_id_b64": "U04tNDkwOA==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T05:54:00Z",
+    "is_infected": false,
+    "user_agent": "354 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-355",
+    "node_name": "Aegis Node 355",
+    "ip_address": "10.42.1.99",
+    "hardware_id_b64": "U04tOTk3MQ==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T05:55:00Z",
+    "is_infected": false,
+    "user_agent": "355 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-356",
+    "node_name": "Aegis Node 356",
+    "ip_address": "10.42.1.100",
+    "hardware_id_b64": "U04tOTEwMw==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T05:56:00Z",
+    "is_infected": false,
+    "user_agent": "356 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-357",
+    "node_name": "Aegis Node 357",
+    "ip_address": "10.42.1.101",
+    "hardware_id_b64": "U04tODk2NA==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T05:57:00Z",
+    "is_infected": false,
+    "user_agent": "357 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-358",
+    "node_name": "Aegis Node 358",
+    "ip_address": "10.42.1.102",
+    "hardware_id_b64": "U04tNTY5OA==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T05:58:00Z",
+    "is_infected": false,
+    "user_agent": "358 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-359",
+    "node_name": "Aegis Node 359",
+    "ip_address": "10.42.1.103",
+    "hardware_id_b64": "U04tOTYzMA==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T05:59:00Z",
+    "is_infected": false,
+    "user_agent": "359 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-360",
+    "node_name": "Aegis Node 360",
+    "ip_address": "10.42.1.104",
+    "hardware_id_b64": "U04tNTc4NQ==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T06:00:00Z",
+    "is_infected": false,
+    "user_agent": "360 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-361",
+    "node_name": "Aegis Node 361",
+    "ip_address": "10.42.1.105",
+    "hardware_id_b64": "U04tNTE3Ng==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T06:01:00Z",
+    "is_infected": false,
+    "user_agent": "361 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-362",
+    "node_name": "Aegis Node 362",
+    "ip_address": "10.42.1.106",
+    "hardware_id_b64": "U04tNzMwMg==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T06:02:00Z",
+    "is_infected": true,
+    "user_agent": "362 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-363",
+    "node_name": "Aegis Node 363",
+    "ip_address": "10.42.1.107",
+    "hardware_id_b64": "U04tNTA4OA==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T06:03:00Z",
+    "is_infected": false,
+    "user_agent": "363 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-364",
+    "node_name": "Aegis Node 364",
+    "ip_address": "10.42.1.108",
+    "hardware_id_b64": "U04tMjY2NA==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T06:04:00Z",
+    "is_infected": false,
+    "user_agent": "364 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-365",
+    "node_name": "Aegis Node 365",
+    "ip_address": "10.42.1.109",
+    "hardware_id_b64": "U04tNTQzMA==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T06:05:00Z",
+    "is_infected": false,
+    "user_agent": "365 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-366",
+    "node_name": "Aegis Node 366",
+    "ip_address": "10.42.1.110",
+    "hardware_id_b64": "U04tNTE0OA==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T06:06:00Z",
+    "is_infected": false,
+    "user_agent": "366 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-367",
+    "node_name": "Aegis Node 367",
+    "ip_address": "10.42.1.111",
+    "hardware_id_b64": "U04tMjc4MA==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T06:07:00Z",
+    "is_infected": false,
+    "user_agent": "367 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-368",
+    "node_name": "Aegis Node 368",
+    "ip_address": "10.42.1.112",
+    "hardware_id_b64": "U04tMzU0Ng==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T06:08:00Z",
+    "is_infected": false,
+    "user_agent": "368 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-369",
+    "node_name": "Aegis Node 369",
+    "ip_address": "10.42.1.113",
+    "hardware_id_b64": "U04tMjA2MQ==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T06:09:00Z",
+    "is_infected": false,
+    "user_agent": "369 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-370",
+    "node_name": "Aegis Node 370",
+    "ip_address": "10.42.1.114",
+    "hardware_id_b64": "U04tMjAxNg==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T06:10:00Z",
+    "is_infected": false,
+    "user_agent": "370 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-371",
+    "node_name": "Aegis Node 371",
+    "ip_address": "10.42.1.115",
+    "hardware_id_b64": "U04tNTM4Mw==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T06:11:00Z",
+    "is_infected": false,
+    "user_agent": "371 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-372",
+    "node_name": "Aegis Node 372",
+    "ip_address": "10.42.1.116",
+    "hardware_id_b64": "U04tMjcyOQ==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T06:12:00Z",
+    "is_infected": false,
+    "user_agent": "372 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-373",
+    "node_name": "Aegis Node 373",
+    "ip_address": "10.42.1.117",
+    "hardware_id_b64": "U04tMjMyMA==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T06:13:00Z",
+    "is_infected": false,
+    "user_agent": "373 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-374",
+    "node_name": "Aegis Node 374",
+    "ip_address": "10.42.1.118",
+    "hardware_id_b64": "U04tNzE4OA==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T06:14:00Z",
+    "is_infected": false,
+    "user_agent": "374 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-375",
+    "node_name": "Aegis Node 375",
+    "ip_address": "10.42.1.119",
+    "hardware_id_b64": "U04tMzk4NQ==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T06:15:00Z",
+    "is_infected": false,
+    "user_agent": "375 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-376",
+    "node_name": "Aegis Node 376",
+    "ip_address": "10.42.1.120",
+    "hardware_id_b64": "U04tODMxOA==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T06:16:00Z",
+    "is_infected": false,
+    "user_agent": "376 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-377",
+    "node_name": "Aegis Node 377",
+    "ip_address": "10.42.1.121",
+    "hardware_id_b64": "U04tODIxNA==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T06:17:00Z",
+    "is_infected": false,
+    "user_agent": "377 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-378",
+    "node_name": "Aegis Node 378",
+    "ip_address": "10.42.1.122",
+    "hardware_id_b64": "U04tMzQ3NA==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T06:18:00Z",
+    "is_infected": false,
+    "user_agent": "378 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-379",
+    "node_name": "Aegis Node 379",
+    "ip_address": "10.42.1.123",
+    "hardware_id_b64": "U04tMzY5NA==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T06:19:00Z",
+    "is_infected": true,
+    "user_agent": "379 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-380",
+    "node_name": "Aegis Node 380",
+    "ip_address": "10.42.1.124",
+    "hardware_id_b64": "U04tMzMxNg==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T06:20:00Z",
+    "is_infected": false,
+    "user_agent": "380 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-381",
+    "node_name": "Aegis Node 381",
+    "ip_address": "10.42.1.125",
+    "hardware_id_b64": "U04tMjM1NA==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T06:21:00Z",
+    "is_infected": true,
+    "user_agent": "381 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-382",
+    "node_name": "Aegis Node 382",
+    "ip_address": "10.42.1.126",
+    "hardware_id_b64": "U04tMTUyOA==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T06:22:00Z",
+    "is_infected": false,
+    "user_agent": "382 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-383",
+    "node_name": "Aegis Node 383",
+    "ip_address": "10.42.1.127",
+    "hardware_id_b64": "U04tOTA1NQ==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T06:23:00Z",
+    "is_infected": true,
+    "user_agent": "383 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-384",
+    "node_name": "Aegis Node 384",
+    "ip_address": "10.42.1.128",
+    "hardware_id_b64": "U04tODE1Ng==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T06:24:00Z",
+    "is_infected": false,
+    "user_agent": "384 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-385",
+    "node_name": "Aegis Node 385",
+    "ip_address": "10.42.1.129",
+    "hardware_id_b64": "U04tNzg1NQ==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T06:25:00Z",
+    "is_infected": false,
+    "user_agent": "385 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-386",
+    "node_name": "Aegis Node 386",
+    "ip_address": "10.42.1.130",
+    "hardware_id_b64": "U04tMjM4MQ==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T06:26:00Z",
+    "is_infected": false,
+    "user_agent": "386 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-387",
+    "node_name": "Aegis Node 387",
+    "ip_address": "10.42.1.131",
+    "hardware_id_b64": "U04tNDYzNA==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T06:27:00Z",
+    "is_infected": true,
+    "user_agent": "387 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-388",
+    "node_name": "Aegis Node 388",
+    "ip_address": "10.42.1.132",
+    "hardware_id_b64": "U04tMTg3MA==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T06:28:00Z",
+    "is_infected": false,
+    "user_agent": "388 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-389",
+    "node_name": "Aegis Node 389",
+    "ip_address": "10.42.1.133",
+    "hardware_id_b64": "U04tNzc5Ng==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T06:29:00Z",
+    "is_infected": false,
+    "user_agent": "389 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-390",
+    "node_name": "Aegis Node 390",
+    "ip_address": "10.42.1.134",
+    "hardware_id_b64": "U04tODY3Ng==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T06:30:00Z",
+    "is_infected": false,
+    "user_agent": "390 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-391",
+    "node_name": "Aegis Node 391",
+    "ip_address": "10.42.1.135",
+    "hardware_id_b64": "U04tNTU2Nw==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T06:31:00Z",
+    "is_infected": false,
+    "user_agent": "391 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-392",
+    "node_name": "Aegis Node 392",
+    "ip_address": "10.42.1.136",
+    "hardware_id_b64": "U04tNjY3OQ==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T06:32:00Z",
+    "is_infected": false,
+    "user_agent": "392 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-393",
+    "node_name": "Aegis Node 393",
+    "ip_address": "10.42.1.137",
+    "hardware_id_b64": "U04tNTMzNg==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T06:33:00Z",
+    "is_infected": false,
+    "user_agent": "393 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-394",
+    "node_name": "Aegis Node 394",
+    "ip_address": "10.42.1.138",
+    "hardware_id_b64": "U04tNTA4Ng==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T06:34:00Z",
+    "is_infected": false,
+    "user_agent": "394 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-395",
+    "node_name": "Aegis Node 395",
+    "ip_address": "10.42.1.139",
+    "hardware_id_b64": "U04tMTI5NQ==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T06:35:00Z",
+    "is_infected": false,
+    "user_agent": "395 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-396",
+    "node_name": "Aegis Node 396",
+    "ip_address": "10.42.1.140",
+    "hardware_id_b64": "U04tMjMzOA==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T06:36:00Z",
+    "is_infected": false,
+    "user_agent": "396 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-397",
+    "node_name": "Aegis Node 397",
+    "ip_address": "10.42.1.141",
+    "hardware_id_b64": "U04tNjc3OA==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T06:37:00Z",
+    "is_infected": true,
+    "user_agent": "397 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-398",
+    "node_name": "Aegis Node 398",
+    "ip_address": "10.42.1.142",
+    "hardware_id_b64": "U04tNjI1Nw==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T06:38:00Z",
+    "is_infected": false,
+    "user_agent": "398 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-399",
+    "node_name": "Aegis Node 399",
+    "ip_address": "10.42.1.143",
+    "hardware_id_b64": "U04tNDAwNQ==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T06:39:00Z",
+    "is_infected": true,
+    "user_agent": "399 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-400",
+    "node_name": "Aegis Node 400",
+    "ip_address": "10.42.1.144",
+    "hardware_id_b64": "U04tNzY4Mw==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T06:40:00Z",
+    "is_infected": false,
+    "user_agent": "400 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-401",
+    "node_name": "Aegis Node 401",
+    "ip_address": "10.42.1.145",
+    "hardware_id_b64": "U04tMTE3MQ==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T06:41:00Z",
+    "is_infected": false,
+    "user_agent": "401 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-402",
+    "node_name": "Aegis Node 402",
+    "ip_address": "10.42.1.146",
+    "hardware_id_b64": "U04tNzc2MA==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T06:42:00Z",
+    "is_infected": false,
+    "user_agent": "402 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-403",
+    "node_name": "Aegis Node 403",
+    "ip_address": "10.42.1.147",
+    "hardware_id_b64": "U04tNzY2OA==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T06:43:00Z",
+    "is_infected": false,
+    "user_agent": "403 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-404",
+    "node_name": "Aegis Node 404",
+    "ip_address": "10.42.1.148",
+    "hardware_id_b64": "U04tMjYzNg==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T06:44:00Z",
+    "is_infected": false,
+    "user_agent": "404 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-405",
+    "node_name": "Aegis Node 405",
+    "ip_address": "10.42.1.149",
+    "hardware_id_b64": "U04tNTgyNw==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T06:45:00Z",
+    "is_infected": false,
+    "user_agent": "405 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-406",
+    "node_name": "Aegis Node 406",
+    "ip_address": "10.42.1.150",
+    "hardware_id_b64": "U04tNjg3OA==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T06:46:00Z",
+    "is_infected": false,
+    "user_agent": "406 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-407",
+    "node_name": "Aegis Node 407",
+    "ip_address": "10.42.1.151",
+    "hardware_id_b64": "U04tODIyMw==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T06:47:00Z",
+    "is_infected": false,
+    "user_agent": "407 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-408",
+    "node_name": "Aegis Node 408",
+    "ip_address": "10.42.1.152",
+    "hardware_id_b64": "U04tOTE5MQ==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T06:48:00Z",
+    "is_infected": false,
+    "user_agent": "408 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-409",
+    "node_name": "Aegis Node 409",
+    "ip_address": "10.42.1.153",
+    "hardware_id_b64": "U04tMzQxMQ==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T06:49:00Z",
+    "is_infected": false,
+    "user_agent": "409 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-410",
+    "node_name": "Aegis Node 410",
+    "ip_address": "10.42.1.154",
+    "hardware_id_b64": "U04tNTEwMA==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T06:50:00Z",
+    "is_infected": false,
+    "user_agent": "410 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-411",
+    "node_name": "Aegis Node 411",
+    "ip_address": "10.42.1.155",
+    "hardware_id_b64": "U04tMzk0Ng==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T06:51:00Z",
+    "is_infected": false,
+    "user_agent": "411 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-412",
+    "node_name": "Aegis Node 412",
+    "ip_address": "10.42.1.156",
+    "hardware_id_b64": "U04tODQ3Nw==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T06:52:00Z",
+    "is_infected": true,
+    "user_agent": "412 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-413",
+    "node_name": "Aegis Node 413",
+    "ip_address": "10.42.1.157",
+    "hardware_id_b64": "U04tNDA1Mg==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T06:53:00Z",
+    "is_infected": false,
+    "user_agent": "413 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-414",
+    "node_name": "Aegis Node 414",
+    "ip_address": "10.42.1.158",
+    "hardware_id_b64": "U04tNDM3MA==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T06:54:00Z",
+    "is_infected": false,
+    "user_agent": "414 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-415",
+    "node_name": "Aegis Node 415",
+    "ip_address": "10.42.1.159",
+    "hardware_id_b64": "U04tMzg1Mw==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T06:55:00Z",
+    "is_infected": false,
+    "user_agent": "415 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-416",
+    "node_name": "Aegis Node 416",
+    "ip_address": "10.42.1.160",
+    "hardware_id_b64": "U04tMTUzMQ==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T06:56:00Z",
+    "is_infected": true,
+    "user_agent": "416 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-417",
+    "node_name": "Aegis Node 417",
+    "ip_address": "10.42.1.161",
+    "hardware_id_b64": "U04tNDE2NA==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T06:57:00Z",
+    "is_infected": false,
+    "user_agent": "417 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-418",
+    "node_name": "Aegis Node 418",
+    "ip_address": "10.42.1.162",
+    "hardware_id_b64": "U04tNDY1MQ==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T06:58:00Z",
+    "is_infected": false,
+    "user_agent": "418 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-419",
+    "node_name": "Aegis Node 419",
+    "ip_address": "10.42.1.163",
+    "hardware_id_b64": "U04tMzQzNA==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T06:59:00Z",
+    "is_infected": false,
+    "user_agent": "419 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-420",
+    "node_name": "Aegis Node 420",
+    "ip_address": "10.42.1.164",
+    "hardware_id_b64": "U04tNzQyNw==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T07:00:00Z",
+    "is_infected": false,
+    "user_agent": "420 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-421",
+    "node_name": "Aegis Node 421",
+    "ip_address": "10.42.1.165",
+    "hardware_id_b64": "U04tODYwOQ==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T07:01:00Z",
+    "is_infected": false,
+    "user_agent": "421 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-422",
+    "node_name": "Aegis Node 422",
+    "ip_address": "10.42.1.166",
+    "hardware_id_b64": "U04tNDA5NA==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T07:02:00Z",
+    "is_infected": false,
+    "user_agent": "422 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-423",
+    "node_name": "Aegis Node 423",
+    "ip_address": "10.42.1.167",
+    "hardware_id_b64": "U04tMjExMw==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T07:03:00Z",
+    "is_infected": false,
+    "user_agent": "423 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-424",
+    "node_name": "Aegis Node 424",
+    "ip_address": "10.42.1.168",
+    "hardware_id_b64": "U04tOTc2NA==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T07:04:00Z",
+    "is_infected": false,
+    "user_agent": "424 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-425",
+    "node_name": "Aegis Node 425",
+    "ip_address": "10.42.1.169",
+    "hardware_id_b64": "U04tNzkwMg==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T07:05:00Z",
+    "is_infected": false,
+    "user_agent": "425 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-426",
+    "node_name": "Aegis Node 426",
+    "ip_address": "10.42.1.170",
+    "hardware_id_b64": "U04tMTM4MQ==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T07:06:00Z",
+    "is_infected": true,
+    "user_agent": "426 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-427",
+    "node_name": "Aegis Node 427",
+    "ip_address": "10.42.1.171",
+    "hardware_id_b64": "U04tMzczOQ==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T07:07:00Z",
+    "is_infected": false,
+    "user_agent": "427 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-428",
+    "node_name": "Aegis Node 428",
+    "ip_address": "10.42.1.172",
+    "hardware_id_b64": "U04tMjQ3Mw==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T07:08:00Z",
+    "is_infected": false,
+    "user_agent": "428 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-429",
+    "node_name": "Aegis Node 429",
+    "ip_address": "10.42.1.173",
+    "hardware_id_b64": "U04tNDIyNQ==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T07:09:00Z",
+    "is_infected": false,
+    "user_agent": "429 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-430",
+    "node_name": "Aegis Node 430",
+    "ip_address": "10.42.1.174",
+    "hardware_id_b64": "U04tNjMwMw==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T07:10:00Z",
+    "is_infected": false,
+    "user_agent": "430 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-431",
+    "node_name": "Aegis Node 431",
+    "ip_address": "10.42.1.175",
+    "hardware_id_b64": "U04tNjEzOA==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T07:11:00Z",
+    "is_infected": false,
+    "user_agent": "431 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-432",
+    "node_name": "Aegis Node 432",
+    "ip_address": "10.42.1.176",
+    "hardware_id_b64": "U04tMjg2Mw==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T07:12:00Z",
+    "is_infected": true,
+    "user_agent": "432 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-433",
+    "node_name": "Aegis Node 433",
+    "ip_address": "10.42.1.177",
+    "hardware_id_b64": "U04tODMwMw==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T07:13:00Z",
+    "is_infected": false,
+    "user_agent": "433 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-434",
+    "node_name": "Aegis Node 434",
+    "ip_address": "10.42.1.178",
+    "hardware_id_b64": "U04tMTQ4OQ==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T07:14:00Z",
+    "is_infected": false,
+    "user_agent": "434 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-435",
+    "node_name": "Aegis Node 435",
+    "ip_address": "10.42.1.179",
+    "hardware_id_b64": "U04tNzkwOQ==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T07:15:00Z",
+    "is_infected": false,
+    "user_agent": "435 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-436",
+    "node_name": "Aegis Node 436",
+    "ip_address": "10.42.1.180",
+    "hardware_id_b64": "U04tMjAyOA==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T07:16:00Z",
+    "is_infected": true,
+    "user_agent": "436 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-437",
+    "node_name": "Aegis Node 437",
+    "ip_address": "10.42.1.181",
+    "hardware_id_b64": "U04tNDg2NQ==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T07:17:00Z",
+    "is_infected": false,
+    "user_agent": "437 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-438",
+    "node_name": "Aegis Node 438",
+    "ip_address": "10.42.1.182",
+    "hardware_id_b64": "U04tNTg3Mw==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T07:18:00Z",
+    "is_infected": false,
+    "user_agent": "438 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-439",
+    "node_name": "Aegis Node 439",
+    "ip_address": "10.42.1.183",
+    "hardware_id_b64": "U04tMzY5MA==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T07:19:00Z",
+    "is_infected": false,
+    "user_agent": "439 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-440",
+    "node_name": "Aegis Node 440",
+    "ip_address": "10.42.1.184",
+    "hardware_id_b64": "U04tMjIxNA==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T07:20:00Z",
+    "is_infected": false,
+    "user_agent": "440 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-441",
+    "node_name": "Aegis Node 441",
+    "ip_address": "10.42.1.185",
+    "hardware_id_b64": "U04tMzY5MQ==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T07:21:00Z",
+    "is_infected": false,
+    "user_agent": "441 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-442",
+    "node_name": "Aegis Node 442",
+    "ip_address": "10.42.1.186",
+    "hardware_id_b64": "U04tNTEwNA==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T07:22:00Z",
+    "is_infected": false,
+    "user_agent": "442 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-443",
+    "node_name": "Aegis Node 443",
+    "ip_address": "10.42.1.187",
+    "hardware_id_b64": "U04tOTg4Mw==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T07:23:00Z",
+    "is_infected": false,
+    "user_agent": "443 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-444",
+    "node_name": "Aegis Node 444",
+    "ip_address": "10.42.1.188",
+    "hardware_id_b64": "U04tMjIxNw==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T07:24:00Z",
+    "is_infected": true,
+    "user_agent": "444 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-445",
+    "node_name": "Aegis Node 445",
+    "ip_address": "10.42.1.189",
+    "hardware_id_b64": "U04tNDE4MQ==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T07:25:00Z",
+    "is_infected": false,
+    "user_agent": "445 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-446",
+    "node_name": "Aegis Node 446",
+    "ip_address": "10.42.1.190",
+    "hardware_id_b64": "U04tODQyOQ==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T07:26:00Z",
+    "is_infected": false,
+    "user_agent": "446 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-447",
+    "node_name": "Aegis Node 447",
+    "ip_address": "10.42.1.191",
+    "hardware_id_b64": "U04tNDM1MA==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T07:27:00Z",
+    "is_infected": true,
+    "user_agent": "447 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-448",
+    "node_name": "Aegis Node 448",
+    "ip_address": "10.42.1.192",
+    "hardware_id_b64": "U04tNzA3Nw==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T07:28:00Z",
+    "is_infected": false,
+    "user_agent": "448 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-449",
+    "node_name": "Aegis Node 449",
+    "ip_address": "10.42.1.193",
+    "hardware_id_b64": "U04tOTMwNw==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T07:29:00Z",
+    "is_infected": false,
+    "user_agent": "449 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-450",
+    "node_name": "Aegis Node 450",
+    "ip_address": "10.42.1.194",
+    "hardware_id_b64": "U04tNTk3Mg==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T07:30:00Z",
+    "is_infected": false,
+    "user_agent": "450 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-451",
+    "node_name": "Aegis Node 451",
+    "ip_address": "10.42.1.195",
+    "hardware_id_b64": "U04tNjg1Ng==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T07:31:00Z",
+    "is_infected": false,
+    "user_agent": "451 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-452",
+    "node_name": "Aegis Node 452",
+    "ip_address": "10.42.1.196",
+    "hardware_id_b64": "U04tNzMwMQ==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T07:32:00Z",
+    "is_infected": false,
+    "user_agent": "452 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-453",
+    "node_name": "Aegis Node 453",
+    "ip_address": "10.42.1.197",
+    "hardware_id_b64": "U04tMzgzNQ==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T07:33:00Z",
+    "is_infected": false,
+    "user_agent": "453 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-454",
+    "node_name": "Aegis Node 454",
+    "ip_address": "10.42.1.198",
+    "hardware_id_b64": "U04tOTMxMg==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T07:34:00Z",
+    "is_infected": false,
+    "user_agent": "454 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-455",
+    "node_name": "Aegis Node 455",
+    "ip_address": "10.42.1.199",
+    "hardware_id_b64": "U04tNDUwNg==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T07:35:00Z",
+    "is_infected": false,
+    "user_agent": "455 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-456",
+    "node_name": "Aegis Node 456",
+    "ip_address": "10.42.1.200",
+    "hardware_id_b64": "U04tNTE0MA==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T07:36:00Z",
+    "is_infected": false,
+    "user_agent": "456 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-457",
+    "node_name": "Aegis Node 457",
+    "ip_address": "10.42.1.201",
+    "hardware_id_b64": "U04tOTcyNg==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T07:37:00Z",
+    "is_infected": false,
+    "user_agent": "457 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-458",
+    "node_name": "Aegis Node 458",
+    "ip_address": "10.42.1.202",
+    "hardware_id_b64": "U04tODI4Ng==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T07:38:00Z",
+    "is_infected": false,
+    "user_agent": "458 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-459",
+    "node_name": "Aegis Node 459",
+    "ip_address": "10.42.1.203",
+    "hardware_id_b64": "U04tNTMyMQ==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T07:39:00Z",
+    "is_infected": true,
+    "user_agent": "459 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-460",
+    "node_name": "Aegis Node 460",
+    "ip_address": "10.42.1.204",
+    "hardware_id_b64": "U04tMjIzMQ==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T07:40:00Z",
+    "is_infected": false,
+    "user_agent": "460 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-461",
+    "node_name": "Aegis Node 461",
+    "ip_address": "10.42.1.205",
+    "hardware_id_b64": "U04tMTUyNQ==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T07:41:00Z",
+    "is_infected": false,
+    "user_agent": "461 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-462",
+    "node_name": "Aegis Node 462",
+    "ip_address": "10.42.1.206",
+    "hardware_id_b64": "U04tMTAzNw==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T07:42:00Z",
+    "is_infected": false,
+    "user_agent": "462 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-463",
+    "node_name": "Aegis Node 463",
+    "ip_address": "10.42.1.207",
+    "hardware_id_b64": "U04tNTA4NQ==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T07:43:00Z",
+    "is_infected": true,
+    "user_agent": "463 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-464",
+    "node_name": "Aegis Node 464",
+    "ip_address": "10.42.1.208",
+    "hardware_id_b64": "U04tNDU5NA==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T07:44:00Z",
+    "is_infected": false,
+    "user_agent": "464 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-465",
+    "node_name": "Aegis Node 465",
+    "ip_address": "10.42.1.209",
+    "hardware_id_b64": "U04tMzg1NA==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T07:45:00Z",
+    "is_infected": false,
+    "user_agent": "465 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-466",
+    "node_name": "Aegis Node 466",
+    "ip_address": "10.42.1.210",
+    "hardware_id_b64": "U04tNDQ0OQ==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T07:46:00Z",
+    "is_infected": false,
+    "user_agent": "466 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-467",
+    "node_name": "Aegis Node 467",
+    "ip_address": "10.42.1.211",
+    "hardware_id_b64": "U04tOTA0OA==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T07:47:00Z",
+    "is_infected": false,
+    "user_agent": "467 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-468",
+    "node_name": "Aegis Node 468",
+    "ip_address": "10.42.1.212",
+    "hardware_id_b64": "U04tNjA0Nw==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T07:48:00Z",
+    "is_infected": false,
+    "user_agent": "468 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-469",
+    "node_name": "Aegis Node 469",
+    "ip_address": "10.42.1.213",
+    "hardware_id_b64": "U04tMjExOQ==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T07:49:00Z",
+    "is_infected": false,
+    "user_agent": "469 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-470",
+    "node_name": "Aegis Node 470",
+    "ip_address": "10.42.1.214",
+    "hardware_id_b64": "U04tMjUxOQ==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T07:50:00Z",
+    "is_infected": false,
+    "user_agent": "470 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-471",
+    "node_name": "Aegis Node 471",
+    "ip_address": "10.42.1.215",
+    "hardware_id_b64": "U04tMjA2Ng==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T07:51:00Z",
+    "is_infected": true,
+    "user_agent": "471 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-472",
+    "node_name": "Aegis Node 472",
+    "ip_address": "10.42.1.216",
+    "hardware_id_b64": "U04tNTUwMQ==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T07:52:00Z",
+    "is_infected": false,
+    "user_agent": "472 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-473",
+    "node_name": "Aegis Node 473",
+    "ip_address": "10.42.1.217",
+    "hardware_id_b64": "U04tMTQxNg==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T07:53:00Z",
+    "is_infected": false,
+    "user_agent": "473 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-474",
+    "node_name": "Aegis Node 474",
+    "ip_address": "10.42.1.218",
+    "hardware_id_b64": "U04tODgxMQ==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T07:54:00Z",
+    "is_infected": false,
+    "user_agent": "474 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-475",
+    "node_name": "Aegis Node 475",
+    "ip_address": "10.42.1.219",
+    "hardware_id_b64": "U04tMjYxOQ==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T07:55:00Z",
+    "is_infected": false,
+    "user_agent": "475 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-476",
+    "node_name": "Aegis Node 476",
+    "ip_address": "10.42.1.220",
+    "hardware_id_b64": "U04tOTg0Ng==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T07:56:00Z",
+    "is_infected": false,
+    "user_agent": "476 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-477",
+    "node_name": "Aegis Node 477",
+    "ip_address": "10.42.1.221",
+    "hardware_id_b64": "U04tMTQ4MQ==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T07:57:00Z",
+    "is_infected": false,
+    "user_agent": "477 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-478",
+    "node_name": "Aegis Node 478",
+    "ip_address": "10.42.1.222",
+    "hardware_id_b64": "U04tOTYzNA==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T07:58:00Z",
+    "is_infected": false,
+    "user_agent": "478 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-479",
+    "node_name": "Aegis Node 479",
+    "ip_address": "10.42.1.223",
+    "hardware_id_b64": "U04tNzE3OQ==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T07:59:00Z",
+    "is_infected": false,
+    "user_agent": "479 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-480",
+    "node_name": "Aegis Node 480",
+    "ip_address": "10.42.1.224",
+    "hardware_id_b64": "U04tMjY4Ng==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T08:00:00Z",
+    "is_infected": true,
+    "user_agent": "480 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-481",
+    "node_name": "Aegis Node 481",
+    "ip_address": "10.42.1.225",
+    "hardware_id_b64": "U04tMjAzNg==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T08:01:00Z",
+    "is_infected": false,
+    "user_agent": "481 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-482",
+    "node_name": "Aegis Node 482",
+    "ip_address": "10.42.1.226",
+    "hardware_id_b64": "U04tNDg5Nw==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T08:02:00Z",
+    "is_infected": false,
+    "user_agent": "482 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-483",
+    "node_name": "Aegis Node 483",
+    "ip_address": "10.42.1.227",
+    "hardware_id_b64": "U04tMjM1Mw==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T08:03:00Z",
+    "is_infected": true,
+    "user_agent": "483 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-484",
+    "node_name": "Aegis Node 484",
+    "ip_address": "10.42.1.228",
+    "hardware_id_b64": "U04tNTYwMA==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T08:04:00Z",
+    "is_infected": true,
+    "user_agent": "484 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-485",
+    "node_name": "Aegis Node 485",
+    "ip_address": "10.42.1.229",
+    "hardware_id_b64": "U04tMjk2OQ==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T08:05:00Z",
+    "is_infected": false,
+    "user_agent": "485 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-486",
+    "node_name": "Aegis Node 486",
+    "ip_address": "10.42.1.230",
+    "hardware_id_b64": "U04tODEwNQ==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T08:06:00Z",
+    "is_infected": true,
+    "user_agent": "486 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-487",
+    "node_name": "Aegis Node 487",
+    "ip_address": "10.42.1.231",
+    "hardware_id_b64": "U04tNzExNg==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T08:07:00Z",
+    "is_infected": true,
+    "user_agent": "487 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-488",
+    "node_name": "Aegis Node 488",
+    "ip_address": "10.42.1.232",
+    "hardware_id_b64": "U04tNTIxMw==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T08:08:00Z",
+    "is_infected": false,
+    "user_agent": "488 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-489",
+    "node_name": "Aegis Node 489",
+    "ip_address": "10.42.1.233",
+    "hardware_id_b64": "U04tOTU2Nw==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T08:09:00Z",
+    "is_infected": false,
+    "user_agent": "489 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-490",
+    "node_name": "Aegis Node 490",
+    "ip_address": "10.42.1.234",
+    "hardware_id_b64": "U04tNDM0NQ==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T08:10:00Z",
+    "is_infected": false,
+    "user_agent": "490 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-491",
+    "node_name": "Aegis Node 491",
+    "ip_address": "10.42.1.235",
+    "hardware_id_b64": "U04tNTgzMA==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T08:11:00Z",
+    "is_infected": false,
+    "user_agent": "491 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-492",
+    "node_name": "Aegis Node 492",
+    "ip_address": "10.42.1.236",
+    "hardware_id_b64": "U04tODcwNw==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T08:12:00Z",
+    "is_infected": false,
+    "user_agent": "492 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-493",
+    "node_name": "Aegis Node 493",
+    "ip_address": "10.42.1.237",
+    "hardware_id_b64": "U04tMzQzOA==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T08:13:00Z",
+    "is_infected": false,
+    "user_agent": "493 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-494",
+    "node_name": "Aegis Node 494",
+    "ip_address": "10.42.1.238",
+    "hardware_id_b64": "U04tODA4NQ==",
+    "region": "EU-WEST",
+    "registered_at": "2026-03-01T08:14:00Z",
+    "is_infected": false,
+    "user_agent": "494 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-495",
+    "node_name": "Aegis Node 495",
+    "ip_address": "10.42.1.239",
+    "hardware_id_b64": "U04tMjE1Ng==",
+    "region": "EU-NORTH",
+    "registered_at": "2026-03-01T08:15:00Z",
+    "is_infected": false,
+    "user_agent": "495 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-496",
+    "node_name": "Aegis Node 496",
+    "ip_address": "10.42.1.240",
+    "hardware_id_b64": "U04tOTk0OQ==",
+    "region": "AP-SOUTH",
+    "registered_at": "2026-03-01T08:16:00Z",
+    "is_infected": false,
+    "user_agent": "496 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-497",
+    "node_name": "Aegis Node 497",
+    "ip_address": "10.42.1.241",
+    "hardware_id_b64": "U04tNjExNg==",
+    "region": "AP-EAST",
+    "registered_at": "2026-03-01T08:17:00Z",
+    "is_infected": true,
+    "user_agent": "497 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-498",
+    "node_name": "Aegis Node 498",
+    "ip_address": "10.42.1.242",
+    "hardware_id_b64": "U04tNzg2MQ==",
+    "region": "US-EAST",
+    "registered_at": "2026-03-01T08:18:00Z",
+    "is_infected": false,
+    "user_agent": "498 AEGIS-Node/2.0 (Linux)"
+  },
+  {
+    "node_id": "NODE-499",
+    "node_name": "Aegis Node 499",
+    "ip_address": "10.42.1.243",
+    "hardware_id_b64": "U04tMjI0OA==",
+    "region": "US-WEST",
+    "registered_at": "2026-03-01T08:19:00Z",
+    "is_infected": true,
+    "user_agent": "499 AEGIS-Node/2.0 (Linux)"
   }
 ]

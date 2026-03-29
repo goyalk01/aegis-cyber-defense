@@ -273,6 +273,6 @@ def normalize_all(
             skipped += 1
 
     print(
-        f"[NORMALIZER] Done → normalized={len(normalized_logs)}, skipped={skipped}"
+        f"[NORMALIZER] Done: normalized={len(normalized_logs)}, skipped={skipped}"
     )
     return normalized_logs

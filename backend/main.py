@@ -38,7 +38,7 @@ def save_json(data: list | dict, filename: str) -> None:
         path = os.path.join(DATA_DIR, filename)
         with open(path, "w", encoding="utf-8") as f:
             json.dump(data, f, indent=2)
-        print(f"[MAIN] Saved {len(data) if isinstance(data, list) else 1} records → {path}")
+        print(f"[MAIN] Saved {len(data) if isinstance(data, list) else 1} records to {path}")
     except Exception as e:
         print(f"[MAIN] WARN: Could not save {filename} — {e}", file=sys.stderr)
 

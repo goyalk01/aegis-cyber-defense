@@ -89,6 +89,6 @@ def load_all(data_dir: str = "data") -> tuple[list[dict], list[dict], list[dict]
     schemas = validate_records(schemas_raw, REQUIRED_SCHEMA_KEYS, "schema_versions")
 
     print(
-        f"[LOADER] Summary → logs={len(logs)}, nodes={len(nodes)}, schemas={len(schemas)}"
+        f"[LOADER] Summary: logs={len(logs)}, nodes={len(nodes)}, schemas={len(schemas)}"
     )
     return logs, nodes, schemas

@@ -6,7 +6,7 @@
       "http_status": "http_code",
       "response_time_ms": "latency"
     },
-    "active_since": "2023-01-01T00:00:00Z",
+    "active_since": "t=0",
     "deprecated": true
   },
   {
@@ -16,17 +16,7 @@
       "http_status": "response_code",
       "response_time_ms": "response_ms"
     },
-    "active_since": "2023-07-01T00:00:00Z",
-    "deprecated": false
-  },
-  {
-    "version": 3,
-    "field_map": {
-      "reported_status": "operational_status",
-      "http_status": "status_code",
-      "response_time_ms": "latency_ms"
-    },
-    "active_since": "2024-01-01T00:00:00Z",
+    "active_since": "t=5000",
     "deprecated": false
   }
 ]

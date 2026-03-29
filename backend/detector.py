@@ -295,7 +295,7 @@ def detect_all(normalized_logs: list[dict]) -> tuple[list[dict], dict]:
     }
 
     print(
-        f"[DETECTOR] Done → total={len(alerts)}, ATTACK={counts['ATTACK']}, "
+        f"[DETECTOR] Done: total={len(alerts)}, ATTACK={counts['ATTACK']}, "
         f"HIGH_RISK={counts['HIGH_RISK']}, SUSPICIOUS={counts['SUSPICIOUS']}, "
         f"CLEAN={counts['CLEAN']}, skipped={skipped}"
     )

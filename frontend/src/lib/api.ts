@@ -1,7 +1,9 @@
 import { Alert, AlertsResponse, Metrics, Summary } from "@/types";
 import { validateAlertLevel, safeNumber, safePercentage, safePositiveInt } from "./utils";
 
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL?.replace(/\/$/, "");
+const BASE_URL =
+  process.env.NEXT_PUBLIC_API_URL?.replace(/\/$/, "") ||
+  (process.env.NODE_ENV === "development" ? "http://127.0.0.1:8000" : undefined);
 
 interface ApiResponse<T> {
   status: "success" | "error";
