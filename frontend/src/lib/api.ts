@@ -1,4 +1,16 @@
-import { Alert, AlertsResponse, Metrics, Summary } from "@/types";
+import {
+  Alert,
+  AlertsResponse,
+  Metrics,
+  Summary,
+  GraphData,
+  GraphNode,
+  GraphLink,
+  FingerprintData,
+  FingerprintCluster,
+  CommandNodeResult,
+  CommandNodeCandidate,
+} from "@/types";
 import { validateAlertLevel, safeNumber, safePercentage, safePositiveInt } from "./utils";
 
 const BASE_URL =
@@ -26,6 +38,7 @@ async function fetchApi<T>(
 
   const res = await fetch(`${BASE_URL}${endpoint}`, {
     ...options,
+    cache: "no-store",
     headers: {
       "Content-Type": "application/json",
       ...options?.headers,
@@ -96,6 +109,7 @@ function sanitizeMetrics(data: Record<string, unknown>): Metrics {
     clean_count: safePositiveInt(data.clean_count, 0),
     attack_percentage: safePercentage(data.attack_percentage, 0),
     high_risk_percentage: safePercentage(data.high_risk_percentage, 0),
+    suspicious_percentage: safePercentage(data.suspicious_percentage, 0),
     threat_percentage: safePercentage(data.threat_percentage, 0),
     total_nodes: safePositiveInt(data.total_nodes, 0),
     invalid_hw_count: safePositiveInt(data.invalid_hw_count, 0),
@@ -106,6 +120,7 @@ function sanitizeMetrics(data: Record<string, unknown>): Metrics {
     schema_versions_seen: Array.isArray(data.schema_versions_seen)
       ? data.schema_versions_seen.map((v) => safePositiveInt(v, 0))
       : [],
+    ml_detection_count: safePositiveInt(data.ml_detection_count, 0),
   };
 }
 
@@ -146,7 +161,8 @@ export interface FetchAlertsParams {
 }
 
 export async function fetchAlerts(
-  params?: FetchAlertsParams
+  params?: FetchAlertsParams,
+  signal?: AbortSignal
 ): Promise<AlertsResponse> {
   const searchParams = new URLSearchParams();
 
@@ -158,24 +174,25 @@ export async function fetchAlerts(
   const query = searchParams.toString();
   const endpoint = `/alerts${query ? `?${query}` : ""}`;
 
-  const data = await fetchApi<{ total: number; limit: number; alerts: unknown[] }>(endpoint);
+  const data = await fetchApi<{ total: number; limit: number; last_generated?: string | null; alerts: unknown[] }>(endpoint, { signal });
 
   return {
     total: safePositiveInt(data.total, 0),
     limit: safePositiveInt(data.limit, 50),
+    last_generated: data.last_generated || null,
     alerts: Array.isArray(data.alerts)
       ? data.alerts.map((a) => sanitizeAlert(a as Record<string, unknown>))
       : [],
   };
 }
 
-export async function fetchMetrics(): Promise<Metrics> {
-  const data = await fetchApi<Record<string, unknown>>("/metrics");
+export async function fetchMetrics(signal?: AbortSignal): Promise<Metrics> {
+  const data = await fetchApi<Record<string, unknown>>("/metrics", { signal });
   return sanitizeMetrics(data);
 }
 
-export async function fetchSummary(): Promise<Summary> {
-  const data = await fetchApi<Record<string, unknown>>("/summary");
+export async function fetchSummary(signal?: AbortSignal): Promise<Summary> {
+  const data = await fetchApi<Record<string, unknown>>("/summary", { signal });
   return sanitizeSummary(data);
 }
 
@@ -209,4 +226,130 @@ export async function runPipeline(): Promise<PipelineResult> {
 
 export async function checkHealth(): Promise<{ service: string }> {
   return fetchApi<{ service: string }>("/health");
+}
+
+function sanitizeGraphNode(node: Record<string, unknown>): GraphNode {
+  const level = validateAlertLevel(node.node_type);
+  return {
+    id: String(node.id || node.node_id || ""),
+    node_id: String(node.node_id || node.id || ""),
+    out_degree: safePositiveInt(node.out_degree, 0),
+    centrality: safeNumber(node.centrality, 0),
+    severity_score: safePercentage(node.severity_score, 0),
+    node_type: level,
+    fingerprint_id: node.fingerprint_id ? String(node.fingerprint_id) : null,
+  };
+}
+
+function sanitizeGraphLink(link: Record<string, unknown>): GraphLink {
+  return {
+    source: String(link.source || ""),
+    target: String(link.target || ""),
+    count: safePositiveInt(link.count, 1),
+    weight: safePositiveInt(link.weight, safePositiveInt(link.count, 1)),
+    interval: safeNumber(link.interval, -1),
+    user_agent: String(link.user_agent || "UNKNOWN-UA"),
+    headers: Array.isArray(link.headers) ? link.headers.map(String) : [],
+    avg_response_time_ms: safeNumber(link.avg_response_time_ms, 0),
+  };
+}
+
+function sanitizeFingerprintCluster(item: Record<string, unknown>): FingerprintCluster {
+  return {
+    fingerprint_id: String(item.fingerprint_id || ""),
+    fingerprint_key: String(item.fingerprint_key || ""),
+    occurrences: safePositiveInt(item.occurrences, 0),
+    nodes: Array.isArray(item.nodes) ? item.nodes.map(String) : [],
+    headers: Array.isArray(item.headers) ? item.headers.map(String) : [],
+    user_agent: String(item.user_agent || "UNKNOWN-UA"),
+    interval_bucket: String(item.interval_bucket || "unknown"),
+    confidence: safePercentage(item.confidence, 0),
+  };
+}
+
+function sanitizeCommandNodeCandidate(item: Record<string, unknown>): CommandNodeCandidate {
+  return {
+    node_id: String(item.node_id || ""),
+    score: safeNumber(item.score, 0),
+    out_degree: safePositiveInt(item.out_degree, 0),
+    fingerprint_matches: safePositiveInt(item.fingerprint_matches, 0),
+    centrality: safeNumber(item.centrality, 0),
+    reasons: Array.isArray(item.reasons) ? item.reasons.map(String) : [],
+  };
+}
+
+export async function fetchGraph(signal?: AbortSignal): Promise<GraphData> {
+  const data = await fetchApi<Record<string, unknown>>("/graph", { signal });
+  const nodes = Array.isArray(data.nodes)
+    ? data.nodes.map((n) => sanitizeGraphNode(n as Record<string, unknown>))
+    : [];
+  const links = Array.isArray(data.links)
+    ? data.links.map((l) => sanitizeGraphLink(l as Record<string, unknown>))
+    : [];
+  const edgeData = Array.isArray(data.edge_data)
+    ? data.edge_data.map((l) => sanitizeGraphLink(l as Record<string, unknown>))
+    : links;
+
+  const graph = (data.graph || {}) as Record<string, unknown>;
+  const centrality = (data.centrality || {}) as Record<string, unknown>;
+  const graphSummary = (data.graph_summary || {}) as Record<string, unknown>;
+
+  return {
+    generated_at: String(data.generated_at || ""),
+    total_nodes: safePositiveInt(data.total_nodes, nodes.length),
+    total_edges: safePositiveInt(data.total_edges, links.length),
+    graph_summary: {
+      total_nodes: safePositiveInt(graphSummary.total_nodes, safePositiveInt(data.total_nodes, nodes.length)),
+      total_edges: safePositiveInt(graphSummary.total_edges, safePositiveInt(data.total_edges, links.length)),
+    },
+    graph: Object.fromEntries(
+      Object.entries(graph).map(([key, value]) => [
+        String(key),
+        Array.isArray(value) ? value.map(String) : [],
+      ])
+    ),
+    edge_data: edgeData,
+    centrality: Object.fromEntries(
+      Object.entries(centrality).map(([key, value]) => [String(key), safeNumber(value, 0)])
+    ),
+    nodes,
+    links,
+  };
+}
+
+export async function fetchFingerprints(signal?: AbortSignal): Promise<FingerprintData> {
+  const data = await fetchApi<Record<string, unknown>>("/fingerprints", { signal });
+  const fps = Array.isArray(data.fingerprints)
+    ? data.fingerprints.map((f) => sanitizeFingerprintCluster(f as Record<string, unknown>))
+    : [];
+
+  const counts = (data.node_fingerprint_counts || {}) as Record<string, unknown>;
+
+  return {
+    generated_at: String(data.generated_at || ""),
+    total_fingerprints: safePositiveInt(data.total_fingerprints, fps.length),
+    fingerprints: fps,
+    node_fingerprint_counts: Object.fromEntries(
+      Object.entries(counts).map(([key, value]) => [String(key), safePositiveInt(value, 0)])
+    ),
+  };
+}
+
+export async function fetchCommandNode(signal?: AbortSignal): Promise<CommandNodeResult> {
+  const data = await fetchApi<Record<string, unknown>>("/command-node", { signal });
+  return {
+    generated_at: String(data.generated_at || ""),
+    command_node: data.command_node ? String(data.command_node) : null,
+    confidence_score: safePercentage(data.confidence_score, 0),
+    reasons: Array.isArray(data.reasons) ? data.reasons.map(String) : [],
+    candidates: Array.isArray(data.candidates)
+      ? data.candidates.map((c) => sanitizeCommandNodeCandidate(c as Record<string, unknown>))
+      : [],
+    top_candidates: Array.isArray(data.top_candidates)
+      ? data.top_candidates.map((t) => ({
+          node: String((t as Record<string, unknown>).node || ""),
+          score: safeNumber((t as Record<string, unknown>).score, 0),
+        }))
+      : [],
+  };
 }

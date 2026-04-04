@@ -33,7 +33,7 @@ export function ThemeToggle() {
 
   if (!mounted) {
     return (
-      <button className="p-2 rounded-lg bg-card border border-border">
+      <button className="p-2 rounded-lg bg-accent/50 border border-border">
         <div className="w-5 h-5" />
       </button>
     );
@@ -42,13 +42,13 @@ export function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 rounded-lg bg-card border border-border hover:bg-accent transition-colors"
+      className="p-2 rounded-lg bg-accent/50 border border-border hover:bg-accent transition-colors"
       aria-label="Toggle theme"
     >
       {isDark ? (
-        <Sun className="w-5 h-5 text-yellow-500" />
+        <Sun className="w-5 h-5 text-amber-400" />
       ) : (
-        <Moon className="w-5 h-5 text-slate-700" />
+        <Moon className="w-5 h-5 text-indigo-600" />
       )}
     </button>
   );

@@ -23,11 +23,17 @@ sys.path.insert(0, BASE_DIR)
 from loader import load_all
 from normalizer import normalize_all
 from detector import detect_all
+from graph_engine import build_graph_ready_logs, build_graph_model
+from fingerprint_engine import build_fingerprint_clusters
+from attribution_engine import detect_command_node
 
 # ── In-memory state (loaded once at startup, reused by API endpoints) ─────────
 normalized_logs: list[dict] = []
 alerts: list[dict] = []
 metrics_summary: dict = {}
+graph_data: dict = {}
+fingerprints_data: dict = {}
+command_node_data: dict = {}
 _pipeline_ready: bool = False
 
 
@@ -50,7 +56,8 @@ def run_pipeline(data_dir: str = DATA_DIR) -> tuple[list[dict], dict]:
     Returns:
         (alerts, metrics_summary)
     """
-    global normalized_logs, alerts, metrics_summary, _pipeline_ready
+    global normalized_logs, alerts, metrics_summary
+    global graph_data, fingerprints_data, command_node_data, _pipeline_ready
 
     print("\n" + "=" * 60)
     print("  AEGIS — Full Pipeline Run")
@@ -67,6 +74,9 @@ def run_pipeline(data_dir: str = DATA_DIR) -> tuple[list[dict], dict]:
     # ── Step 2: Normalize ─────────────────────────────────────────────────
     normalized_logs = normalize_all(system_logs, node_registry, schema_versions)
     save_json(normalized_logs, "normalized_logs.json")
+    integrity_summary = getattr(normalize_all, "last_integrity_summary", None)
+    if isinstance(integrity_summary, dict):
+        save_json(integrity_summary, "integrity_summary.json")
 
     if not normalized_logs:
         print("[MAIN] ERROR: No logs normalized — aborting detection", file=sys.stderr)
@@ -78,6 +88,19 @@ def run_pipeline(data_dir: str = DATA_DIR) -> tuple[list[dict], dict]:
     save_json(alerts, "alerts.json")
     save_json(metrics_summary, "metrics.json")
 
+    # ── Step 4: Graph + Fingerprint + Attribution ───────────────────────
+    normalized_graph_logs = build_graph_ready_logs(normalized_logs, node_registry, alerts)
+    save_json(normalized_graph_logs, "normalized_graph_logs.json")
+
+    graph_data = build_graph_model(normalized_graph_logs)
+    save_json(graph_data, "graph.json")
+
+    fingerprints_data = build_fingerprint_clusters(normalized_graph_logs)
+    save_json(fingerprints_data, "fingerprints.json")
+
+    command_node_data = detect_command_node(graph_data, fingerprints_data)
+    save_json(command_node_data, "command_node.json")
+
     _pipeline_ready = True
 
     print("\n" + "=" * 60)
@@ -88,6 +111,12 @@ def run_pipeline(data_dir: str = DATA_DIR) -> tuple[list[dict], dict]:
     print(f"  SUSPICIOUS     : {metrics_summary.get('suspicious_count', 0)}")
     print(f"  CLEAN          : {metrics_summary.get('clean_count', 0)}")
     print(f"  Invalid HW IDs : {metrics_summary.get('invalid_hw_count', 0)}")
+    print(f"  Graph nodes    : {graph_data.get('total_nodes', 0)}")
+    print(f"  Graph edges    : {graph_data.get('total_edges', 0)}")
+    print(f"  Fingerprints   : {fingerprints_data.get('total_fingerprints', 0)}")
+    print(f"  Command node   : {command_node_data.get('command_node')}")
+    if isinstance(integrity_summary, dict):
+        print(f"  Dropped rows   : {integrity_summary.get('dropped_rows', 0)}")
     print("=" * 60 + "\n")
 
     return alerts, metrics_summary

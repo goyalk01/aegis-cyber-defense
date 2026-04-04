@@ -1,0 +1,38 @@
+# ══════════════════════════════════════════════════════════════════════════════
+# AEGIS - Render.com Deployment Configuration
+# ══════════════════════════════════════════════════════════════════════════════
+# This file configures automatic deployment on Render.com
+# Documentation: https://render.com/docs/yaml-spec
+
+services:
+  # ── Backend API Service ────────────────────────────────────────────────────
+  - type: web
+    name: aegis-backend
+    runtime: python
+    region: oregon  # or singapore, frankfurt, ohio
+    plan: free      # free, starter, standard, pro
+    
+    # Build & Start Commands
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: bash start.sh
+    
+    # Environment Variables
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11.0"
+      - key: PORT
+        generateValue: true
+    
+    # Health Check
+    healthCheckPath: /health
+    
+    # Auto-Deploy on Push
+    autoDeploy: true
+
+# ══════════════════════════════════════════════════════════════════════════════
+# Notes:
+# - Frontend is deployed separately on Vercel
+# - Update NEXT_PUBLIC_API_URL in Vercel to point to this backend URL
+# - Backend URL format: https://aegis-backend.onrender.com
+# ══════════════════════════════════════════════════════════════════════════════

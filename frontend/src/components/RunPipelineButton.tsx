@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { cn } from "@/lib/utils";
-import { Play, Loader2, Check, AlertTriangle } from "lucide-react";
+import { Play, Loader2, Check, AlertTriangle, Sparkles } from "lucide-react";
 
 interface RunPipelineButtonProps {
   onRun: () => Promise<void>;
@@ -37,63 +37,73 @@ export function RunPipelineButton({ onRun }: RunPipelineButtonProps) {
         return (
           <>
             <Loader2 className="w-5 h-5 animate-spin" />
-            <span>Running Pipeline...</span>
+            <span>Analyzing...</span>
           </>
         );
       case "success":
         return (
           <>
             <Check className="w-5 h-5" />
-            <span>Pipeline Complete</span>
+            <span>Complete!</span>
           </>
         );
       case "error":
         return (
           <>
             <AlertTriangle className="w-5 h-5" />
-            <span>Pipeline Failed</span>
+            <span>Failed</span>
           </>
         );
       default:
         return (
           <>
             <Play className="w-5 h-5" />
-            <span>Run Pipeline</span>
+            <span>Run Analysis</span>
+            <Sparkles className="w-4 h-4 opacity-70" />
           </>
         );
     }
   };
 
-  const getButtonClasses = () => {
-    const base =
-      "flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all shadow-sm";
-
-    switch (status) {
-      case "running":
-        return cn(base, "bg-primary/80 text-primary-foreground cursor-wait");
-      case "success":
-        return cn(base, "bg-green-500 text-white");
-      case "error":
-        return cn(base, "bg-red-500 text-white");
-      default:
-        return cn(
-          base,
-          "bg-primary text-primary-foreground hover:bg-primary/90 active:scale-95"
-        );
-    }
-  };
-
   return (
-    <div>
+    <div className="relative group">
+      {/* Glow effect */}
+      {status === "idle" && (
+        <div className="absolute -inset-1 bg-gradient-to-r from-primary to-emerald-500 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity duration-300" />
+      )}
+      
       <button
         onClick={handleClick}
         disabled={status === "running"}
-        className={getButtonClasses()}
+        className={cn(
+          "relative flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300",
+          "shadow-lg",
+          status === "idle" && [
+            "bg-gradient-to-r from-primary to-emerald-600 text-white",
+            "hover:shadow-xl hover:shadow-primary/25 hover:-translate-y-0.5",
+            "active:scale-95"
+          ],
+          status === "running" && [
+            "bg-primary/80 text-white cursor-wait",
+            "shadow-lg shadow-primary/20"
+          ],
+          status === "success" && [
+            "bg-gradient-to-r from-green-500 to-emerald-600 text-white",
+            "shadow-lg shadow-green-500/25"
+          ],
+          status === "error" && [
+            "bg-gradient-to-r from-red-500 to-rose-600 text-white",
+            "shadow-lg shadow-red-500/25"
+          ]
+        )}
       >
         {getButtonContent()}
       </button>
+      
       {status === "error" && errorMessage && (
-        <p className="mt-2 text-sm text-red-500">{errorMessage}</p>
+        <p className="absolute top-full mt-2 left-0 right-0 text-xs text-red-500 text-center whitespace-nowrap">
+          {errorMessage}
+        </p>
       )}
     </div>
   );

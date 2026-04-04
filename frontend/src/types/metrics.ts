@@ -7,10 +7,12 @@ export interface Metrics {
   clean_count: number;
   attack_percentage: number;
   high_risk_percentage: number;
+  suspicious_percentage: number;
   threat_percentage: number;
   total_nodes: number;
   invalid_hw_count: number;
   avg_response_time_ms: number;
   nodes_under_attack: string[];
   schema_versions_seen: number[];
+  ml_detection_count: number;
 }

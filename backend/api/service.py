@@ -20,11 +20,14 @@ ALERTS_FILE = os.path.join(DATA_DIR, "alerts.json")
 METRICS_FILE = os.path.join(DATA_DIR, "metrics.json")
 NORMALIZED_LOGS_FILE = os.path.join(DATA_DIR, "normalized_logs.json")
 NODE_REGISTRY_FILE = os.path.join(DATA_DIR, "node_registry.json")
+GRAPH_FILE = os.path.join(DATA_DIR, "graph.json")
+FINGERPRINTS_FILE = os.path.join(DATA_DIR, "fingerprints.json")
+COMMAND_NODE_FILE = os.path.join(DATA_DIR, "command_node.json")
 
 # ── Constants ──────────────────────────────────────────────────────────────────
 API_VERSION = "1.0"
 DEFAULT_LIMIT = 50
-MAX_LIMIT = 100
+MAX_LIMIT = 500  # Increased for better alert viewing
 
 # Ensure main module can be imported
 sys.path.insert(0, BASE_DIR)
@@ -130,7 +133,16 @@ def get_root() -> dict:
 
     return success_response({
         "message": "AEGIS API Running",
-        "endpoints": ["/health", "/alerts", "/metrics", "/summary", "/run-pipeline"]
+        "endpoints": [
+            "/health",
+            "/alerts",
+            "/metrics",
+            "/summary",
+            "/graph",
+            "/fingerprints",
+            "/command-node",
+            "/run-pipeline",
+        ]
     }, request_id, start_time)
 
 
@@ -219,9 +231,17 @@ def read_alerts(
 
     filtered = filtered[:effective_limit]
 
+    # Get last generation timestamp from most recent alert
+    last_generated = None
+    if alerts_list:
+        ingestion_times = [a.get("ingestion_time") for a in alerts_list if a.get("ingestion_time")]
+        if ingestion_times:
+            last_generated = max(ingestion_times)
+
     return success_response({
         "total": len(filtered),
         "limit": effective_limit,
+        "last_generated": last_generated,
         "alerts": filtered
     }, request_id, start_time)
 
@@ -259,6 +279,8 @@ def read_metrics() -> dict:
     clean_count = data.get("clean_count", 0)
 
     # Build enhanced metrics
+    ml_detection_count = data.get("ml_detection_count", 0)
+
     enhanced_metrics = {
         "total_logs": total_logs,
         "total_alerts": data.get("total_alerts", 0),
@@ -266,9 +288,11 @@ def read_metrics() -> dict:
         "high_risk_count": high_risk_count,
         "suspicious_count": suspicious_count,
         "clean_count": clean_count,
+        "ml_detection_count": ml_detection_count,
         "attack_percentage": calculate_percentage(attack_count, total_logs),
         "high_risk_percentage": calculate_percentage(high_risk_count, total_logs),
-        "threat_percentage": calculate_percentage(attack_count + high_risk_count, total_logs),
+        "suspicious_percentage": calculate_percentage(suspicious_count, total_logs),
+        "threat_percentage": calculate_percentage(attack_count + high_risk_count + suspicious_count, total_logs),
         "total_nodes": get_total_nodes(),
         "invalid_hw_count": data.get("invalid_hw_count", 0),
         "avg_response_time_ms": data.get("avg_response_time_ms", 0),
@@ -370,16 +394,20 @@ def get_summary() -> dict:
     attack_count = metrics_data.get("attack_count", 0)
     high_risk_count = metrics_data.get("high_risk_count", 0)
 
+    suspicious_count = metrics_data.get("suspicious_count", 0)
+    ml_detection_count = metrics_data.get("ml_detection_count", 0)
+
     summary = {
         "metrics": {
             "total_logs": total_logs,
             "total_alerts": metrics_data.get("total_alerts", 0),
             "attack_count": attack_count,
             "high_risk_count": high_risk_count,
-            "suspicious_count": metrics_data.get("suspicious_count", 0),
+            "suspicious_count": suspicious_count,
             "clean_count": metrics_data.get("clean_count", 0),
+            "ml_detection_count": ml_detection_count,
             "attack_percentage": calculate_percentage(attack_count, total_logs),
-            "threat_percentage": calculate_percentage(attack_count + high_risk_count, total_logs),
+            "threat_percentage": calculate_percentage(attack_count + high_risk_count + suspicious_count, total_logs),
             "total_nodes": get_total_nodes()
         },
         "critical_alerts": {
@@ -390,3 +418,78 @@ def get_summary() -> dict:
     }
 
     return success_response(summary, request_id, start_time)
+
+
+def get_graph() -> dict:
+    """Get precomputed graph model."""
+    start_time = time.time()
+    request_id = get_request_id()
+    log("INFO", f"[{request_id}] GET /graph")
+
+    data, error = load_json_file(GRAPH_FILE)
+    if error:
+        if "not found" in error.lower():
+            return {
+                **error_response("No graph data found. Run the pipeline first.", request_id, start_time),
+                "_code": 404,
+            }
+        log("ERROR", f"[{request_id}] {error}")
+        return {**error_response(error, request_id, start_time), "_code": 500}
+
+    if not isinstance(data, dict):
+        return {
+            **error_response("Invalid graph data format", request_id, start_time),
+            "_code": 500,
+        }
+
+    return success_response(data, request_id, start_time)
+
+
+def get_fingerprints() -> dict:
+    """Get fingerprint clusters."""
+    start_time = time.time()
+    request_id = get_request_id()
+    log("INFO", f"[{request_id}] GET /fingerprints")
+
+    data, error = load_json_file(FINGERPRINTS_FILE)
+    if error:
+        if "not found" in error.lower():
+            return {
+                **error_response("No fingerprint data found. Run the pipeline first.", request_id, start_time),
+                "_code": 404,
+            }
+        log("ERROR", f"[{request_id}] {error}")
+        return {**error_response(error, request_id, start_time), "_code": 500}
+
+    if not isinstance(data, dict):
+        return {
+            **error_response("Invalid fingerprint data format", request_id, start_time),
+            "_code": 500,
+        }
+
+    return success_response(data, request_id, start_time)
+
+
+def get_command_node() -> dict:
+    """Get latest command node attribution result."""
+    start_time = time.time()
+    request_id = get_request_id()
+    log("INFO", f"[{request_id}] GET /command-node")
+
+    data, error = load_json_file(COMMAND_NODE_FILE)
+    if error:
+        if "not found" in error.lower():
+            return {
+                **error_response("No command node data found. Run the pipeline first.", request_id, start_time),
+                "_code": 404,
+            }
+        log("ERROR", f"[{request_id}] {error}")
+        return {**error_response(error, request_id, start_time), "_code": 500}
+
+    if not isinstance(data, dict):
+        return {
+            **error_response("Invalid command node data format", request_id, start_time),
+            "_code": 500,
+        }
+
+    return success_response(data, request_id, start_time)

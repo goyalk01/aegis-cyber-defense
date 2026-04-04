@@ -139,6 +139,8 @@ def normalize_log(
         "hardware_id_reason": str | None,
         "timestamp": str,
         "parse_warnings": list[str]   # soft errors — does not prevent processing
+        "load_val": log.get("load_val"),
+        "L_V1": log.get("L_V1"),
     }
     """
     warnings = []
@@ -207,6 +209,10 @@ def normalize_log(
     if not hw_result["valid"]:
         warnings.append(f"hardware_id issue: {hw_result['reason']}")
 
+    # ── Extract additional fields for ML (pass-through) ────────────────────
+    load_val = log.get("load_val")
+    l_v1 = log.get("L_V1")
+
     # ── Assemble normalized log ───────────────────────────────────────────
     return {
         "log_id": log_id,
@@ -224,6 +230,9 @@ def normalize_log(
         "hardware_id_reason": hw_result["reason"],
         "timestamp": timestamp,
         "parse_warnings": warnings,
+        # ML feature pass-through
+        "load_val": load_val,
+        "L_V1": l_v1,
     }
 
 
@@ -255,6 +264,7 @@ def normalize_all(
 
     normalized_logs = []
     skipped = 0
+    total_rows = len(system_logs)
 
     for raw_log in system_logs:
         try:
@@ -275,4 +285,13 @@ def normalize_all(
     print(
         f"[NORMALIZER] Done: normalized={len(normalized_logs)}, skipped={skipped}"
     )
+
+    integrity_summary = {
+        "total_rows": total_rows,
+        "valid_rows": len(normalized_logs),
+        "dropped_rows": skipped,
+    }
+    # Exposed as function attribute so callers can persist/report without changing API.
+    normalize_all.last_integrity_summary = integrity_summary
+    print(f"[NORMALIZER] Integrity summary: {integrity_summary}")
     return normalized_logs

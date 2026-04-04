@@ -28,5 +28,6 @@ export interface Alert {
 export interface AlertsResponse {
   total: number;
   limit: number;
+  last_generated: string | null;
   alerts: Alert[];
 }

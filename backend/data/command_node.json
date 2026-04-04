@@ -1,0 +1,86 @@
+{
+  "generated_at": "2026-04-04T22:30:14Z",
+  "command_node": "NODE-037",
+  "confidence_score": 0.99,
+  "reasons": [
+    "Elevated centrality position",
+    "Repeated fingerprint cluster (30 matches) \u2014 strong automation signature",
+    "High outgoing connections (33) \u2014 significant target reach"
+  ],
+  "candidates": [
+    {
+      "node_id": "NODE-037",
+      "score": 9.4866,
+      "out_degree": 33,
+      "fingerprint_matches": 30,
+      "centrality": 0.066,
+      "reasons": [
+        "Elevated centrality position",
+        "Repeated fingerprint cluster (30 matches) \u2014 strong automation signature",
+        "High outgoing connections (33) \u2014 significant target reach"
+      ]
+    },
+    {
+      "node_id": "NODE-080",
+      "score": 9.1662,
+      "out_degree": 31,
+      "fingerprint_matches": 30,
+      "centrality": 0.062,
+      "reasons": [
+        "Elevated centrality position",
+        "Repeated fingerprint cluster (30 matches) \u2014 strong automation signature",
+        "High outgoing connections (31) \u2014 significant target reach"
+      ]
+    },
+    {
+      "node_id": "NODE-338",
+      "score": 9.0262,
+      "out_degree": 31,
+      "fingerprint_matches": 29,
+      "centrality": 0.062,
+      "reasons": [
+        "Elevated centrality position",
+        "Repeated fingerprint cluster (29 matches) \u2014 strong automation signature",
+        "High outgoing connections (31) \u2014 significant target reach"
+      ]
+    },
+    {
+      "node_id": "NODE-177",
+      "score": 9.006,
+      "out_degree": 30,
+      "fingerprint_matches": 30,
+      "centrality": 0.06,
+      "reasons": [
+        "Elevated centrality position",
+        "Repeated fingerprint cluster (30 matches) \u2014 strong automation signature",
+        "High outgoing connections (30) \u2014 significant target reach"
+      ]
+    },
+    {
+      "node_id": "NODE-271",
+      "score": 9.006,
+      "out_degree": 30,
+      "fingerprint_matches": 30,
+      "centrality": 0.06,
+      "reasons": [
+        "Elevated centrality position",
+        "Repeated fingerprint cluster (30 matches) \u2014 strong automation signature",
+        "High outgoing connections (30) \u2014 significant target reach"
+      ]
+    }
+  ],
+  "top_candidates": [
+    {
+      "node": "NODE-037",
+      "score": 9.4866
+    },
+    {
+      "node": "NODE-080",
+      "score": 9.1662
+    },
+    {
+      "node": "NODE-338",
+      "score": 9.0262
+    }
+  ]
+}

@@ -29,6 +29,7 @@ venv/
 ENV/
 env/
 .venv/
+backend/venv/
 
 # PyInstaller
 *.manifest
@@ -58,13 +59,14 @@ out/
 frontend/build/
 build/
 
-# ── Environment Variables ─────────────────────────────────────────────────────
+# ── Environment Variables (KEEP .env.example) ─────────────────────────────────
 .env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
-*.env
+frontend/.env.local
+backend/.env
 
 # ── IDE / Editor ──────────────────────────────────────────────────────────────
 .vscode/
@@ -91,9 +93,6 @@ desktop.ini
 # ── Logs ──────────────────────────────────────────────────────────────────────
 *.log
 logs/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
 
 # ── Testing ───────────────────────────────────────────────────────────────────
 coverage/
@@ -102,7 +101,6 @@ coverage/
 
 # ── TypeScript ────────────────────────────────────────────────────────────────
 *.tsbuildinfo
-next-env.d.ts
 
 # ── Misc ──────────────────────────────────────────────────────────────────────
 *.bak
@@ -111,14 +109,15 @@ next-env.d.ts
 .cache/
 .parcel-cache/
 
-# ── Generated Data (Optional - uncomment if you don't want to track) ─────────
-# backend/data/normalized_logs.json
-# backend/data/alerts.json
-# backend/data/metrics.json
+# ── Generated Data (Pipeline Output) ──────────────────────────────────────────
+# JSON files are now tracked so they are available on Render.com cold starts
+# without needing the pipeline to run immediately.
 
-backend/data/alerts.json
-backend/data/metrics.json
-backend/data/normalized_logs.json
-backend/__pycache__/
-backend/venv/
-.next/
+# ── Local deployment/runtime caches ───────────────────────────────────────────
+frontend/.vercel/
+frontend/.turbo/
+
+# ── Keep these files ──────────────────────────────────────────────────────────
+!frontend/.env.example
+!backend/.env.example
+!render.yaml
