@@ -7,9 +7,9 @@
 </p>
 
 <h1 align="center">🛡️ AEGIS</h1>
-<h3 align="center">Cyber-Infrastructure Defense System</h3>
+<h3 align="center">Cyber-Infrastructure Attribution Engine</h3>
 <p align="center">
-  <strong>Real-Time Threat Detection · Deterministic Security · Zero-Dependency Backend</strong>
+  <strong>Graph Intelligence · Metadata Fingerprinting · Explainable Command-Node Attribution</strong>
 </p>
 
 <p align="center">
@@ -17,14 +17,15 @@
   <a href="#-system-architecture">Architecture</a> ·
   <a href="#-api-documentation">API Docs</a> ·
   <a href="#-dashboard">Dashboard</a> ·
-  <a href="#-detection-logic">Detection Logic</a>
+  <a href="#-detection-logic">Detection Logic</a> ·
+  <a href="#-attribution-engine">Attribution Engine</a>
 </p>
 
 ---
 
 ## 🧠 Overview
 
-**AEGIS** (Advanced Enforcement & Guardian Infrastructure System) is a full-stack cybersecurity platform that ingests raw infrastructure telemetry, normalizes heterogeneous log schemas, runs a deterministic multi-rule detection engine, and surfaces threats through a real-time dashboard — all without a single ML dependency.
+**AEGIS** (Advanced Enforcement & Guardian Infrastructure System) is a full-stack cybersecurity platform that ingests raw infrastructure telemetry, normalizes heterogeneous log schemas, runs deterministic detection, builds a directional interaction graph, fingerprints suspicious behavior, and attributes the most likely command node with explainable scoring.
 
 Most detection systems rely on opaque machine learning models. AEGIS takes a fundamentally different approach: **every alert is explainable, every rule is auditable, and every classification is reproducible**. If the same log enters the pipeline twice, it will always produce the same alert with the same severity score.
 
@@ -46,8 +47,9 @@ Modern infrastructure generates telemetry across dozens of schema versions, regi
 | 📐 **Normalization** | Schema-aware mapping | Translates v1/v2/v3+ field names into a unified canonical structure |
 | 🔍 **Detection** | 7-rule engine | Status contradiction, server errors, sentinel detection, latency tiers, Base64 malware scan, schema warnings |
 | 📊 **Scoring** | Severity + Confidence | Composite 0–100 scores with per-rule bonus stacking |
-| 🌐 **API** | RESTful + Swagger | 6 endpoints with filtering, pagination, standard response envelope |
-| 🖥️ **Dashboard** | Real-time UI | Metrics cards, alert log, forensic topology map, response-time heatmap, threat distribution |
+| 🌐 **API** | RESTful + Swagger | 9 endpoints with filtering, pagination, attribution payloads, standard response envelope |
+| 🕸️ **Attribution** | Graph + Fingerprints + Scoring | Directional graph, centrality, behavior clusters, top-candidate ranking |
+| 🖥️ **Dashboard** | Real-time UI | Interactive attribution graph, command-node panel, fingerprint clusters, influence ranking, heatmap |
 | 🎨 **Theming** | Dark + Light mode | CSS variable-based theme system with `localStorage` persistence |
 | ♻️ **Auto-refresh** | 15-second polling | Dashboard silently re-fetches alerts, metrics, and summary every 15 seconds |
 | 🛡️ **Safety** | Zero eval/exec | Decoded payloads are treated as data only — never executed |
@@ -101,14 +103,22 @@ AEGIS follows a strict 4-step pipeline. Each step is a separate module with a si
 - Severity score: base (0–80) + per-rule bonus stacking, capped at 100
 - Confidence score: `min(triggered_rules × 25, 100)`
 
-### Step 4 — API Layer (`app.py` + `routes.py` + `service.py`)
+### Step 4 — Attribution Engine (`graph_engine.py` + `fingerprint_engine.py` + `attribution_engine.py`)
+
+- Builds strict graph-ready logs with sentinel-safe defaults and deterministic timestamp conversion
+- Constructs a directional graph with edge metadata and centrality (`out_degree / total_nodes`)
+- Generates combined fingerprint hashes from headers + user agent + interval bucket
+- Applies noise filtering for low-frequency and common benign signatures
+- Scores command-node candidates and emits top-candidate comparison for "why this node" explainability
+
+### Step 5 — API Layer (`app.py` + `routes.py` + `service.py`)
 
 - FastAPI application with CORS, Swagger UI (`/docs`), and ReDoc (`/redoc`)
 - Service layer reads from persisted JSON files — API is stateless and restartable
 - Standard response envelope: `{ status, data, timestamp, version, request_id, processing_time_ms }`
 - Pipeline can be triggered via `POST /run-pipeline` from the dashboard
 
-### Step 5 — Frontend Dashboard (`Next.js` + `Tailwind CSS`)
+### Step 6 — Frontend Dashboard (`Next.js` + `Tailwind CSS`)
 
 - Server-connected React SPA that consumes the API
 - 8 components: Navbar, MetricsCards, AlertsTable, CityMap, Heatmap, SummaryPanel, RunPipelineButton, ThemeToggle
@@ -213,6 +223,47 @@ The engine walks the priority order `ATTACK → HIGH_RISK → SUSPICIOUS → CLE
 
 ---
 
+## 🧠 Attribution Engine
+
+The attribution layer extends deterministic detection into command-node identification.
+
+### Core Scoring
+
+```
+score = (out_degree * w1) + (fingerprint_matches * w2) + (centrality * w3)
+```
+
+### Output Artifacts
+
+- `backend/data/normalized_graph_logs.json`
+- `backend/data/graph.json`
+- `backend/data/fingerprints.json`
+- `backend/data/command_node.json`
+- `backend/data/integrity_summary.json`
+
+### Explainability Contract
+
+AEGIS returns both the selected command node and alternatives:
+
+```json
+{
+  "command_node": "NODE-037",
+  "confidence_score": 0.99,
+  "reasons": [
+    "High centrality",
+    "Repeated fingerprint",
+    "Consistent intervals"
+  ],
+  "top_candidates": [
+    { "node": "NODE-037", "score": 23.7165 },
+    { "node": "NODE-080", "score": 22.9155 },
+    { "node": "NODE-338", "score": 22.5655 }
+  ]
+}
+```
+
+---
+
 ## 🌐 API Documentation
 
 **Base URL**: `http://127.0.0.1:8000` &nbsp; | &nbsp; **Swagger**: `http://127.0.0.1:8000/docs`
@@ -226,6 +277,9 @@ The engine walks the priority order `ATTACK → HIGH_RISK → SUSPICIOUS → CLE
 | `GET` | `/alerts` | Detection alerts with filtering + pagination |
 | `GET` | `/metrics` | Pipeline metrics summary with enriched percentages |
 | `GET` | `/summary` | Combined overview — metrics + top 5 critical alerts + nodes under attack |
+| `GET` | `/graph` | Precomputed directional graph with nodes, links, centrality, and edge metadata |
+| `GET` | `/fingerprints` | Metadata fingerprint clusters and node fingerprint counts |
+| `GET` | `/command-node` | Final attribution result with confidence, reasons, and top candidates |
 | `POST` | `/run-pipeline` | Trigger full pipeline re-execution |
 
 ### GET `/alerts`
@@ -313,6 +367,10 @@ The AEGIS frontend is a Next.js 14 application with 8 purpose-built components:
 | `SummaryPanel` | Critical alerts feed, nodes-under-attack chips, threat distribution bar, quick stats |
 | `RunPipelineButton` | Stateful button with idle/running/success/error transitions and loading spinner |
 | `ThemeToggle` | Dark/Light mode toggle with `localStorage` persistence |
+| `NetworkGraph` | Interactive force-directed graph with zoom/drag, directional edge flow, thickness by request volume |
+| `CommandNodePanel` | Command-node confidence + reasons + top candidate comparison |
+| `FingerprintPanel` | Fingerprint clusters with node participation and occurrence density |
+| `NodeRankingPanel` | Top 5 influence ranking for judge-facing comparative analysis |
 
 ### UI Features
 
@@ -473,6 +531,10 @@ npm run dev
 1. `http://127.0.0.1:8000/health` → `{ "status": "success", "data": { "service": "healthy" } }`
 2. `http://localhost:3000` → AEGIS Dashboard loads
 3. Click **Run Pipeline** → data processes and populates all panels
+4. Confirm attribution endpoints are available:
+  - `http://127.0.0.1:8000/graph`
+  - `http://127.0.0.1:8000/fingerprints`
+  - `http://127.0.0.1:8000/command-node`
 
 ---
 
@@ -530,6 +592,19 @@ python pipeline_test.py     # End-to-end normalization smoke test
 ### Pipeline Test (`pipeline_test.py`)
 
 Runs the full normalization pipeline against live data and prints each normalized record with warnings.
+
+### Attribution Endpoint Smoke Test
+
+```bash
+cd backend
+python -c "from main import run_pipeline; run_pipeline()"
+```
+
+Then check:
+
+- `GET /graph` returns 200
+- `GET /fingerprints` returns 200
+- `GET /command-node` returns 200
 
 ---
 
@@ -608,5 +683,11 @@ Open an issue or reach out — we'd love to hear from you.
 ---
 
 <p align="center">
-  <strong>AEGIS</strong> — Because security should be deterministic, not probabilistic.
+  <strong>AEGIS</strong> — We moved beyond detection to attribution by combining graph intelligence, metadata fingerprinting, and explainable scoring.
 </p>
+
+---
+
+## 🤖 AI Usage Statement
+
+AI tools were used for assistance in structuring and debugging. All core logic, architecture, and validation were designed and verified by the team.

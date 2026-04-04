@@ -119,6 +119,15 @@ next-env.d.ts
 backend/data/alerts.json
 backend/data/metrics.json
 backend/data/normalized_logs.json
+backend/data/normalized_graph_logs.json
+backend/data/graph.json
+backend/data/fingerprints.json
+backend/data/command_node.json
+backend/data/integrity_summary.json
 backend/__pycache__/
 backend/venv/
 .next/
+
+# Local deployment/runtime caches
+frontend/.vercel/
+frontend/.turbo/

@@ -20,6 +20,9 @@ ALERTS_FILE = os.path.join(DATA_DIR, "alerts.json")
 METRICS_FILE = os.path.join(DATA_DIR, "metrics.json")
 NORMALIZED_LOGS_FILE = os.path.join(DATA_DIR, "normalized_logs.json")
 NODE_REGISTRY_FILE = os.path.join(DATA_DIR, "node_registry.json")
+GRAPH_FILE = os.path.join(DATA_DIR, "graph.json")
+FINGERPRINTS_FILE = os.path.join(DATA_DIR, "fingerprints.json")
+COMMAND_NODE_FILE = os.path.join(DATA_DIR, "command_node.json")
 
 # ── Constants ──────────────────────────────────────────────────────────────────
 API_VERSION = "1.0"
@@ -130,7 +133,16 @@ def get_root() -> dict:
 
     return success_response({
         "message": "AEGIS API Running",
-        "endpoints": ["/health", "/alerts", "/metrics", "/summary", "/run-pipeline"]
+        "endpoints": [
+            "/health",
+            "/alerts",
+            "/metrics",
+            "/summary",
+            "/graph",
+            "/fingerprints",
+            "/command-node",
+            "/run-pipeline",
+        ]
     }, request_id, start_time)
 
 
@@ -390,3 +402,78 @@ def get_summary() -> dict:
     }
 
     return success_response(summary, request_id, start_time)
+
+
+def get_graph() -> dict:
+    """Get precomputed graph model."""
+    start_time = time.time()
+    request_id = get_request_id()
+    log("INFO", f"[{request_id}] GET /graph")
+
+    data, error = load_json_file(GRAPH_FILE)
+    if error:
+        if "not found" in error.lower():
+            return {
+                **error_response("No graph data found. Run the pipeline first.", request_id, start_time),
+                "_code": 404,
+            }
+        log("ERROR", f"[{request_id}] {error}")
+        return {**error_response(error, request_id, start_time), "_code": 500}
+
+    if not isinstance(data, dict):
+        return {
+            **error_response("Invalid graph data format", request_id, start_time),
+            "_code": 500,
+        }
+
+    return success_response(data, request_id, start_time)
+
+
+def get_fingerprints() -> dict:
+    """Get fingerprint clusters."""
+    start_time = time.time()
+    request_id = get_request_id()
+    log("INFO", f"[{request_id}] GET /fingerprints")
+
+    data, error = load_json_file(FINGERPRINTS_FILE)
+    if error:
+        if "not found" in error.lower():
+            return {
+                **error_response("No fingerprint data found. Run the pipeline first.", request_id, start_time),
+                "_code": 404,
+            }
+        log("ERROR", f"[{request_id}] {error}")
+        return {**error_response(error, request_id, start_time), "_code": 500}
+
+    if not isinstance(data, dict):
+        return {
+            **error_response("Invalid fingerprint data format", request_id, start_time),
+            "_code": 500,
+        }
+
+    return success_response(data, request_id, start_time)
+
+
+def get_command_node() -> dict:
+    """Get latest command node attribution result."""
+    start_time = time.time()
+    request_id = get_request_id()
+    log("INFO", f"[{request_id}] GET /command-node")
+
+    data, error = load_json_file(COMMAND_NODE_FILE)
+    if error:
+        if "not found" in error.lower():
+            return {
+                **error_response("No command node data found. Run the pipeline first.", request_id, start_time),
+                "_code": 404,
+            }
+        log("ERROR", f"[{request_id}] {error}")
+        return {**error_response(error, request_id, start_time), "_code": 500}
+
+    if not isinstance(data, dict):
+        return {
+            **error_response("Invalid command node data format", request_id, start_time),
+            "_code": 500,
+        }
+
+    return success_response(data, request_id, start_time)

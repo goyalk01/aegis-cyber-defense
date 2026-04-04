@@ -39,7 +39,7 @@ export function Navbar({ lastUpdated }: NavbarProps) {
           {/* System Status */}
           <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-card border border-border">
             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-            <span className="text-sm text-muted-foreground">Online</span>
+            <span className="text-sm text-muted-foreground">System Active</span>
           </div>
 
           <ThemeToggle />

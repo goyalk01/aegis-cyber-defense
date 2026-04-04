@@ -15,6 +15,9 @@ from api.service import (
     read_metrics,
     run_pipeline,
     get_summary,
+    get_graph,
+    get_fingerprints,
+    get_command_node,
     DEFAULT_LIMIT,
     MAX_LIMIT
 )
@@ -118,6 +121,24 @@ def summary():
     - Nodes currently under attack
     """
     return build_response(get_summary())
+
+
+@router.get("/graph", tags=["Attribution"], summary="Get Graph")
+def graph():
+    """Get precomputed network graph and metadata."""
+    return build_response(get_graph())
+
+
+@router.get("/fingerprints", tags=["Attribution"], summary="Get Fingerprints")
+def fingerprints():
+    """Get fingerprint clusters identified from metadata behavior."""
+    return build_response(get_fingerprints())
+
+
+@router.get("/command-node", tags=["Attribution"], summary="Get Command Node")
+def command_node():
+    """Get current command node attribution with confidence and reasons."""
+    return build_response(get_command_node())
 
 
 # ── Pipeline Endpoints ─────────────────────────────────────────────────────────

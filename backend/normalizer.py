@@ -255,6 +255,7 @@ def normalize_all(
 
     normalized_logs = []
     skipped = 0
+    total_rows = len(system_logs)
 
     for raw_log in system_logs:
         try:
@@ -275,4 +276,13 @@ def normalize_all(
     print(
         f"[NORMALIZER] Done: normalized={len(normalized_logs)}, skipped={skipped}"
     )
+
+    integrity_summary = {
+        "total_rows": total_rows,
+        "valid_rows": len(normalized_logs),
+        "dropped_rows": skipped,
+    }
+    # Exposed as function attribute so callers can persist/report without changing API.
+    normalize_all.last_integrity_summary = integrity_summary
+    print(f"[NORMALIZER] Integrity summary: {integrity_summary}")
     return normalized_logs
