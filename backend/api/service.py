@@ -271,6 +271,8 @@ def read_metrics() -> dict:
     clean_count = data.get("clean_count", 0)
 
     # Build enhanced metrics
+    ml_detection_count = data.get("ml_detection_count", 0)
+
     enhanced_metrics = {
         "total_logs": total_logs,
         "total_alerts": data.get("total_alerts", 0),
@@ -278,9 +280,11 @@ def read_metrics() -> dict:
         "high_risk_count": high_risk_count,
         "suspicious_count": suspicious_count,
         "clean_count": clean_count,
+        "ml_detection_count": ml_detection_count,
         "attack_percentage": calculate_percentage(attack_count, total_logs),
         "high_risk_percentage": calculate_percentage(high_risk_count, total_logs),
-        "threat_percentage": calculate_percentage(attack_count + high_risk_count, total_logs),
+        "suspicious_percentage": calculate_percentage(suspicious_count, total_logs),
+        "threat_percentage": calculate_percentage(attack_count + high_risk_count + suspicious_count, total_logs),
         "total_nodes": get_total_nodes(),
         "invalid_hw_count": data.get("invalid_hw_count", 0),
         "avg_response_time_ms": data.get("avg_response_time_ms", 0),
@@ -382,16 +386,20 @@ def get_summary() -> dict:
     attack_count = metrics_data.get("attack_count", 0)
     high_risk_count = metrics_data.get("high_risk_count", 0)
 
+    suspicious_count = metrics_data.get("suspicious_count", 0)
+    ml_detection_count = metrics_data.get("ml_detection_count", 0)
+
     summary = {
         "metrics": {
             "total_logs": total_logs,
             "total_alerts": metrics_data.get("total_alerts", 0),
             "attack_count": attack_count,
             "high_risk_count": high_risk_count,
-            "suspicious_count": metrics_data.get("suspicious_count", 0),
+            "suspicious_count": suspicious_count,
             "clean_count": metrics_data.get("clean_count", 0),
+            "ml_detection_count": ml_detection_count,
             "attack_percentage": calculate_percentage(attack_count, total_logs),
-            "threat_percentage": calculate_percentage(attack_count + high_risk_count, total_logs),
+            "threat_percentage": calculate_percentage(attack_count + high_risk_count + suspicious_count, total_logs),
             "total_nodes": get_total_nodes()
         },
         "critical_alerts": {

@@ -1,13 +1,14 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import { useMemo, useRef, useEffect, useState } from "react";
 import { AlertTriangle, Network, Info } from "lucide-react";
 import { CommandNodeResult, FingerprintData, GraphData } from "@/types";
 
-const ForceGraph2D = dynamic(() => import("react-force-graph-2d"), {
-  ssr: false,
-}) as unknown as React.ComponentType<Record<string, unknown>>;
+// Safely load ForceGraph2D only on the client side to avoid SSR and ref errors
+let ForceGraph2D: any = null;
+if (typeof window !== "undefined") {
+  ForceGraph2D = require("react-force-graph-2d").default;
+}
 
 interface NetworkGraphProps {
   graph: GraphData | null;
@@ -41,12 +42,19 @@ export function NetworkGraph({
   error,
   demoPhase = "graph",
 }: NetworkGraphProps) {
+  const [isMounted, setIsMounted] = useState(false);
   const [hoveredNode, setHoveredNode] = useState<string | null>(null);
   const animationFrame = useRef<number>(0);
   const graphRef = useRef<{ zoomToFit: (ms?: number, padding?: number) => void; centerAt: (x?: number, y?: number, ms?: number) => void } | null>(null);
 
+  // Mark component as mounted to safely render the graph
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   // Animation loop for pulsing effects
   useEffect(() => {
+    if (!isMounted) return;
     let frameId: number;
     const animate = () => {
       animationFrame.current = (animationFrame.current + 1) % 360;
@@ -54,12 +62,11 @@ export function NetworkGraph({
     };
     frameId = requestAnimationFrame(animate);
     return () => cancelAnimationFrame(frameId);
-  }, []);
+  }, [isMounted]);
 
   // Center and zoom the graph after it loads
   useEffect(() => {
-    if (graph && graphRef.current) {
-      // Wait for the graph to stabilize, then zoom to fit
+    if (isMounted && graph && graphRef.current) {
       const timer = setTimeout(() => {
         if (graphRef.current) {
           graphRef.current.zoomToFit(400, 50);
@@ -67,7 +74,7 @@ export function NetworkGraph({
       }, 500);
       return () => clearTimeout(timer);
     }
-  }, [graph]);
+  }, [graph, isMounted]);
 
   const fingerprintByNode = useMemo(() => {
     const index: Record<string, string> = {};
@@ -137,7 +144,7 @@ export function NetworkGraph({
     );
   }
 
-  if (loading) {
+  if (loading || !isMounted) {
     return (
       <div className="rounded-2xl border border-border/50 bg-card/80 backdrop-blur-sm overflow-hidden">
         <div className="p-4 border-b border-border/50 bg-gradient-to-r from-muted/30 to-transparent">
@@ -224,137 +231,125 @@ export function NetworkGraph({
       )}
 
       <div className="h-[500px] bg-gradient-to-b from-background via-background to-muted/20 relative">
-        <ForceGraph2D
-          ref={graphRef}
-          graphData={graphData}
-          cooldownTicks={100}
-          d3AlphaDecay={0.02}
-          d3VelocityDecay={0.3}
-          warmupTicks={50}
-          onEngineStop={() => {
-            // Auto zoom to fit after graph stabilizes
-            if (graphRef.current) {
-              graphRef.current.zoomToFit(400, 60);
-            }
-          }}
-          linkColor={(linkObj: Record<string, unknown>) => {
-            const src = String(linkObj.source && typeof linkObj.source === "object" ? (linkObj.source as Record<string, unknown>).id : linkObj.source || "");
-            const tgt = String(linkObj.target && typeof linkObj.target === "object" ? (linkObj.target as Record<string, unknown>).id : linkObj.target || "");
-            
-            // Highlight command node connections
-            if (demoPhase !== "graph" && commandNode?.command_node) {
-              if (src === commandNode.command_node) {
-                return "rgba(244, 63, 94, 0.8)";
+        {ForceGraph2D && (
+          <ForceGraph2D
+            ref={graphRef}
+            graphData={graphData}
+            cooldownTicks={100}
+            d3AlphaDecay={0.02}
+            d3VelocityDecay={0.3}
+            warmupTicks={50}
+            onEngineStop={() => {
+              // Auto zoom to fit after graph stabilizes
+              if (graphRef.current) {
+                graphRef.current.zoomToFit(400, 60);
               }
-              if (tgt === commandNode.command_node) {
-                return "rgba(244, 63, 94, 0.5)";
+            }}
+            linkColor={(linkObj: Record<string, unknown>) => {
+              const src = String(linkObj.source && typeof linkObj.source === "object" ? (linkObj.source as Record<string, unknown>).id : linkObj.source || "");
+              const tgt = String(linkObj.target && typeof linkObj.target === "object" ? (linkObj.target as Record<string, unknown>).id : linkObj.target || "");
+              
+              if (demoPhase !== "graph" && commandNode?.command_node) {
+                if (src === commandNode.command_node) return "rgba(244, 63, 94, 0.8)";
+                if (tgt === commandNode.command_node) return "rgba(244, 63, 94, 0.5)";
               }
-            }
-            return "rgba(100, 116, 139, 0.25)";
-          }}
-          linkWidth={(linkObj: Record<string, unknown>) => {
-            const w = Number(linkObj.weight || linkObj.count || 1);
-            const src = String(linkObj.source && typeof linkObj.source === "object" ? (linkObj.source as Record<string, unknown>).id : linkObj.source || "");
-            
-            // Thicker lines for command node connections (attack flow)
-            if (commandNode?.command_node && src === commandNode.command_node) {
-              return Math.max(2, Math.min(8, 1 + w / 2));
-            }
-            return Math.max(0.5, Math.min(4, 0.4 + w / 5));
-          }}
-          linkDirectionalParticles={(linkObj: Record<string, unknown>) => {
-            const src = String(linkObj.source && typeof linkObj.source === "object" ? (linkObj.source as Record<string, unknown>).id : linkObj.source || "");
-            const w = Number(linkObj.weight || linkObj.count || 1);
-            
-            // More particles on command node outgoing edges
-            if (commandNode?.command_node && src === commandNode.command_node) {
-              return Math.max(2, Math.min(6, Math.floor(w / 2)));
-            }
-            return Math.max(0, Math.min(3, Math.floor(w / 4)));
-          }}
-          linkDirectionalParticleWidth={2}
-          linkDirectionalParticleSpeed={0.006}
-          linkDirectionalParticleColor={() => "rgba(244, 63, 94, 0.8)"}
-          nodeRelSize={6}
-          nodeCanvasObject={(nodeObj: Record<string, unknown>, ctx: CanvasRenderingContext2D, globalScale: number) => {
-            const nodeId = String(nodeObj.node_id || nodeObj.id || "");
-            const nodeType = String(nodeObj.node_type || "CLEAN");
-            const severity = Number(nodeObj.severity_score || 0);
-            const x = Number(nodeObj.x);
-            const y = Number(nodeObj.y);
+              return "rgba(100, 116, 139, 0.25)";
+            }}
+            linkWidth={(linkObj: Record<string, unknown>) => {
+              const w = Number(linkObj.weight || linkObj.count || 1);
+              const src = String(linkObj.source && typeof linkObj.source === "object" ? (linkObj.source as Record<string, unknown>).id : linkObj.source || "");
+              
+              if (commandNode?.command_node && src === commandNode.command_node) {
+                return Math.max(2, Math.min(8, 1 + w / 2));
+              }
+              return Math.max(0.5, Math.min(4, 0.4 + w / 5));
+            }}
+            linkDirectionalParticles={(linkObj: Record<string, unknown>) => {
+              const src = String(linkObj.source && typeof linkObj.source === "object" ? (linkObj.source as Record<string, unknown>).id : linkObj.source || "");
+              const w = Number(linkObj.weight || linkObj.count || 1);
+              
+              if (commandNode?.command_node && src === commandNode.command_node) {
+                return Math.max(2, Math.min(6, Math.floor(w / 2)));
+              }
+              return Math.max(0, Math.min(3, Math.floor(w / 4)));
+            }}
+            linkDirectionalParticleWidth={2}
+            linkDirectionalParticleSpeed={0.006}
+            linkDirectionalParticleColor={() => "rgba(244, 63, 94, 0.8)"}
+            nodeRelSize={6}
+            nodeCanvasObject={(nodeObj: Record<string, unknown>, ctx: CanvasRenderingContext2D, globalScale: number) => {
+              const nodeId = String(nodeObj.node_id || nodeObj.id || "");
+              const nodeType = String(nodeObj.node_type || "CLEAN");
+              const severity = Number(nodeObj.severity_score || 0);
+              const x = Number(nodeObj.x);
+              const y = Number(nodeObj.y);
 
-            const color = NODE_COLORS[nodeType] || NODE_COLORS.CLEAN;
-            const radius = 3 + Math.min(6, severity / 20);
-            const time = Date.now() / 200;
-            const pulse = 1 + (Math.sin(time) + 1) * 0.15;
+              const color = NODE_COLORS[nodeType] || NODE_COLORS.CLEAN;
+              const radius = 3 + Math.min(6, severity / 20);
+              const time = Date.now() / 200;
+              const pulse = 1 + (Math.sin(time) + 1) * 0.15;
 
-            // Command node special rendering with multi-layer glow
-            if (nodeType === "COMMAND_NODE") {
-              // Outer glow rings (pulsing)
-              COMMAND_GLOW_COLORS.forEach((glowColor, idx) => {
+              if (nodeType === "COMMAND_NODE") {
+                COMMAND_GLOW_COLORS.forEach((glowColor, idx) => {
+                  ctx.beginPath();
+                  ctx.arc(x, y, (radius + 8 + idx * 6) * pulse, 0, 2 * Math.PI, false);
+                  ctx.fillStyle = glowColor;
+                  ctx.fill();
+                });
+                
                 ctx.beginPath();
-                ctx.arc(x, y, (radius + 8 + idx * 6) * pulse, 0, 2 * Math.PI, false);
-                ctx.fillStyle = glowColor;
+                ctx.arc(x, y, (radius + 4) * pulse, 0, 2 * Math.PI, false);
+                ctx.fillStyle = "rgba(244, 63, 94, 0.35)";
                 ctx.fill();
-              });
-              
-              // Main glow
-              ctx.beginPath();
-              ctx.arc(x, y, (radius + 4) * pulse, 0, 2 * Math.PI, false);
-              ctx.fillStyle = "rgba(244, 63, 94, 0.35)";
-              ctx.fill();
-              
-              // Core with border
-              ctx.beginPath();
-              ctx.arc(x, y, radius + 1, 0, 2 * Math.PI, false);
-              ctx.fillStyle = "#f43f5e";
-              ctx.fill();
-              ctx.strokeStyle = "#ffffff";
-              ctx.lineWidth = 2;
-              ctx.stroke();
-            } else {
-              // Regular node
-              ctx.beginPath();
-              ctx.arc(x, y, radius, 0, 2 * Math.PI, false);
-              ctx.fillStyle = color;
-              ctx.fill();
-              
-              // Subtle border for non-clean nodes
-              if (nodeType !== "CLEAN") {
-                ctx.strokeStyle = "rgba(255,255,255,0.3)";
-                ctx.lineWidth = 1;
+                
+                ctx.beginPath();
+                ctx.arc(x, y, radius + 1, 0, 2 * Math.PI, false);
+                ctx.fillStyle = "#f43f5e";
+                ctx.fill();
+                ctx.strokeStyle = "#ffffff";
+                ctx.lineWidth = 2;
                 ctx.stroke();
+              } else {
+                ctx.beginPath();
+                ctx.arc(x, y, radius, 0, 2 * Math.PI, false);
+                ctx.fillStyle = color;
+                ctx.fill();
+                
+                if (nodeType !== "CLEAN") {
+                  ctx.strokeStyle = "rgba(255,255,255,0.3)";
+                  ctx.lineWidth = 1;
+                  ctx.stroke();
+                }
               }
-            }
 
-            // Label
-            const fontSize = Math.max(8, 11 / globalScale);
-            ctx.font = `${fontSize}px sans-serif`;
-            ctx.fillStyle = nodeType === "COMMAND_NODE" ? "#ffffff" : "#94a3b8";
-            ctx.textAlign = "center";
-            ctx.fillText(nodeId, x, y - radius - 4);
-          }}
-          nodeLabel={(nodeObj: Record<string, unknown>) => {
-            const nodeId = String(nodeObj.node_id || nodeObj.id || "");
-            const nodeType = String(nodeObj.node_type || "CLEAN");
-            const severity = Number(nodeObj.severity_score || 0);
-            const fp = String(nodeObj.fingerprint_id || "N/A");
-            const requests = Number(nodeObj.request_count || 0);
-            
-            return `<div style="background:#1e293b;padding:8px 12px;border-radius:8px;border:1px solid #334155;font-size:12px;min-width:140px;">
-              <div style="font-weight:600;color:#f8fafc;margin-bottom:4px;">${nodeId}</div>
-              <div style="color:#94a3b8;font-size:11px;">
-                <div>Type: <span style="color:${NODE_COLORS[nodeType] || '#22c55e'}">${nodeType}</span></div>
-                <div>Severity: ${severity}</div>
-                <div>Fingerprint: ${fp}</div>
-                <div>Requests: ${requests}</div>
-              </div>
-            </div>`;
-          }}
-          onNodeHover={(node: Record<string, unknown> | null) => {
-            setHoveredNode(node ? String(node.node_id || node.id || "") : null);
-          }}
-        />
+              const fontSize = Math.max(8, 11 / globalScale);
+              ctx.font = `${fontSize}px sans-serif`;
+              ctx.fillStyle = nodeType === "COMMAND_NODE" ? "#ffffff" : "#94a3b8";
+              ctx.textAlign = "center";
+              ctx.fillText(nodeId, x, y - radius - 4);
+            }}
+            nodeLabel={(nodeObj: Record<string, unknown>) => {
+              const nodeId = String(nodeObj.node_id || nodeObj.id || "");
+              const nodeType = String(nodeObj.node_type || "CLEAN");
+              const severity = Number(nodeObj.severity_score || 0);
+              const fp = String(nodeObj.fingerprint_id || "N/A");
+              const requests = Number(nodeObj.request_count || 0);
+              
+              return `<div style="background:#1e293b;padding:8px 12px;border-radius:8px;border:1px solid #334155;font-size:12px;min-width:140px;">
+                <div style="font-weight:600;color:#f8fafc;margin-bottom:4px;">${nodeId}</div>
+                <div style="color:#94a3b8;font-size:11px;">
+                  <div>Type: <span style="color:${NODE_COLORS[nodeType] || '#22c55e'}">${nodeType}</span></div>
+                  <div>Severity: ${severity}</div>
+                  <div>Fingerprint: ${fp}</div>
+                  <div>Requests: ${requests}</div>
+                </div>
+              </div>`;
+            }}
+            onNodeHover={(node: Record<string, unknown> | null) => {
+              setHoveredNode(node ? String(node.node_id || node.id || "") : null);
+            }}
+          />
+        )}
       </div>
 
       <div className="border-t border-border p-3 flex flex-wrap items-center gap-3 text-xs bg-muted/20">

@@ -10,6 +10,7 @@ import {
   Activity,
   Server,
   Zap,
+  Brain,
 } from "lucide-react";
 
 interface MetricsCardsProps {
@@ -175,9 +176,11 @@ export function MetricsCards({ metrics, loading, error }: MetricsCardsProps) {
   const suspiciousCount = metrics.suspicious_count ?? 0;
   const cleanCount = metrics.clean_count ?? 0;
   const threatPercentage = metrics.threat_percentage ?? 0;
+  const mlDetectionCount = metrics.ml_detection_count ?? 0;
+  const mlPercentage = totalLogs > 0 ? ((mlDetectionCount / totalLogs) * 100).toFixed(1) : "0.0";
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 stagger-children">
+    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-4 stagger-children">
       <Card
         title="Total Logs"
         value={totalLogs}
@@ -218,12 +221,20 @@ export function MetricsCards({ metrics, loading, error }: MetricsCardsProps) {
         delay={200}
       />
       <Card
+        title="ML Detections"
+        value={mlDetectionCount}
+        subtitle={`${mlPercentage}% AI-flagged`}
+        icon={<Brain className="w-5 h-5" />}
+        variant={mlDetectionCount > 0 ? "info" : "default"}
+        delay={250}
+      />
+      <Card
         title="Threat Rate"
         value={`${threatPercentage.toFixed(1)}%`}
         subtitle="Attack + High Risk"
         icon={<TrendingUp className="w-5 h-5" />}
         variant={threatPercentage > 30 ? "danger" : threatPercentage > 10 ? "warning" : "default"}
-        delay={250}
+        delay={300}
       />
     </div>
   );

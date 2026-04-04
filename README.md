@@ -2,8 +2,14 @@
   <img src="https://img.shields.io/badge/AEGIS-Cyber%20Attribution-10b981?style=for-the-badge&logo=shield&logoColor=white" alt="AEGIS Badge" />
   <img src="https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
   <img src="https://img.shields.io/badge/Next.js-14-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js" />
-  <img src="https://img.shields.io/badge/FastAPI-0.100+-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI" />
-  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License" />
+  <img src="https://img.shields.io/badge/FastAPI-0.109+-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI" />
+  <img src="https://img.shields.io/badge/ML-XGBoost%20%2B%20IsolationForest-FF6600?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="ML" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Frontend-Vercel-000000?style=flat-square&logo=vercel" alt="Vercel" />
+  <img src="https://img.shields.io/badge/Backend-Render-46E3B7?style=flat-square&logo=render" alt="Render" />
+  <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="License" />
 </p>
 
 <h1 align="center">🛡️ AEGIS</h1>
@@ -650,13 +656,65 @@ Then check:
 
 ## 🔮 Future Scope
 
-- **ML Anomaly Layer** — Supervised model on top of the deterministic engine for baseline learning
+- **ML Anomaly Layer** — ✅ Implemented! IsolationForest + XGBoost for hybrid ML-rule detection
 - **Real-Time Streaming** — WebSocket push for instant alert delivery (replace polling)
 - **Database Backend** — PostgreSQL / TimescaleDB for historical analysis and time-series queries
 - **RBAC** — Role-based access control for multi-team SOC environments
 - **Alert Correlation** — Cross-node pattern detection (e.g., coordinated latency spikes across regions)
 - **SIEM Export** — Syslog / CEF / STIX format output for integration with Splunk, Sentinel, etc.
 - **Prometheus Metrics** — `/metrics` endpoint in OpenMetrics format for Grafana dashboards
+
+---
+
+## 🚀 Deployment
+
+### Live Demo
+
+| Service | Platform | URL |
+|---------|----------|-----|
+| **Frontend** | Vercel | [aegis-frontend.vercel.app](https://aegis-frontend.vercel.app) |
+| **Backend API** | Render | [aegis-backend.onrender.com](https://aegis-backend-8b9v.onrender.com) |
+
+### Deploy Your Own
+
+#### Frontend (Vercel)
+
+1. Fork this repository
+2. Import to [Vercel](https://vercel.com/new)
+3. Set root directory to `frontend`
+4. Add environment variable:
+   ```
+   NEXT_PUBLIC_API_URL=https://your-backend.onrender.com
+   ```
+5. Deploy!
+
+#### Backend (Render)
+
+1. Fork this repository
+2. Create new **Web Service** on [Render](https://render.com)
+3. Connect your GitHub repository
+4. Configure:
+   - **Root Directory**: `backend`
+   - **Build Command**: `pip install -r requirements.txt`
+   - **Start Command**: `uvicorn app:app --host 0.0.0.0 --port $PORT`
+   - **Environment**: Python 3
+5. Deploy!
+
+Or use the included `render.yaml` for one-click deployment:
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
+
+### Environment Variables
+
+#### Frontend (.env.local)
+```env
+NEXT_PUBLIC_API_URL=https://your-backend.onrender.com
+```
+
+#### Backend
+```env
+# Optional - Render sets PORT automatically
+PORT=8000
+```
 
 ---
 

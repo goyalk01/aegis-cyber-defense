@@ -109,6 +109,7 @@ function sanitizeMetrics(data: Record<string, unknown>): Metrics {
     clean_count: safePositiveInt(data.clean_count, 0),
     attack_percentage: safePercentage(data.attack_percentage, 0),
     high_risk_percentage: safePercentage(data.high_risk_percentage, 0),
+    suspicious_percentage: safePercentage(data.suspicious_percentage, 0),
     threat_percentage: safePercentage(data.threat_percentage, 0),
     total_nodes: safePositiveInt(data.total_nodes, 0),
     invalid_hw_count: safePositiveInt(data.invalid_hw_count, 0),
@@ -119,6 +120,7 @@ function sanitizeMetrics(data: Record<string, unknown>): Metrics {
     schema_versions_seen: Array.isArray(data.schema_versions_seen)
       ? data.schema_versions_seen.map((v) => safePositiveInt(v, 0))
       : [],
+    ml_detection_count: safePositiveInt(data.ml_detection_count, 0),
   };
 }
 

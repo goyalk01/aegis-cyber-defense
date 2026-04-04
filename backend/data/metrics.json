@@ -3,9 +3,10 @@
   "total_alerts": 10000,
   "skipped": 0,
   "attack_count": 727,
-  "high_risk_count": 0,
-  "suspicious_count": 0,
-  "clean_count": 9273,
+  "high_risk_count": 109,
+  "suspicious_count": 605,
+  "clean_count": 8559,
+  "ml_detection_count": 1441,
   "avg_response_time_ms": 136.3,
   "invalid_hw_count": 0,
   "nodes_under_attack": [
